@@ -1,0 +1,52 @@
+﻿@model GROHE.Models.tblConfig 
+           @if(Request.Browser.IsMobileDevice)
+           { 
+<div id="Menu_mb">
+    <a href="/" title="Trang chủ" rel="nofollow"><img src="@Model.ImageLinkLogo" alt="@Model.Name" title="@Model.Name" /></a>
+    <div id="MenuMobile">
+        <a href="#menu" rel="nofollow"><span></span>Danh mục</a>
+    </div>
+</div>
+           }
+<div id="Logo">
+    <div id="bg_logo">
+        <div id="Content_Logo">
+            <a href="/" title="Trang chủ" rel="nofollow"></a>
+        </div>
+    </div>
+
+</div>
+<div id="Banner">
+    <div id="Content_Banner">
+        <div id="Center_Banner">
+            <h2>@Model.Name</h2>
+            <p>Hệ thống bán hàng trực tiếp từ <span class="gr">GROHE<span>GROUP</span></span>. vn</p>
+        </div>
+        <div id="Right_Banner">
+            <div class="icon"></div>
+            <div class="Hotlines">
+                <span class="hl1">Tư vấn online (24/7)</span>
+                <span class="hl2">
+                    @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
+                    {
+
+                        <span>@Model.HotlineOUT</span>
+
+                    }
+                    else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
+                    {
+
+                        <span>@Model.HotlineIN</span>
+                    }
+
+
+                    else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
+                    {
+                        <span>@Model.HotlineOUT</span>
+
+                    }  
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

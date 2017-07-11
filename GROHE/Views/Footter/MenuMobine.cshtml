@@ -1,0 +1,16 @@
+﻿@if (Request.Browser.IsMobileDevice)
+{
+    <nav id="menu">
+        <ul>
+            <li><a href="/" title="Trang chủ" rel="nofollow">Trang chủ</a></li>
+            <li>
+                <a href="/" title="Trang chủ" rel="nofollow">Sản phẩm</a>
+                <ul>
+
+                    @Html.Raw(ViewBag.chuoi)
+                </ul>
+            </li>
+            <li><a href="/Lien-he" title="Liên hệ" rel="nofollow">Liên hệ</a></li>
+        </ul>
+    </nav>
+}

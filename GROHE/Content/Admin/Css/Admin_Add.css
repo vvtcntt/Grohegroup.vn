@@ -1,0 +1,45 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.tr_1{width:100%; height:auto; float:left; margin:0; line-height:30px; background-color:#f5f5f5; font-weight:bold; color:#3b3b3b;   border-bottom: 1px solid #e8e8e8}
+.left_tr1{ width:15%; height:auto; margin:0px ; float:left; padding:auto 10px; text-align:right}
+.left_tr1 span{ margin-right:10px}
+.Right_tr1 {width:84%; height:auto; margin:0px;   padding:auto 10px ; float:right;border-left: 1px solid #e8e8e8;}
+.Right_tr1 input.txtName{ width:90%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:20px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Right_tr1 .txtHeadShort{ width:98%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:50px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Right_tr1 .txtPrice{ width:15%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:20px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Right_tr1 select{ width:auto; height:20px; margin:5px 5px; float:left;border:1px solid #efecec}
+.Right_tr1 .txtSale{ width:98%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:30px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Right_tr1 .txtPk{ width:98%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:30px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Right_tr1 .btnAdd{ width:80px; height:25px; margin:2px; background:url(../Icon/page_save.png) no-repeat left center scroll #ece7e7; border:1px solid #e8e8e8 }
+.Leght_1{ width:90%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:20px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Leght_2{ width:70%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:20px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Leght_3{ width:50%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:20px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Leght_4{ width:30%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:20px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Leght_5{ width:15%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:20px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Leght_6{ width:98%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:30px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.Leght_7{ width:98%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:100px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+.txtWarraty
+{
+    width: 7%;
+    height: auto;
+    margin: 5px;border:1px solid #efecec; min-height:20px; border-radius:5px; border-left: 1px solid #e8e8e8; text-align:center
+}
+#ImgLink{ width:40%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:20px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+#Link{ width:30%; height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:20px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+select{height:auto; float:left; margin:5px 5px; border:1px solid #efecec; min-height:25px; border-radius:5px; border-left: 1px solid #e8e8e8;}
+
+.Right_tr1 table{ width:100% !important; height:auto; border:none}
+.Right_tr1 table tr { border:none}
+.Right_tr1 tr td{ width:49.80%;height:auto; float:left; border:none}
+.Right_tr1 table tr td h3 {
+    font-size: 20px;
+}
+
+.ListImages {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin: 5px 0px;
+}
+.ListImages .Tear_Images{ width:15%; height:100px; float:left; margin:4px; border:1px solid #efecec}
+.ListImages .Tear_Images img{ max-width:100%; max-height:85px; float:left; width:auto}

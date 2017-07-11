@@ -1,0 +1,9 @@
+﻿ @using (Html.BeginForm("OrderMultipleUp", "InportExcel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ <div style="width:650px; height:320px; margin:5px auto; border:1px solid #808080">
+    <input type="file" name="fileExcel" />
+    <input type="submit" value="OK" /> 
+ 
+      <input type="checkbox" name="checkstatus" id="checkstatus" /> Cập nhật toàn bộ giá
+      @Html.DropDownList("drMenu", "Select Item ") 
+    </div> 
+}

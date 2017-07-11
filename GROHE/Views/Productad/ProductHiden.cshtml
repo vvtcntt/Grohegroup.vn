@@ -1,0 +1,254 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@using PagedList.Mvc;
+@model PagedList.IPagedList<GROHE.Models.tblProduct>
+
+<script>
+    $(document).ready(function () {
+        $('.ajax').colorbox({ width: "650px" });
+    });
+</script>
+<script language="JavaScript">
+    function toggle(source) {
+        checkboxes = document.getElementsByClassName('checkitem');
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            checkboxes[i].checked = source.checked;
+        }
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //$(document).on("click", ".Delete", function () {
+        //    //your code
+
+        //    var id = $(this).attr('title');
+        //    //alert(getID);
+        //    $.ajax(
+
+        //           {
+
+        //               url: '/Productad/DeleteProduct',
+        //               type: 'post',
+        //               data: { "id": id },
+        //               dataType: 'json',
+        //               success: function (data) {
+        //                   $(".alert").replaceWith("<div class='alert alert-info'>" + data.result + "</div>");
+        //                   $(".alert").fadeOut(2000);
+
+        //               }
+        //            ,
+        //               error: function () { }
+        //           });
+        //    //
+        //});
+        $(document).on("click", "#Export", function () {
+            //your code
+
+            var id = $(this).attr('title');
+            //alert(getID);
+            $.ajax(
+
+                   {
+
+                       url: '/Productad/ExportData',
+                       type: 'post',
+                       data: { "id": id },
+                       dataType: 'json',
+                       success: function (data) {
+                           $(".alert").replaceWith("<div class='alert alert-info'>" + data.result + "</div>");
+                           $(".alert").fadeOut(2000);
+
+                       }
+                    ,
+                       error: function () { }
+                   });
+            //
+        });
+
+        //$(document).on("click", ".Delete", function () {
+        //    //your code
+
+        //    var id = $(this).attr('title');
+        //    //alert(getID);
+        //    $.ajax(
+
+        //           {
+
+        //               url: '/Productad/DeleteProduct',
+        //               type: 'post',
+        //               data: { "id": id },
+        //               dataType: 'json',
+        //               success: function (data) {
+        //                   $(".alert").replaceWith("<div class='alert alert-info'>" + data.result + "</div>");
+        //                   $(".alert").fadeOut(2000);
+
+        //               }
+        //            ,
+        //               error: function () { }
+        //           });
+        //    //
+        //});
+
+        $(document).on("click", "#DeleteAll", function () {
+            //your code
+
+            var id = $(this).attr('title');
+            //alert(getID);
+            $.ajax(
+
+                   {
+
+                       url: '/Productad/DeleteAll',
+                       type: 'post',
+
+                       dataType: 'json',
+                       success: function (data) {
+                           $(".alert").replaceWith("<div class='alert alert-info'>" + data.result + "</div>");
+                           $(".alert").fadeOut(2000);
+
+                       }
+                    ,
+                       error: function () { }
+                   });
+            //
+        });
+    })
+
+
+
+</script>
+@*<script>
+        $(document).ready(function () {
+            $('.Delete').easyconfirm({
+                locale: { title: "Xóa", button: ['Không', 'có'] }
+            });
+        });
+
+    </script>*@
+<script type="text/javascript">
+    $(function () {
+        //$("input").keypress(function () {
+        $(document).ready(function () {
+            $('#txtSearch').keyup(function () {
+                var text = $(this).val();
+                $.post("Productad/Index", { "text": text }, function (data) {
+                    $('#ajaxnhan').html(data);
+                })
+            });
+        });
+        $("#drMenu").change(function () {
+            //your code
+
+            var idCate = $("#drMenu").val();
+
+
+            $.post("/Productad/Index", { "idCate": idCate },
+                function (data) {
+                    $('#ajaxnhan').html(data);
+                });
+
+            //
+        });
+        $(".alert").hide();
+        ///
+        $("#btnSearch").click(function () {
+            //your code
+            var searchString = $("#txtSearch").val();
+            var idCate = $("#drMenu").val();
+            //alert(searchString);
+            if (searchString != "") {
+                $.post("/Productad/Search", { "Name": searchString, "idCate": idCate },
+                    function (data) {
+                        $(".alert").replaceWith("<div class='alert alert-info'>Bạn đã nhập đủ dữ liệu.</div>");
+                        $(".alert").fadeOut(2000);
+                    });
+            }
+            else {
+                $("#btnSearch").focus();
+                $(".alert").replaceWith("<div class='alert alert-error'>Bạn chưa nhập dữ liệu để tìm kiếm.</div>");
+                $(".alert").fadeOut(10000);
+            }
+            //
+        });
+        ///Update Sort
+
+    });
+    $(document).ready(function () {
+
+        $(".txtSort").change(function () {
+            var ts = $(this).val();
+            var id = $(this).attr('id');
+            if (ts != "") {
+                $.ajax(
+
+                    {
+                        url: '/Productad/ProductEditOrd',
+                        type: 'post',
+                        data: { "txtSort": id, "ts": ts },
+                        dataType: 'json',
+                        success: function (data) {
+                            $(".alert").replaceWith("<div class='alert alert-info'>" + data.result + "</div>");
+                            $(".alert").fadeOut(2000);
+
+                        }
+                    ,
+                        error: function () { }
+                    });
+            }
+            else { }
+
+        });
+        $(document).on("click", ".State", function () {
+            //your code
+
+            var getID = $(this).attr('id');
+            var Active = $(this).attr("value")
+            //alert(getID);
+
+            $.post("/Productad/ProductEditActive", { "chk": getID, "nchecked": Active },
+                function (data) {
+
+
+                    $(".alert").replaceWith("<div class='alert alert-info'>" + data.result + "</div>");
+                    $(".alert").fadeOut(2000);
+
+
+
+                });
+            //
+        });
+
+
+    })
+</script>
+@Html.Raw(ViewBag.thongbao)
+@using (Html.BeginForm("Command", "Productad", FormMethod.Post))
+{
+    <div id="/Content_Detail">
+        <div class="Nvar_Content_Detail">
+            <div class="Left_Nvar">
+                <img src="/Content/Admin/Icon/folder.png" alt="Danh mục sản phẩm" />Product List
+            </div>
+            <div class="Center_Nvar">
+                <input type="text" name="txtSearch" id="txtSearch" class="txtSearch" />
+                
+            </div>
+            <div class="Right_Nvar">
+                <div id="msg" class="msg">
+                    <div class="alert alert-info" id="update-message">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @{Html.RenderPartial("PartialProductData", Model);}
+
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, sortOrder = ViewBag.CurrentSortOrder, sortName = ViewBag.CurrentSortName, sortLevel = ViewBag.CurrentSortLevel }), (PagedListRenderOptions)ViewBag.ship)
+
+    </div>
+}
+
+

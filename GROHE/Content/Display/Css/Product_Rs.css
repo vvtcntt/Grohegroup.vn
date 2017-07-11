@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 768px) 
+{
+	#Content #Hearshort #LeftHeadshort{ width:100%}
+	#Content #Hearshort #LeftHeadshort img{ height:100%}
+	#Content #Hearshort #RightHeadshort{ width:100%}
+	#Content #Hearshort #RightHeadshort #Des{ font-size:13px}
+	#Content #Hearshort #RightHeadshort h1{ font-size:15px}
+	#Content .ContentProduct .Tear_1{ width:23.5%}
+	#Content #Download{ position:relative}
+		#LeftProduct{ width:100%; margin:0px}
+	 #Top3{ height:auto}
+	 #Top3 #Left_Top3 span .Price_Sale{ font-size:15px}
+	 #Top3 #Right_Top3 .sp2{ font-size:14px}
+	 #Left_Top_Headder:hover #Menu{ margin-top:-33px}
+	 #LeftProduct #Left_ContentProduct #Top_Product #List_Product .Tear_pl{ width:22.8%}
+	 #RightProduct{ width:100%}
+	 #Support{ display:none}
+	 #MenuProduct{ display:none}
+	 #ProductLienquan .Tear_1{ width:23%; float:left}
+ 
+	 .Tear_syn{ width:32%}
+}
+@media screen and (max-width: 480px) 
+{
+	#Content #Hearshort #LeftHeadshort{	width:100%; height:auto; margin:0px}
+		#Content .ContentProduct .Tear_1{ width:47%}#Content #Box_Name #Rigt_Box_Name{ display:none}
+		 #LeftProduct #Left_ContentProduct{ width:100%; margin:0px}
+	 #Right_ContentProduct{ width:100%; margin:7px 0px}
+	 #LeftProduct_Content_Content{ margin:5px 0px}
+	  #LeftProduct_Parametter{ margin:5px 0px}
+	  #LeftProduct_Parametter_content{ margin:5px 0px}
+	  #Right_ContentProduct #Top1 h1{ text-align:center}
+	  	 #ProductLienquan .Tear_1{ width:48%; float:left}
+#Dichvu{ display:none}
+#Top5 button.btnInOrd{ display:none}
+.table3{ border:none}
+.table3 td{ width:99%; border:none; float:left; margin:3px} 
+.table2{ border:none}
+.table2 td{ width:99%; border:none; float:left; margin:3px} 
+.table4{ border:none}
+.table4 td{ width:99%; border:none; float:left; margin:3px} 
+.table5{ border:none}
+.table5 td{ width:99%; border:none; float:left; margin:3px} 
+.Tear_syn{ width:48%}
+.Tear_syn .img_syn{ width:100%}
+.Tear_syn .img_syn img { float:none; margin:3px auto; display:block}
+}

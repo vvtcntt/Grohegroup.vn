@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Html.Raw(ViewBag.Title)
+    @Html.Raw(ViewBag.Description)
+        @Html.Raw(ViewBag.Keyword)
+    <style>
+        body {
+            font: 12px arial;
+            margin: 0;
+            padding: 0;
+         }
+        #Main {
+            width: 1300px;
+            height: auto;
+            margin: 0px auto;
+        }
+    
+            Table tr td img{float:left; margin:0px}
+    </style>
+</head>
+<body>
+    <div id="Main">
+
+        @RenderBody()
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url xmlns="">
+    <loc>http://GROHE.vn/0/voi-rua-grohe</loc>
+    <id>173</id>
+    <type>GroupProduct</type>
+  </url>
+  <url xmlns="">
+    <loc>http://GROHE.vn/0/sen-tam-grohe</loc>
+    <id>174</id>
+    <type>GroupProduct</type>
+  </url>
+  <url xmlns="">
+    <loc>http://GROHE.vn/0/bon-tieu-grohe</loc>
+    <id>175</id>
+    <type>GroupProduct</type>
+  </url>
+  <url xmlns="">
+    <loc>http://GROHE.vn/0/bon-tam-grohe</loc>
+    <id>176</id>
+    <type>GroupProduct</type>
+  </url>
+  <url xmlns="">
+    <loc>http://GROHE.vn/0/phu-kien-grohe</loc>
+    <id>177</id>
+    <type>GroupProduct</type>
+  </url>
+  <url xmlns="">
+    <loc>http://GROHE.vn/0/chau-rua-mat-grohe</loc>
+    <id>178</id>
+    <type>GroupProduct</type>
+  </url>
+  <url xmlns="">
+    <loc>http://GROHE.vn/0/chau-rua-bat-grohe</loc>
+    <id>179</id>
+    <type>GroupProduct</type>
+  </url>
+  <url xmlns="">
+    <loc>http://GROHE.vn/0/san-pham-spa-grohe</loc>
+    <id>180</id>
+    <type>GroupProduct</type>
+  </url>
+  <url xmlns="">
+    <loc>http://GROHE.vn/0/bo-tu-chau-grohe</loc>
+    <id>181</id>
+    <type>GroupProduct</type>
+  </url>
+  <url xmlns="">
+    <loc>http://GROHE.vn/2/tuyen-dung-grohe</loc>
+    <id>5</id>
+    <type>GroupNews</type>
+  </url>
+</urlset>

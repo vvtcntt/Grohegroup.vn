@@ -1,0 +1,108 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 768px) 
+{
+	#Banner{ width:100%; float:left; margin:0; padding:0;  overflow:hidden; height: 100%}
+ #Logo #bg_logo{ width:100%}
+#Content_Banner{width:100%}
+#Content_Banner #Right_Banner{display:none}
+#Content_Banner #Center_Banner{ width:auto; margin-left:262px}
+#Content_Banner #Center_Banner h2{ font-size:14px; margin-top:20px}
+
+#Content_Banner #Center_Banner p{ font-size:14px}
+#nVar #Content_nVar{ width:100%}
+#BoxTime{ display:none}
+#nVar #Content_nVar #BoxOrder{ display:none; }
+.Menu ul.ul1 .li1 .ul2{ width:auto}
+.Menu ul.ul1 .li1 .ul2 .li2 { height:auto}
+.Menu ul.ul1 .li1 .ul2 .li2 .tear_Menu{ display:none}
+#Main #Header #MainMenu{ display:none}
+#Slide{ width:100% !important; overflow:hidden;margin:0px}
+#Footter #LinkURL{ width:100%}
+.uudai img{ width:32.3%}
+#Menu_width ul li.Homes{display:none}
+#Menu_width ul li.li1:last-child{ display:none}
+#Main{ width:100%; height:auto; float:left; margin:0px; padding:0px}
+#Left_Headder{ width:100%; overflow:hidden; margin:0px}
+#Right_Headder{ display:none}
+#Headder #Left_Headder{ width:100%; margin:0px}
+#Headder{ overflow:hidden}
+#Content_ProductSale .Tear_Sale{ width:32%}
+#ProductSale h3{ margin-left:10px}
+#Product h3{ margin-left:10px}
+.ProductHomes .Content_ProductHomes{ width:99%; border:none}
+.ProductHomes .bg_ProductHomes{ background:none}
+.ProductHomes .Content_ProductHomes .Left_Content_ProductHomes{ display:none}
+.ProductHomes .Content_ProductHomes .Right_Content_ProductHomes{ width:100%}
+.Tear_1{ width:24%}
+#Services{ width:100%; float:left; margin:0px}
+.Tear_Chinhhang{ width:48%; height:auto}
+.Tear_Dichvu{ width:48%; margin:0px 5px 0px 10px; height:auto}
+.Tear_Dichvu .Name{ font-size:15px}
+.Tear_Chinhhang .Name{ font-size:15px}
+.Tear_Muahang{ display:none}
+.Tear_Chinhhang:last-child{display:none}
+#List_Info{ width:100%; height:auto; float:left; margin:0px}
+.Tear_Info{ width:30%; height:auto; float:left}
+.Tear_Info-1{ width:32%; height:auto; float:left}
+.Tear_Info_2{ display:none}
+.Tear_Info .Name{ font-size:15px}
+.Tear_Info-1 .Name{ font-size:15px}
+#Footter #Content_Footter{ width:100%; float:left; margin:0}
+#Footter #Content_Footter #Left{ background-size:100%}
+#Footter #Content_Footter #Right img{ max-width:100%}
+#Footter #Content_Footter #Center .Coppyright{ font-size:11px}
+#Footter #Content_Footter #Center .ft1{ font-size:10px}
+.ProductHomes .nVar .Left_nVar .Name{ background:#13439c}
+ .ProductHomes .nVar .Left_nVar .iCon_nVar {
+    border: 1px solid #13439c;
+}
+#Content_Sidebar #Menu span{ font-size:15px}
+#Content_Sidebar #Menu{ margin:0px 5px}
+.Line_ft{ width:100%; float:left}
+footer{ border:none}
+#ProductSYN{ width:100%}
+#BannerTimes{ width:100%; background-size:100%; height:70px}
+ .spdb{ width:32%}
+  #Maps_Homes{ width:100%}
+
+}
+@media screen and (max-width: 480px) 
+{.n_var .Left_n_Var{ display:none}
+.n_var .Right_n_Var{ display:none}
+.n_var .Center_n_Var{ width:100%; float:left}
+	header{ height:auto}
+	#nVar{ display:none}
+	#Main #Header{ display:none
+	}
+	.uudai img{ width:100%; height:auto; float:left; margin:0px}
+	.uudai a:last-child{display:none}
+		.uudai a:first-child{display:none}
+	 #Logo{ display:none}
+	#Banner{ height:auto; display:none}
+ 	#Sidebar{ display:block; height:60px; overflow:hidden}
+	#Content_Sidebar #Menu{ display:none}
+	#Content_Sidebar #Search{ display:none}
+	#MenuMobile{ display:block}
+	#Menu_width{ display:none}
+	#menu{ z-index:5000}
+ .spdb{ width:48%}
+	#Content_ProductSale .Tear_Sale{ width:48%}
+	.ProductHomes .nVar .Right_nVar{ display:none}
+	.Tear_Dichvu{ width:99%; height:auto; margin:5px 2px}
+	.Tear_Chinhhang{ width:99%; height:auto; margin:5px 2px}
+	.Tear_Info{ width:48%; height:auto; margin:5px 2px}
+	.Tear_Info-1{ width:99%; height:auto; margin:5px 2px}
+	.Tear_1{ width:48%}
+	#Footter #Content_Footter #Center .Name{ font-size:14px}
+	#Footter #Content_Footter #Right{ display:none}
+	#Footter #Content_Footter #Center{ width:72%}
+	.Tear_Info .Name{ font-size:14px}
+	 #Menu_mb{ display:block}
+#Content_ProductSale #Tear_SalePriority{ width:100%; height:auto; float:left; margin:5px 0px; display:none}
+#Content_ProductSale #Tear_SalePriority img{ height:auto}
+.n_var .Center_n_Var h3{ font-size:12px}
+ #Maps_Homes{ display:none}
+
+}

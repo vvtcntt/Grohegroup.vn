@@ -1,0 +1,218 @@
+﻿@model GROHE.Models.tblProductSale
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+
+    <div class="Nvar_Content_Detail">
+        <div class="Left_Nvar">
+            <img src="/Content/Admin/Icon/folder.png" alt="Danh mục sản phẩm" />Add ProductSale
+        </div>
+
+    </div>
+    <div class="Content_Content_Detail">
+
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Name :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.Name, new { @class = "Leght_2" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Description :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p => p.Description, new { @class = "Leght_6" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Content:</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p => p.Content, new { @class = "Leght_6" })
+
+            </div>
+        </div>
+        @*<div class="tr_1">
+            <div class="left_tr1">
+                <span>Code Product Sale Priority :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p => p.CodeOne, new { @class = "Leght_6" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Code Product Sale normal :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p => p.CodeTrue, new { @class = "Leght_6", @style = "min-height:100px"} )
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Code Product Syn :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p => p.CodeSale, new { @class = "Leght_6" , @style = "min-height:100px"})
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Slogan :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.Slogan, new { @class = "Leght_2" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Text run :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.TextRun, new { @class = "Leght_2" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Date Start :</span>
+            </div>
+        
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.StartSale, new { @class = "txtDate", @required = "required", @type = "datetime", @autofocus = "autofocus", @Value = String.Format("{0:MM/dd/yyyy}", Model.StartSale) })
+                <script>
+    $(function () {
+        $("#StartSale").datepicker();
+    });
+                   
+                </script>
+               
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Date Stop :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.StopSale, new { @class = "txtDate", @required = "required", @type = "datetime", @autofocus = "autofocus", @Value = String.Format("{0:MM/dd/yyyy}", Model.StopSale) })
+                <script>
+                    $(function () {
+                        $("#StopSale").datepicker();
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Image Banner :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.ImageBanner, new { @class = "Leght_2" })&nbsp;<input id="SelectImages" type="button" value="Browses" />
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Image Sale :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.ImageSale, new { @class = "Leght_2" })&nbsp;<input id="SelectImages1" type="button" value="Browses" />
+
+            </div>
+        </div>*@
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Image Thumb :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.ImageThumb, new { @class = "Leght_2" })&nbsp;<input id="SelectImages2" type="button" value="Browses" />
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Ord:</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.Ord, new { @class = "txtWarraty" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Active :</span>
+            </div>
+            <div class="Right_tr1">
+               @Html.RadioButtonFor(p => p.Active, true, new { @id = "Active" }) : Yes
+            @Html.RadioButtonFor(p => p.Active, false, new { @id = "Active" }): No 
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+            </div>
+            <div class="Right_tr1">
+                <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Add</button>
+
+            </div>
+        </div>
+    </div>
+}
+<script type="text/javascript">
+    $(function () {
+        $("#SelectImages").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#ImageBanner").val(fileUrl);
+            };
+            finder.popup();
+        });
+        $("#SelectImages1").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#ImageSale").val(fileUrl);
+            };
+            finder.popup();
+        });
+        $("#SelectImages2").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#ImageThumb").val(fileUrl);
+            };
+            finder.popup();
+        });
+
+    });
+</script>
+
+<script type="text/javascript">
+    var editor;
+    function createEditor(languageCode, id) {
+        var editor = CKEDITOR.replace(id, {
+            language: languageCode
+        });
+    }
+
+    $(function () {
+        createEditor('vi', 'Content');
+    });
+
+</script>

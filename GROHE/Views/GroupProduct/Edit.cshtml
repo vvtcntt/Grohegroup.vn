@@ -1,0 +1,203 @@
+﻿@model GROHE.Models.tblGroupProduct
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#SelectImages").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#Images").val(fileUrl);
+            };
+            finder.popup();
+        });
+        $("#SelectImages1").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#iCon").val(fileUrl);
+            };
+            finder.popup();
+        });
+        $("#SelectImages2").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#Background").val(fileUrl);
+            };
+            finder.popup();
+        });
+    });
+</script>
+
+ 
+
+<script type="text/javascript">
+    var editor;
+    function createEditor(languageCode, id) {
+        var editor = CKEDITOR.replace(id, {
+            language: languageCode
+        });
+    }
+
+    $(function () {
+        createEditor('vi', 'Content');
+    });
+
+</script>
+
+
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(true)
+
+     
+     <div class="Nvar_Content_Detail">
+        <div class="Left_Nvar">
+            <img src="/Content/Admin/Icon/folder.png" alt="Danh mục sản phẩm" />Edit GroupProduct
+        </div>
+
+    </div>
+    <div class="Content_Content_Detail">
+        <div class="tr_1">
+            <div class="left_tr1" id="Test">
+                <span>Select Parent :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.DropDownList("drMenu","======= [Menu Parent]=======")
+                @* @Html.DropDownListFor(p => p.Id, "Danh mục cấp 1", new { @id="drMenu"});*@
+
+            </div>
+        </div>
+       
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Name :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Name, new { @class = "Leght_2" })
+                <input type="checkbox" name="URL" id="URL" /> : Rename URL
+                @Html.TextBoxFor(p => p.Tag, null, new { @Name = "NameURL", @style = " opacity:0" })
+                <input type="text" name="idProduct" id="idProduct" value="@Model.Id" style="opacity:0" />
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1"><span>Images :</span></div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Images, new { @class = "Leght_4" })&nbsp;<input id="SelectImages" type="button" value="Browser" />
+
+            </div>
+        </div>    
+
+        <div class="tr_1">
+            <div class="left_tr1"><span>iCon :</span></div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.iCon, new { @class = "Leght_4" })&nbsp;<input id="SelectImages1" type="button" value="Browser" />
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1"><span>Background :</span></div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.Background, new { @class = "Leght_4" })&nbsp;<input id="SelectImages2" type="button" value="Browser" />
+
+            </div>
+        </div>        
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Title Meta :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Title, new { @class = "Leght_2" })
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Description Meta :</span>
+            </div>
+            <div class="Right_tr1">
+
+                @Html.TextAreaFor(p=>p.Description, new { @class = "Leght_6" })
+
+            </div>
+        </div>
+        
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Keyword Meta :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p=>p.Keyword, new { @class = "Leght_6" })
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Content:</span>
+            </div>
+            <div class="Right_tr1">
+
+                @Html.TextAreaFor(p => p.Content, new { @class = "Leght_6" })
+
+            </div>
+        </div>
+        
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Note :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p => p.Note, new { @class = "Leght_2" })
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Ord:</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Ord, new { @class="txtWarraty"})
+                  
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Homes :</span>
+            </div>
+            <div class="Right_tr1">
+               @{ bool Index = ((Model.Index == null) || (Model.Index == false)) ? false : true; }
+                     
+                    @Html.CheckBoxFor(p => Index ) 
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Prioryti :</span>
+            </div>
+            <div class="Right_tr1">
+                    @{ bool Priority = ((Model.Priority == null) || (Model.Priority == false)) ? false : true; }
+                    @Html.CheckBoxFor(p => Priority ) 
+               
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Active :</span>
+            </div>
+            <div class="Right_tr1">
+                        @{ bool Active = ((Model.Active == null) || (Model.Active == false)) ? false : true; }
+                    @Html.CheckBoxFor(p => Active ) 
+            </div>
+        </div>     
+        
+        <div class="tr_1">
+            <div class="left_tr1">
+            </div>
+            <div class="Right_tr1">
+                <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Add</button>
+                <button type="button" id="btnCanse" name="btnCanse" class="btnCanse">Cancel</button>
+            </div>
+        </div>
+    </div>
+}

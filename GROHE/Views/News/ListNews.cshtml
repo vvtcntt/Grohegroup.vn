@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@using PagedList.Mvc;
+@model PagedList.IPagedList<GROHE.Models.tblNew>
+<div class="Root">
+@Html.Raw(ViewBag.nUrl)
+</div>
+<div class="Clear"></div>
+<div id="News">
+    <h1>Tin tức</h1>
+    <div class="Line_ft"></div>
+    <div id="ContentNews">
+        <article>
+            <div id="LeftNews">
+                @foreach (var item in Model)
+            {
+                    <div class="TearNews">
+                        <a href="/3/@item.Tag" title="@item.Name"><img src="@item.ImageLinkThumb" alt="@item.Name" /></a>
+                        <a href="/3/@item.Tag" title="@item.Name" class="Name">@item.Name <span>Viết ngày : @item.DateCreate</span></a>
+                        <span class="Des">@Html.Raw(item.Description)</span>
+
+                    </div>
+            }
+                @Html.PagedListPager(Model, page => Url.Action("ListNews", new { page = page, sortOrder = ViewBag.CurrentSortOrder, sortName = ViewBag.CurrentSortName, sortLevel = ViewBag.CurrentSortLevel }), (PagedListRenderOptions)ViewBag.ship)
+
+
+            </div>
+        </article>
+        <aside>
+            @{Html.RenderAction("PartialRightNews", "News");}
+        </aside>
+    </div>
+</div>
+<div class="Clear"></div>

@@ -1,0 +1,60 @@
+﻿
+@{
+     Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@model GROHE.Models.tblNew
+           <article>
+    <div class="Root">
+        @Html.Raw(ViewBag.nUrl)
+    </div>
+    <div class="Clear"></div>
+    <div id="News">
+        <h1>@Model.Name</h1>
+        <div class="Line_ft"></div>
+
+        <div id="ContentNews">
+            <article>
+                <div id="LeftNews">
+                    <div class="Description">@Html.Raw(Model.Description)</div>
+                    @Html.Raw(ViewBag.chuoinew)
+                    <div class="ContentNew">
+                        @Html.Raw(Model.Content)
+                    </div>
+                    <div class="Author">
+                        <span>Nguồn : GROHEGOUP.vn</span>
+                    </div>
+                    <div id="Comment">
+                        <div class="nVar_2">
+                            <span>Nhận xét đánh giá</span>
+                        </div>
+                        <div id="Sluion"></div>
+                        <div id="review">
+                            <span class="rv1">Cho điểm chất lượng tin tức</span>
+                            <span class="rv2">Mời bạn đánh giá về tin tức @Model.Name</span>
+                            <div id="Content_review">
+                                <input type="radio" name="review" value="1" class="rd1" /> <img src="~/Content/Display/iCon/rating_1_rstar.gif" alt="1 điểm" />
+                                <input type="radio" name="review" value="2" class="rd2" /><img src="~/Content/Display/iCon/rating_2_rstar.gif" alt="2 điểm" />
+                                <input type="radio" name="review" value="3" class="rd3" /><img src="~/Content/Display/iCon/rating_3_rstar.gif" alt="3 điểm" />
+                                <input type="radio" name="review" value="4" class="rd4" /><img src="~/Content/Display/iCon/rating_4_rstar.gif" alt="4 điểm" />
+                                <input type="radio" name="review" value="5" class="rd5" /><img src="~/Content/Display/iCon/rating_5_rstar.gif" alt="5 điểm" />
+                            </div>
+                        </div>
+                        <div id="ConmentFacebook"></div>
+                    </div>
+                    <div class="Clear"></div>
+                    <div class="ListNewsLienquan">
+                        <span class="name_ListNewsLienquan">Tin tức MỚI</span>
+                        <ul>
+                            @Html.Raw(ViewBag.chuoinewnews)
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <aside>
+                @{Html.RenderAction("PartialRightNews", "News");}
+            </aside>
+        </div>
+    </div>
+    <div class="Clear"></div>
+</article>
+@Html.Raw(ViewBag.Coppy)

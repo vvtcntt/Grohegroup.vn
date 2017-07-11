@@ -1,0 +1,28 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@using PagedList.Mvc;
+@model PagedList.IPagedList<GROHE.Models.tblFile>
+<div class="Root">
+    <a href="/" title="Trang chủ" rel="nofollow"><span class="iCon"></span>Trang chủ</a> / <a href="/Catalogues" title="Catalogues">Catalogues</a>  
+</div>
+<div class="Clear"></div>
+<div id="Data">
+    <h1>Catalogua</h1>
+    <div class="Line_ft"></div>
+    <div id="Content_Data">
+        @foreach(var item in Model)
+        {
+         <div class="Tear_Data">
+            <div class="img">
+                <a href="@item.File" title="@item.Name"><img src="@item.Image" alt="@item.Name" /></a>
+            </div>
+             <a class="Name" href="@item.File" title="@item.Name">@item.Name</a>
+        </div>
+        }<div class="Clear"></div>
+        @Html.PagedListPager(Model, page => Url.Action("ListCatalogues", new { page = page, sortOrder = ViewBag.CurrentSortOrder, sortName = ViewBag.CurrentSortName, sortLevel = ViewBag.CurrentSortLevel }), (PagedListRenderOptions)ViewBag.ship)
+    </div>
+</div>
+<div class="Clear"></div>

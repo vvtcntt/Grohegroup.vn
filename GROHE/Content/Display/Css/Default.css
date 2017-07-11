@@ -1,0 +1,422 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body { 
+    font: 12px arial;
+    margin: 0;
+    padding: 0; background:url(../iCon/bg_body.jpg);  
+	 
+	}
+ul,li{ padding:0px; margin:0px; outline:0px; vertical-align:baseline; border:0px}
+ul,li{ list-style:none}
+a{text-decoration:none}
+a:hover{color:#fa8e00 !important} 
+img { border:none}
+.Clear{ clear:both}
+@font-face { 
+font-family:UTMPenumbra; 
+src:url(../Font/UTMPenumbra.ttf)
+}
+@font-face { 
+font-family:UTMSwiss; 
+src:url(../Font/UTMSwiss.ttf)
+}
+@font-face { font-family: Roboto; src:url(../Font/Roboto-Bold.ttf); }
+@font-face { font-family: UTMSwiss; src:url(../Font/UTMSwiss.ttf); }
+@font-face { font-family: UTM_Cafeta; src: url(../Font/UTM%20Cafeta.ttf); }
+@font-face { font-family: Dientu; src:url(../Font/QuartzRegular.ttf); }
+@font-face { font-family: SwissCondensedBold; src:url(../Font/UTM-Swiss-CondensedBold.ttf); }
+@font-face { 
+font-family:taho; 
+src:url(../Font/UTMChickenhawk.ttf); 
+}
+@font-face { 
+font-family:UTM_SwissCondensed; 
+src:url(../Font/UTM_SwissCondensed.ttf); 
+}
+header{ width:100%; height:97px; float:left; margin:0px 0px 3px 0px; padding:0; position:relative}
+
+ .h1{font-size:1px; font-weight:normal; margin:0px; color:#FFF}
+ #Logo{ width:100%; height:100%; margin:0px auto; position:absolute}
+  #Logo #bg_logo{ width:1100px; height:100%; margin:0px auto}
+ #Logo #Content_Logo{ width:250px; height:97px; float:left; margin:0px; background:url(../iCon/Logo.jpg) no-repeat center center scroll #07215a}
+  #Logo #Content_Logo a{ width:100%; height:100%; float:left; margin:0px; display:block}
+#Banner{ width:100%; height:85px; margin:6px 0px; background:#304a83; float:left}
+#Content_Banner{ width:1100px; height:100%; margin:0px auto}
+#Content_Banner #Center_Banner{ width:600px; height:100%; margin:0px 0px 0px 252px; float:left}
+#Content_Banner #Center_Banner h2{font-size:20px; color:#FFF; text-transform:uppercase; text-align:center; margin:15px auto 8px auto; font-family:UTMPenumbra; font-weight:normal}
+#Content_Banner #Center_Banner p{ color:#FFF; margin:5px auto; text-align:center; display:block; font-size:16px}
+#Content_Banner #Center_Banner p span.gr{ background:#FFF; color:#304a83; font-weight:bold; padding:5px}
+#Content_Banner #Center_Banner p span.gr span{ color:#ff6000}
+#Content_Banner #Right_Banner{ width:248px; height:100%; float:left; margin:0px}
+#Content_Banner #Right_Banner .icon{ width:65px; height:100%; float:left; margin:0px; background:url(../iCon/icon_Hotlines.png) no-repeat left center scroll transparent; background-size:100%}
+#Content_Banner #Right_Banner .Hotlines{ width:174px; height:100%; float:left; margin:0px}
+#Content_Banner #Right_Banner .Hotlines .hl1{font-size:13px; color:#FFF; text-transform:uppercase; margin:22px 5px 5px 6px; display:block}
+#Content_Banner #Right_Banner .Hotlines .hl2{font-size:16px; color:#FFF; text-transform:uppercase; margin:2px 5px 0px 6px; display:block; font-family:UTM_SwissCondensed}
+#Content_Banner #Right_Banner .Hotlines .hl2 span{font-weight:bold; color:#f0ff00; font-size:25px; line-height:25px}
+#nVar{ width:100%; height:40px; margin:0px 0px; float:left; background:#304a83}
+#nVar #Content_nVar{ width:1100px; height:100%; margin:0px auto}
+#nVar #Content_nVar #Menu_nvar{ width:250px; height:100%; background: url(../iCon/icon_list.png) no-repeat 5px center scroll #ff6001; float:left}
+#nVar #Content_nVar #Menu_nvar .Menu{display:none; margin-top:0px; position:absolute; z-index:1000}
+#nVar #Content_nVar #Menu_nvar:hover .Menu{display:block}
+#nVar #Content_nVar #Menu_nvar span{font-size:13px; color:#FFF; text-align:center; display:block; text-transform:uppercase; line-height:40px}
+#nVar #Content_nVar #Box_Search{ width:370px; height:30px; margin:5px 7px 5px 40px; background:#FFF; float:left; border-radius:4px; overflow:hidden}
+#nVar #Content_nVar #Box_Search .txtSearch{ width:280px; height:28px; background-color:transparent; border:none; float:left; text-indent:15px}
+#nVar #Content_nVar #Box_Search .btnSearch{width:68px; height:30px; border:none; background:url(../iCon/icon_search.png) no-repeat 8px center scroll #ff6001; float:right; font-size:13px; color:#FFF; text-transform:uppercase; text-indent:17px} 
+#BoxTime{ width:285px; height:100%; float:left; margin:0px 15px 0px 25px; background:url(../iCon/icon_time.png) no-repeat left center scroll transparent; font-size:13px; text-transform:uppercase; line-height:40px; text-indent:46px; color:#FFF;  }
+#BoxTime span{ font-size:18px; font-weight:bold}
+#nVar #Content_nVar #BoxOrder{ width:105px; height:100%; float:right; color:#fff;}
+#nVar #Content_nVar #BoxOrder a{color:#FFF; text-transform:uppercase; margin:7px 5px; display:block; font-size:10px}
+#nVar #Content_nVar #BoxOrder a span.icon{ width:26px; height:25px; float:left; background:url(../iCon/icon_order.png); margin:0px 13px 5px 5px}
+#nVar #Content_nVar #BoxOrder a span { text-transform:none; font-size:12px}
+section{ width:100%; height:100%; float:left; margin:0px}
+#Main{ width:1100px; height:auto; margin:5px auto}
+#Main #Header{ width:100%; height:auto; float:left; margin:0px 0px}
+#Main #Header #MainMenu{ width:250px; height:auto; float:left; margin:0px  }
+.Menu{border:1px solid #ebebeb; width:248px; float:left; margin:0px 0px 0px 0px; border-top:none; z-index:10000}
+.Menu ul.ul1{width:100%; float:left; margin:0px; background:#FFF}
+.Menu ul.ul1 .li1:last-child{border:none}
+.Menu ul.ul1 .li1{ width:100%; margin:0px; float:left; border-bottom:1px solid #ebebeb; background:url(../iCon/icon_menu.png) no-repeat 235px center scroll transparent }
+.Menu ul.ul1 .li1 a{ color:#1e1e1e; font-size:13px; margin:7px 5px; display:block}
+.Menu ul.ul1 .li1 a span{ float:left; margin:0px 7px 0px 3px;  width:16px; height:17px}
+.Menu ul.ul1 .li1 .ul2{ width:550px; height:auto; float:left; position:absolute; margin:-30px 0px 0px 249px; background:#FFF; border:1px solid #e0e0e0; display:none; z-index:100}
+.Menu ul.ul1 .li1:hover .ul2{ display:block}
+.Menu ul.ul1 .li1 .ul2 .li2{ width:170px; height:230px; float:left; margin:5px; border:1px dashed #d4d4d4}
+.Menu ul.ul1 .li1 .ul2 .li2:hover{border:1px dashed #858585}
+.Menu ul.ul1 .li1 .ul2 .li2 .tear_Menu{ width:100%; height:170px; float:left; margin:0px 0px 7px 0px; display:table; table-layout:fixed }
+.Menu ul.ul1 .li1 .ul2 .li2 .tear_Menu a{ display:table-cell; vertical-align:middle; text-align:center}
+.Menu ul.ul1 .li1 .ul2 .li2 .tear_Menu a img { width:98%; max-height:100%; margin:3px}
+.Menu ul.ul1 .li1 .ul2 .li2 a.Name { font-size:12px; color:#373736; text-transform:uppercase; text-align:center; margin:5px; display:block}
+.Menu ul.ul1 .li1 .ul2 .li2 .Line{ width:100%; height:10px; float:left; background:url(../iCon/bottoms_list.gif) no-repeat center center scroll transparent; margin:0px 0px 7px 0px}
+.f-nav{  /* To fix main menu container */
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+#Slide{width:845px;  height:300px; float:left; margin:0px 0px 0px 5px}
+#Slide img{ width:100%; height:100%; float:left; margin:0px}
+
+
+
+.hr{ width:100%; height:2px; float:left; margin:5px 0px; background:#e7e7e7}
+#ProductSale{ width:100%; height:auto; float:left; margin:5px 0px}
+ 
+#Content_ProductSale{ width:100%; height:auto; float:left; margin:5px 0px}
+#Content_ProductSale #Tear_SalePriority{ width:435px; height:540px; float:left; margin: 2px}
+#Content_ProductSale #Tear_SalePriority img{max-width:100%; height:100%; float:left}
+#Content_ProductSale .Tear_Sale{ width:214px; height:266px; float:left; margin:2px; border:1px solid #efefef; position:relative; display:block; overflow:hidden}
+#Content_ProductSale .Tear_Sale .img{ width:100%; height:188px; float:left; margin:0px; display:table; table-layout:fixed}
+#Content_ProductSale .Tear_Sale .img a{ display:table-cell; vertical-align:middle; text-align:center}
+#Content_ProductSale .Tear_Sale .img a img{ max-width:98%; max-height:188px; margin:2px}
+#Content_ProductSale .Tear_Sale h2{font-weight:normal; margin:0px}
+#Content_ProductSale .Tear_Sale a.Name{ color:#403f3f; text-transform:uppercase; margin:3px 5px; text-align:center; display:block; font-size:13px}
+#Content_ProductSale .Tear_Sale .Info{ width:100%; height:40px; float:left; bottom:3px; display:block; position:absolute}
+#Content_ProductSale .Tear_Sale .Info .Left_Info{ width:50%; height:100%; float:left; margin:0px}
+#Content_ProductSale .Tear_Sale .Info .Left_Info .Top_Left_Info{ width:100%; height:50%; float:left; margin:0px}
+#Content_ProductSale .Tear_Sale .Info .Left_Info .Top_Left_Info .Status{ width:100%; height:100%; float:left; background:url(../iCon/StockStatus1.gif) no-repeat left center scroll transparent; background-position:2px; margin:4px 1px; display:block}
+#Content_ProductSale .Tear_Sale .Info .Left_Info .Top_Left_Info .Status1{ width:100%; height:100%; float:left; background:url(../iCon/Hethang.png) no-repeat left center scroll transparent; background-position:2px;margin:4px 1px; display:block}
+#Content_ProductSale .Tear_Sale .Info .Left_Info  .Buttom_Left_Info{ width:100%; height:50%; float:left; margin:0px}
+ #Content_ProductSale .Tear_Sale .Info .Left_Info  .Buttom_Left_Info span{ font-size:10px; color:#2a2a2a; margin:3px 6px; display:block}
+#Content_ProductSale .Tear_Sale .Info .Left_Info  .Buttom_Left_Info a img:hover{ opacity:0.7}
+#Content_ProductSale .Tear_Sale .Info .Left_Info  .Buttom_Left_Info a img{ height:14px; float:left;  margin:5px 1px}
+#Content_ProductSale .Tear_Sale .Info .Left_Info  .Buttom_Left_Info a:first-child img{ margin-left:3px}
+#Content_ProductSale .Tear_Sale .Info .Left_Info  .Buttom_Left_Info a span{ height:14px; width:auto}
+#Content_ProductSale .Tear_Sale .Info .Right_Info{ width:50%; height:100%; float:left; margin:0px; text-align:right}
+#Content_ProductSale .Tear_Sale .Info .Right_Info .Pricesale{ color:#ff2400; margin:1px; font-family:UTMSwiss; font-size:16px; margin-right:3px; display:block}
+#Content_ProductSale .Tear_Sale .Info .Right_Info .Pricesale span{ font-family:Arial, Helvetica, sans-serif; font-size:10px}
+#Content_ProductSale .Tear_Sale .Info .Right_Info .Price{ font-size:11px; font-style:italic; color:#5c5c5c; margin:2px 3px}
+ .Box_ProductNews{ width:50px; height:15px; position:absolute; top:3px; right:3px; background-size:100%; background:url(../iCon/icon-new.gif) no-repeat}
+.Tear_Sale .Boxlight{width:100%;
+height:100%;
+background-image:url(../iCon/glass.png);
+background-position:-214px 0;
+background-repeat:no-repeat;
+position:absolute;
+left:0;top:0
+}
+ .sevices{ width:45%; height:auto; float:left; margin:0px}
+ .sevices .Status{ width:70px; height:22px; float:right; background:url(../iCon/StockStatus1.gif) no-repeat right center scroll transparent; background-size:100%; margin:0px 2px 0px 0px}
+ .sevices .StatusNo{ width:70px; height:22px; float:right; background:url(../iCon/Hethang.png) no-repeat right center scroll transparent; background-size:100%; margin:0px 2px 0px 0px}
+
+ .sevices .Transport{ float:right; margin:0px 3px; font-size:12px; color:#a1a1a1; text-align:right}
+ .sevices .Transport .icon{ width:16px; height:12px; float:left; background:url(../iCon/icon-car-local.jpg); margin:2px 2px 5px auto}
+ .Price_s {
+    margin: 2px 3px;
+    display: block;
+    font-style: italic;
+    color: #7a7a7a;
+    font-size: 11px;
+    text-decoration: line-through;
+    text-align: left;
+}
+.Tear_Sale .Boxlight:hover{background:url(../iCon/glass.png) no-repeat scroll 214px 0 transparent;
+transition:all 1.5s ease-in-out 0s;
+-moz-transition:all 1.5s ease-in-out 0s;
+-webkit-transition:all 1.5s ease-in-out 0s;
+cursor:pointer;}
+#Product{ width:100%; height:auto; float:left; margin:5px 0px}
+ 
+.ProductHomes{ width:100%; height:auto; float:left; margin:3px 0px}
+.ProductHomes .nVar{    width: 100%;
+    height: 30px;
+    float: left;
+    margin: 0px;
+    background: #fff;
+}
+.ProductHomes .nVar .Left_nVar{    width: auto;
+    float: left;
+    margin: 0px;
+    height: 100%;
+    position: relative;
+}
+.ProductHomes .nVar .Left_nVar .Name {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    height: 100%;
+    background: #304a83;
+}
+.ProductHomes .nVar .Left_nVar .Name .iCon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 5px 5px;
+}
+.ProductHomes .nVar .Left_nVar .Name h2 {
+    font-size: 14px;
+    color: #fff;
+    margin: 4px 30px 5px 2px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: UTM_SwissCondensed;
+    float: left;
+}
+.ProductHomes .nVar .Left_nVar .iCon_nVar {
+    border: 1px solid #304a83;
+    position: absolute;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    right: -15px;
+}
+.ProductHomes .nVar .Left_nVar .iCon_nVar span {
+    text-align: center;
+    margin: 2px auto;
+    display: block;
+    color: #304a83;
+    font-family: SwissCondensedBold;
+    font-size: 15px;
+}
+#seoquake-seobar-panel{display:none !important;}
+.seoquake-seobar-vertical-top-left{display:none !important;}
+.ProductHomes .nVar .Right_nVar{ width:auto; float:right; height:100%; margin:0px}
+.ProductHomes .nVar .Right_nVar .ul_1{ width:auto; height:100%; float:left; position:relative}
+.ProductHomes .nVar .Right_nVar .ul_1 .li_1{float:left}
+.ProductHomes .nVar .Right_nVar .ul_1 .li_1:hover{ background:#304a83; height:100%; }
+.ProductHomes .nVar .Right_nVar .ul_1 .li_1 a{ font-size:12px; color:#5e5e5e; line-height:30px;  float:left; margin:auto 5px}
+.ProductHomes .nVar .Right_nVar .ul_1 .li_1 a:hover{ color:#FFF !important}
+.ProductHomes .nVar .Right_nVar .ul_1 .li_1 a span{ width:12px; height:6px; float:right; background:url(../iCon/tamgiac.png) no-repeat; margin:12px 4px; opacity:0.7;}
+.ProductHomes .nVar .Right_nVar .ul_1 .li_1:hover a span{background:url(../iCon/tamgiac_hover.png) no-repeat}
+.ProductHomes .nVar .Right_nVar .ul_1 .li_1 .ul_2{ display:none;   width:170px; position:absolute; height:100%; margin-top:30px; z-index:10;background:#fff; border:1px solid #1d1d1d; height:auto !important; float:left; padding:5px}
+.ProductHomes .nVar .Right_nVar .ul_1 .li_1 .ul_2 .li_2 a:hover{ color:#ff5e26 !important}
+.ProductHomes .nVar .Right_nVar .ul_1 .li_1 .ul_2 .li_2 a{ line-height:normal !important; margin:5px 5px; display:block}
+.ProductHomes .nVar .Right_nVar .ul_1 .li_1:hover .ul_2{ display:block; }
+.ProductHomes .nVar .Right_nVar  .Xemchitiet{ font-size:12px; text-align:right; float:right; line-height:30px; color:#304a83; margin-left:15px}
+.ProductHomes .bg_ProductHomes{     width: 100%;
+    height: auto;
+    float: left;
+    margin: 0px 0px;
+    background: #304a83;
+    padding: 2px 0px 0px 0px;} 
+.ProductHomes  .Content_ProductHomes{
+     width: 1099px;
+    height: 100%;
+    float: left;
+    margin: 0px;
+    background: #FFF;
+    border-right: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+}
+.ProductHomes  .Content_ProductHomes .Left_Content_ProductHomes	{
+	width:19%; height:auto; float:left; margin:0px 0px}
+.ProductHomes  .Content_ProductHomes .Left_Content_ProductHomes a img{ float:left; margin:0px; max-width:100%; height:auto; float:left}
+.ProductHomes  .Content_ProductHomes .Right_Content_ProductHomes{ width:80%; height:auto; float:left; margin:5px 0px 0px 5px}
+.Tear_1{ width:169.8px; height:240px; float:left; margin:2px;border:1px solid #efefef; position:relative; display:block; overflow:hidden}
+.Tear_1 .img{ width:100%; height:155px; float:left; margin:0px; display:table; table-layout:fixed}
+.Tear_1 .img a{ text-align:center; display:table-cell; vertical-align:middle}
+.Tear_1 .img a img{ max-width:98%; margin:2px; max-width:97%; max-height:155px}
+.Tear_1 h3{font-weight:normal; margin:0px}
+.Tear_1 a.Name{ color:#393939; font-size:12px; margin:2px 3px; text-align:center; display:block}
+.Tear_1 .Info{ width:100%; height:40px; position:absolute; bottom:3px; float:left}
+.Tear_1 .Info .LeftInfo{ width:50%; height:100%; float:left; margin:0px; text-align:left}
+.Tear_1 .Info .LeftInfo .PriceSale{ font-size:14px; font-family:UTMSwiss; color:#ff3c00; display:block; margin:2px 3px}
+.Tear_1 .Info .LeftInfo .Price{ font-size:10px; color:#4f4f4f; font-style:italic; margin:2px 3px; display:block}
+.Tear_1 .Info .RightInfo{ width:50%; height:100%; float:left; margin:0px; text-align:left}
+.Tear_1 .Info .RightInfo .Top_RightInfo{ width:100%; height:50%; float:left; margin:0} 
+.Tear_1 .Info .RightInfo .Top_RightInfo span{ width:17px; height:13px; background:url(../iCon/giohang.png) no-repeat; float:right; margin:5px 3px 1px 3px; background-size:100%}
+.Tear_1 .Info .RightInfo .Top_RightInfo span:hover{opacity:0.7}
+.Tear_1 .Info .RightInfo .Bottom_RightInfo{ width:100%; height:50%; float:left; margin:0; text-align:right} 
+.Tear_1 .Info .RightInfo .Bottom_RightInfo span{ color:#2a2a2a; font-size:12px; margin:3px; display:block}
+.Tear_1 .Info .RightInfo .Bottom_RightInfo a img:hover{ opacity:0.7}
+.Tear_1 .Info .RightInfo .Bottom_RightInfo a img{ height:12px; float:right;  margin:5px 1px}
+.Tear_1 .Info .RightInfo .Bottom_RightInfo .Buttom_Left_Info a:first-child img{ margin-left:3px}
+  .Tear_1 .Boxlight{width:100%;
+height:100%;
+background-image:url(../iCon/glass.png);
+background-position:-250px 0;
+background-repeat:no-repeat;
+position:absolute;
+left:0;top:0
+}
+.Tear_1 .Boxlight:hover{background:url(../iCon/glass.png) no-repeat scroll 170px 0 transparent;
+transition:all 1.5s ease-in-out 0s;
+-moz-transition:all 1.5s ease-in-out 0s;
+-webkit-transition:all 1.5s ease-in-out 0s;
+cursor:pointer;}
+.Tear_1 .Box_Sale{ width:25px; height:25px; float:left; background:url(../iCon/icon-qua-tang.png) no-repeat; position:absolute; right:3px; top:3px; background-size:100%}
+footer{ width:100%; height:auto; float:left; margin:20px 0px 0px 0px; background:#FFF; border:1px solid #f2f1f1}
+#Services{ width:1100px; height:auto; margin:20px auto 10px auto}
+.Tear_Chinhhang{ width:30%; height:66px; float:left; margin:5px 5px 5px 0px; background:url(../iCon/ft_chinhhang.png) no-repeat left center scroll transparent; background-position:5px}
+.Tear_Chinhhang .Name{ font-size:16px; color:#393939; text-transform:uppercase; font-family:SwissCondensedBold; margin:2px 5px 3px 65px; display:block}
+.Tear_Chinhhang .Des{ font-style:italic; font-size:12px; color:#796666; margin:3px 5px 3px 65px; display:block}
+.Tear_Dichvu{ width:30%; height:66px; float:left; margin:5px 50px; background:url(../iCon/ft-dichvu.png) no-repeat left center scroll transparent; background-position:5px}
+.Tear_Dichvu .Name{ font-size:16px; color:#393939; text-transform:uppercase; font-family:SwissCondensedBold; margin:2px 5px 3px 65px; display:block}
+.Tear_Dichvu .Des{ font-style:italic; font-size:12px; color:#796666; margin:3px 5px 3px 65px; display:block}
+.Tear_Muahang{ width:30%; height:66px; float:right; margin:5px 0px 5px 5px; background:url(../iCon/ft-muahang.png) no-repeat left center scroll transparent; background-position:5px}
+.Tear_Muahang .Name{ font-size:16px; color:#393939; text-transform:uppercase; font-family:SwissCondensedBold; margin:2px 5px 3px 65px; display:block}
+.Tear_Muahang .Des{ font-style:italic; font-size:12px; color:#796666; margin:3px 5px 3px 65px; display:block}
+.Line_ft{ margin:5px auto; height:1px; width:1100px; background:#f2f1f1}
+#List_Info{ width:1100px; height:auto; margin:5px auto}
+.Tear_Info{ width:20%; height:auto; float:left; margin:5px 5px}
+.Tear_Info .Name{ font-size:16px; margin:5px 0px 0px 0px; text-transform:uppercase; display:block; font-family:UTM_SwissCondensed; color:#383838}
+.line_Bo{ width:100%; height:10px; background:url(../iCon/bottoms_list.gif) no-repeat left center scroll transparent; float:left; margin:5px 0px 7px 0px}
+.Tear_Info a{ font-size:12px; color:#454444; margin:6px 2px; display:block}
+.Tear_Info-1{ width:27%; height:auto; float:left; margin:5px 5px}
+.Tear_Info-1 .Name{ font-size:16px; margin:5px 0px 0px 4px; text-transform:uppercase; display:block; font-family:UTM_SwissCondensed; color:#383838}
+.Location { font-size:12px; color:#454444; margin:6px 2px; display:block}
+.Location .icon{ width:14px; height:12px; float:left; margin:3px 15px 2px 5px; background:url(../iCon/location.png) no-repeat}
+.Hotline { font-size:17px; color:#454444; margin:6px 2px; display:block; font-family:SwissCondensedBold; text-transform:uppercase}
+.Hotline .icon{ width:25px; height:25px;; float:left; margin:2px 7px 1px 1px; background:url(../iCon/phone2x.gif) no-repeat; background-size:100%}
+.Phone { font-size:12px; color:#454444; margin:auto 2px; display:block; line-height:23px}
+.Phone .icon{ width:25px; height:19px; float:left; margin:3px 8px 2px 2px; background:url(../iCon/icon_Phone.png) no-repeat; background-size:100%}
+.Email { font-size:12px; color:#454444; margin:6px 2px; display:block}
+.Email .icon{ width:18px; height:13px; float:left; margin:3px 10px 2px 6px; background:url(../iCon/icon_Email.png) no-repeat; background-size:100%}
+.n_var{ width:auto; height:35px; float:left; margin:5px 0px}
+.n_var .Left_n_Var{ width:66px; height:100%; float:left; background:url(../iCon/left_Nvar.png) no-repeat}	
+.n_var .Right_n_Var{ width:26px; height:100%; float:left; background:url(../iCon/right_nVar.png) no-repeat}	
+.n_var .Center_n_Var{ width:auto; height:100%; float:left; margin:0px; background:#064980}	
+.n_var .Center_n_Var h3{font-size:16px; color:#FFF; text-transform:uppercase; margin:0px 10px; font-family:SwissCondensedBold; font-weight:normal; line-height:35px}	
+.Tear_Info_2{ width:27%; height:auto; float:right; margin:5px 5px}
+.Tear_Info_2 .Name{ font-size:16px; margin:5px 0px 0px 0px; text-transform:uppercase; display:block; font-family:UTM_SwissCondensed; color:#383838}
+.Tear_Info_2 .Des{ font-size:12px; color:#454444; margin:6px 2px; display:block; font-style:italic}
+.Tear_Info_2 .Row{ width:100%; height:22px; float:left; margin:3px 0px}
+.Tear_Info_2 .Row .col_1{ width:30%; height:100%; color:#383838; line-height:22px; float:left; display:block}
+.Tear_Info_2 .Row .col_2{ width:65%; height:100%; color:#383838; line-height:100%; float:left}
+.Tear_Info_2 .Row .col_2 input{ width:90%; height:18px; border:1px dashed #a3a3a3; margin:0px 5px; float:left}.Tear_Info_2 .Row .col_2 select{ width:91%; height:22px; border:1px dashed #a3a3a3; background-color:transparent; margin:0px 5px; float:left; font-size:12px; color:#787878}
+.Tear_Info_2 .Row button{ width:80px; height:23px; border:1px solid #CCC; background-color:transparent;  margin:2px auto; display:block; }
+#Footter{ width:100%; height:auto; float:left; margin:0px; background:#304a83}
+#Footter #Content_Footter{ width:1100px; height:120px; margin:0px auto}
+#Footter #Content_Footter #Left{ width:25%; height:80%; float:left; background:url(../iCon/logo_Grohe.png) no-repeat left center scroll #FFF; background-size:100%; margin:10px 0px 0px 0px; border-radius:5px}
+#Footter #Content_Footter #Center{ width:57%; height:100%; float:left; margin:0px}
+#Footter #Content_Footter #Center .Coppyright{ text-align:center; color:#FFF; font-size:15px; margin:20px 5px 1px 5px; display:block}
+#Footter #Content_Footter #Center .Name{ font-size:16px; color:#FFF; margin:5px 5px; display:block; font-family:SwissCondensedBold; text-align:center; text-transform:uppercase}
+#Footter #Content_Footter #Center .ft1{ font-size:12px; color:#FFF; margin:  5px; display:block; text-align:center}
+#Footter #Content_Footter  #Right{ width:18%; height:100%; float:left; margin:0px; display:table; table-layout:fixed}
+#Footter #Content_Footter  #Right a{ display:table-cell; vertical-align:middle}
+#Footter #Content_Footter #Right img{ float:right; margin:10px 0px; display:block}
+#Footter #LinkURL{ width:1100px; height:auto; margin:0px auto }
+#Footter #LinkURL a{ color:#1c58c7; font-size:10px}
+#Sidebar{ width:100%; height:43px; background-color:#13439c; float:left; padding:0px;   z-index:1; display:none }
+#Content_Sidebar{ width:1100px; height:100%; margin:0px auto}
+#Content_Sidebar .Logo{ width:130px; height:100%; float:left; margin:0px; display:table; table-layout:fixed}
+#Content_Sidebar .Logo a{ display:table-cell; vertical-align:middle;}
+#Content_Sidebar .Logo a img{ max-width:100%; height:auto}
+#Content_Sidebar .Chinhhang{ width:73px; height:100%; float:left; margin:0px 8px; background:url(../iCon/chinhhang.png) no-repeat left center scroll transparent}
+#Content_Sidebar #Menu{ width:180px; height:100%; float:left; margin:0px 20px}
+#Content_Sidebar #Menu .iCon{ width:12px; height:12px; float:left; margin:16px 10px auto 5px; background:url(../iCon/iconMenu.png) no-repeat}
+#Content_Sidebar #Menu span{ font-size:16px; color:#fff; text-transform:uppercase; font-family:SwissCondensedBold; line-height:43px}
+#Content_Sidebar #Menu:hover ul.ul1{display:block}
+#Content_Sidebar #Menu ul.ul1{ width:100%; height:auto; float:left; margin:0px; z-index:100000; position:absolute; background:#13439c; width:180px; ; border-top:none;position:relative; display:none}
+#Content_Sidebar #Menu ul li{ background:url(../iCon/line.png) repeat-x left bottom scroll transparent; position:relative}
+#Content_Sidebar #Menu ul li:hover{background:#1a4ead}
+#Content_Sidebar #Menu ul li:last-child{background:none}
+#Content_Sidebar #Menu ul li:hover a{ color:#fff !important}
+#Content_Sidebar #Menu ul li a{ font-size:12px; padding:7px 5px; display:block; color:#FFF; display:block}
+#Content_Sidebar #Menu ul li ul{ width:170px; height:auto; float:left; margin-left:180px; background:#1a4ead; position:absolute; margin-top:-28px; display:none}
+#Content_Sidebar #Menu ul li:hover ul{ display:block}
+#Content_Sidebar #Search{ width:222px; height:100%; float:left; margin:0px 20px}
+#Content_Sidebar #Hotline{ width:190px; height:100%; float:left; margin:0px 20px 0px 35px; background:url(../iCon/icon_Hotline1.png) no-repeat left center scroll transparent}
+#Content_Sidebar #Hotline span{ font-size:17px; color:#FFF; font-family:SwissCondensedBold; line-height:43px; margin-left:40px; display:block}
+#Content_Sidebar #Giohang{ width:120px; height:100%; float:right; margin:0px 0px 0px 20px}
+#Content_Sidebar #Giohang a{ color:#FFF; margin:auto 5px; line-height:43px; display:block}
+#Content_Sidebar #Giohang a span{ width:19px; height:15px; float:left; background:url(../iCon/icon_giohang.png) no-repeat; margin:12px 10px}
+.f-nav{  /* To fix main menu container */
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+#Menu_mb{ width:100%; height:50px; float:left; margin:0px; background:#07215a; display:none}
+#Menu_mb img{ float:left; width:auto; height:100%; margin-left:10px}
+#MenuMobile{ width:120px; height:25px;  display:none; margin:10px 2px 5px auto; float:right; border:1px solid #efefed;}
+#MenuMobile a { line-height:25px; display:block; color:#FFF; text-transform:uppercase; font-family:SwissCondensedBold; font-size:15px}
+#MenuMobile a span{    width: 12px;
+    height: 12px;
+    float: left;
+    margin: 8px 10px auto 5px;
+    background: url(../iCon/iconMenu.png) no-repeat;}
+#ProductSYN{ width:1100px; height:auto; margin:5px 0px}
+#ProductSYN .Adw_Syn{ width:100%; height:auto; float:left; margin:0px 0px 7px 0px}
+#ProductSYN .Adw_Syn img{ max-width:100%; height:auto; float:left}
+#BannerTimes{ width:1100px; height:120px; background:url(../iCon/Banner-times.png) no-repeat; margin:20px auto 10px auto}
+#nVar_ProductSYN{ width:100#; height:auto; float:left; margin:5px 0px}
+#nVar_ProductSYN span {    font-size: 16px;
+    color: #242424;
+    text-transform: uppercase;
+    margin: 0px 0px;
+    font-family: SwissCondensedBold;
+    font-weight: normal;}
+	  .Bottom_Tear_Sale{ width:100%; height:auto; float:left; margin:3px 0px}
+  
+ .Bottom_Tear_Sale .Price{ width:55%; height:50px;  float:left;  top:150px; overflow:hidden}
+ .Bottom_Tear_Sale .PriceSale{ font-size:18px; color:#ff3c00; font-family:UTMSwiss; line-height:15px; margin:0px; display:block;  text-align:left; margin:3px 5px; display:block;  
+ text-shadow: 0 0 2px #fff; 
+filter: progid:DXImageTransform.Microsoft.Glow(Color=#ffffff,Strength=1);
+ }
+#Content_ProductSYN{ width:100%; height:auto; margin:0px;   float:left}
+ .spdb{ width:19.4%; float:left; margin:2px; border:1px solid #f3f3f3; position:relative}
+ .spdb .img_spdb{ width: 100%; max-height:240px; float:left; margin:0px; display:table; table-layout:fixed}
+  .spdb .img_spdb a{ display:table-cell; vertical-align:middle; text-align:center}
+  .spdb .img_spdb img{ max-width:100%; margin:0px}
+  .spdb .Name{ font-size:12px; color:#525252; margin:4px; font-family:Arial, Helvetica, sans-serif; text-align:center; display:block; text-transform:uppercase}
+  .spdb .Note{ font-size:11px; font-style:italic; color:#8d8d8d; margin:5px 2px; display:block; text-align:center}
+  .spdb .Box_Price{ width:100%; height:30px; top:60%;position:absolute;  text-align:right}
+ .spdb .Box_Price span{ font-size:18px; color:#ff3c00; text-align:right; margin:auto 1px; line-height:100%; font-family:UTMSwiss   }
+  .spdb .Box_Price span span{ font-size:11px; font-family:Arial, Helvetica, sans-serif; text-align:right } 
+  .spdb .sptb{ width:60px; height:60px; position:absolute; right:0px; background:url(../iCon/icon_Theobo.png) no-repeat left center scroll transparent}
+#Adw_sbdb{ width:100%; height:auto; float:left; margin:5px 0px; overflow:hidden} 
+#Adw_sbdb img{width:auto; height:100%; max-width:100%; float:left; margin:0px}
+.fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style], .fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style]
+ {
+ 
+       width: 100% !important;
+ 
+}
+ .fb-like{ width:118px; height:15px; float:left; margin:7px 6px 7px 0px}
+.tweet{ width:70px; height:15px; float:left; margin:7px 5px}
+.float-ck { position: fixed; bottom: 0px; z-index: 9000}
+* html .float-ck {position:absolute;bottom:auto;top:expression(eval (document.documentElement.scrollTop+document.docum entElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))) ;}
+ 
+#hide_float_left {text-align:left; font-size: 11px;}
+#hide_float_left a {background: #01AEF0; padding: 2px 4px; color: #FFF;}
+.uudai{ width:100%; height:auto; float:left; margin:5px 0px}
+.uudai img{ width:363px; height:auto; float:left; margin:0px 5px}
+.uudai a:last-child img{ float:right; margin:0px}
+.uudai a:first-child img{  margin:0px}
+#Maps_Homes{ width:1100px; height:120px;   margin:10px auto 10px auto}
+#Maps_Homes p{ margin:0px}
+#Maps_Homes iframe{ width:100%; height:100%;   margin:0px; float:left}

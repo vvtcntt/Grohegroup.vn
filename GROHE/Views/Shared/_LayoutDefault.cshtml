@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Html.Raw(ViewBag.Title)
+    @Html.Raw(ViewBag.dcTitle)
+    @Html.Raw(ViewBag.Description)
+    @Html.Raw(ViewBag.dcDescription)
+    @Html.Raw(ViewBag.Keyword)
+    <meta name="geo.region" content="VN-HN" />
+    <meta name="geo.position" content="20.987303;105.806721" />
+    <meta name="ICBM" content="20.987303, 105.806721" />
+    <meta http-equiv="Content-Language" content="vi">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/Display/Css/Data.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/Default.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/Default_Rs.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/jquery.mmenu.all.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/News.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/News_Rs.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/Order.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/Order_res.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/prettyPhoto.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/Product.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/Product_Rs.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/Maps.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/linhnguyen.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/styles.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/datepicker.css" rel="stylesheet" />
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-27277318-25', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    @Html.Raw(ViewBag.h1)
+    <header>
+        @{Html.RenderAction("ControlHeader", "Header");}
+    </header>
+    <div class="Clear"></div>
+    <section>
+        @{Html.RenderAction("PartialnVar", "Header");}
+        <div id="Main">
+            @RenderBody()
+        </div>
+    </section>
+
+    <footer>
+        <script src="~/Content/Display/Js/Adw.js"></script>
+
+        @{Html.RenderAction("ControlFootter", "Footter");}
+        <!--    Quảng cáo-->
+        @if (Request.Browser.IsMobileDevice)
+        { }
+        else
+        {
+            Html.RenderAction("AdwLeftRight", "Default");
+            Html.RenderAction("AdwLeftExt", "Default");
+
+            Html.RenderAction("Popup", "Default");
+
+        }
+
+
+        <script>
+            document.write("<script type='text/javascript' language='javascript'>MainContentW = 1100;LeftBannerW = 128;RightBannerW = 128;LeftAdjust = 5;RightAdjust = 5;TopAdjust = 147;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
+        </script>
+    </footer>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <script src="~/Content/Display/Js/jquery.mmenu.min.all.js"></script>
+    <script src="~/Content/Display/Js/jquery.prettyPhoto.js"></script>
+    <script src="~/Content/Display/Js/PopupDetailProduct.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Content/Display/Js/jquery.popup.js"></script>
+    @if (Request.Browser.IsMobileDevice == false)
+    {
+
+        <script src="~/Content/Display/Js/js.js"></script>
+    }
+    <script type="text/javascript">
+        $(function () {
+            $('nav#menu').mmenu({
+                extensions: ['effect-slide', 'pageshadow'],
+                header: true,
+                searchfield: true,
+                counters: true,
+                footer: {
+                    add: true,
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function hide_float_left() {
+            var content = document.getElementById('float_content_left');
+            var hide = document.getElementById('hide_float_left');
+            if (content.style.display == "none")
+            { content.style.display = "block"; hide.innerHTML = '<a href="javascript:hide_float_left()">Tắt quảng cáo [X]</a>'; }
+            else {
+                content.style.display = "none"; hide.innerHTML = '<a href="javascript:hide_float_left()">Xem quảng cáo...</a>';
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            if (document.cookie.indexOf("adf") == -1) {
+                document.cookie = "popunder1=adf";
+                $('#myModal').linhnguyen($('#myModal').data());
+            }
+        });
+    </script>
+
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1486305081684176',
+                xfbml: true,
+                version: 'v2.4'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+</body>
+</html>

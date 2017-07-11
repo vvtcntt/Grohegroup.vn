@@ -1,0 +1,165 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body {
+  
+ background: url(../Icon/bg_body.jpg)repeat scroll;
+    font: 12px arial;
+    margin: 0;
+    padding: 0;
+ 
+}
+@font-face { font-family: UTM_Cafeta; src: url(../Font/UTM%20Cafeta.ttf); }
+ul,li{ padding:0px; margin:0px; outline:0px; vertical-align:baseline; border:0px}
+ul,li{ list-style:none  }
+a{text-decoration:none}
+a:hover{color:#3d6b50 !important}
+img { border:none}
+.Clear{ clear:both}
+#Main{ width:100%; height:auto; float:left; margin:0px; padding:0px}
+#Top_Main{  width:100%; height:auto; float:left; margin:0px; padding:0px}
+#nvar_Top{background: url(../Icon/bg_nvar.png) repeat scroll 50% center transparent;
+height: 35px;
+margin: 0px 1px;
+border-radius: 5px 5px 0px 0px;
+padding: 0px; 
+border: 1px solid #89B7D9;
+}
+#nvar_Top a{ line-height:35px; margin:auto 5px; color:#FFF; font-weight:bold }
+#nvar_Top a img{ float:left; margin:4px 2px}
+#nvar_Bottom{background-color: #F7F6F6;
+height: 30px;
+margin: 0px 1px;
+border-right: 1px solid #E7E6E6;
+border-bottom: 1px solid #E7E6E6;
+border-left:  1px solid #E7E6E6;
+ 
+border-image: none;
+padding-left: 10px;
+line-height: 30px;
+font-weight: bold;}
+#nvar_Bottom_left{ width:auto; height:100%; float:left; margin:0px}
+#nvar_Bottom_left_1{float:left; background:url(../Icon/User.gif) no-repeat left; padding-left:20px;}
+#nvar_Bottom_left_2{float:left; margin-left:40px}
+#ul_Right{ float:right; height:35px ;width:auto; margin:0px; display:table }
+ 
+#ul_Right a{ margin-right:25px;    color:#000; float:right; display:table-cell; vertical-align:middle}
+#ul_Right a img{ margin:5px 6px; width:24px; height:18px; float:left}
+#Content{ width:100%; height:auto; margin:0px; padding:1px; margin:5px 1px; float:left;min-height:510px}
+#Left_Content{ width:14.5%; min-width:195px; height:auto; float:left; margin:0;min-height:510px}
+.Tear_Menu{width:100%; height:auto; float:left; margin:0px 0px;background: #F8F6F7;}
+.Nvar_menu{background: url(../Icon/bg_nvar.png) repeat scroll 50% center transparent;
+border-radius: 5px 5px 0px 0px;
+height: 30px;
+color: #FFF;
+font-weight: bold;
+line-height: 30px; 
+text-transform: uppercase;   
+width:100%;
+display:table  }
+.Nvar_menu img{  float:left ;margin:5px 6px; width:20px; height:auto }
+.List_menu{border-right: 1px solid #E7E6E6;
+border-bottom: 1px solid #E7E6E6;
+border-left:  1px solid #E7E6E6;width:99.2%; height:auto; float:left; margin:0px}
+.List_menu ul{ width:100%; height:auto; float:left; margin:3px 0px; padding:0px;  }
+.List_menu ul li{ 
+    list-style: none outside none;
+    border-bottom: 1px solid #E7E6E6;
+    border-top: 1px solid #FFF;
+  
+ }
+.List_menu ul li:last-child{ border-bottom:none}
+.List_menu ul li:first-child{ border-top:none}
+.List_menu ul li a{ font-weight:bold; color:#000; margin:5px 5px; display:block}
+#Footter{background: url(../Icon/bg_nvar.png) 50%;
+height: 30px;
+line-height: 30px;
+-webkit-border-radius: 0px 0px 5px 5px;
+margin-left: 5px;
+margin-right: 5px;
+text-align: center;
+color: #FFF;
+font-weight: bold;
+width:100%; margin:0px 1px}
+#Right_Content{ width:85%; float:right; margin:0px 2px; border:1px solid #E7E6E6;; min-height:510px; border-radius: 5px 5px 0px 0px;background: #F8F6F7;}
+#Content_Detail{ width:100%; height:auto; float:left; margin:0}
+.Nvar_Content_Detail{background: url(../Icon/bg_nvar.png) repeat scroll 50% center transparent;
+border-radius: 5px 5px 0px 0px;
+height: 30px;
+color: #FFF;
+font-weight: bold;
+line-height: 30px;
+padding-left: 10px;
+text-transform: uppercase;}
+ #drMenu {
+        text-transform: none !important 
+    }
+.Left_Nvar{ width:auto; height:100%; float:left; margin:0px}
+.Left_Nvar img{ float:left; margin:3px 5px}
+.Center_Nvar{ width:auto; height:100%; float:left; margin:0px}
+
+.txtSearch{ width:200px; height:20px; border:1px solid #e8e8e8; float:left; margin:3px 2px 3px 20px}
+.Center_Nvar select{ width:auto; height:24px; float:left; margin:3px }
+.btnSearch{ height:24px;   margin:3px; float:left}
+.Right_Nvar{ width:auto; height:100%; float:right; margin:0px}
+.Right_Nvar  a{   color: #FFF; width:90px; height:24px; background-color:#2e9de2; margin:1px 2px; float:left;  font-size:11px; line-height:24px; text-align:center; border:1px solid #FFF }
+ .Right_Nvar  a span{font-weight:bold; color:#FF0; font-size:14px }
+ .Content_Content_Detail{ width:100%; height:auto; float:left; margin:0}
+ .Nvar_1{ width:100%; height:auto; float:left; margin:0; line-height:30px; background-color:#efedec; font-weight:bold; color:#084BBE; text-align:center; border-bottom: 1px solid #dcdad9}
+ .clo_1{ width:4%; float:left; margin:0px; border-right: 1px solid #dcdad9;
+}
+.clo_Image{ width:12%; float:left; margin:0px; border-right: 1px solid #dcdad9;}
+  .clo_2{ width:57%; float:left; margin:0px; border-right: 1px solid #dcdad9; text-align:left; margin:auto 2px; display:block}
+  .clo_2 a{color:#3b3b3b}
+   .clo_3{ width:10%; float:left; margin:0px; border-right: 1px solid #dcdad9}
+    .clo_4{ width:6%; float:left; margin:0px; border-right: 1px solid #dcdad9;}
+	 .clo_5{ width:5%; float:left; margin:0px; border-right: 1px solid #dcdad9;}
+	  .clo_6{ width:5%; float:left; margin:0px; border-right: 1px solid #dcdad9;}
+	   .clo_1 input{ margin:8px auto; display:block}
+	   .Nvar_2{width:100%; height:auto; float:left; margin:0; line-height:30px; background-color:#f5f5f5; font-weight:bold; color:#3b3b3b; text-align:center; border-bottom: 1px solid #dcdad9}
+	   .Edit{ background:url(../Icon/Edit.png) no-repeat left center scroll transparent; width:16px; height:16px; margin:7px auto; border:none; display:block}
+	    .Delete{ background:url(../Icon/Delete.png) no-repeat left center scroll transparent; width:16px; height:16px; margin:7px auto; border:none; display:block}
+		.txtSort{ width:22px; height:13px; margin:5px auto; display:block}
+		.clo_3 input {
+margin: 8px auto;
+display: block;}
+.Nvar_2:nth-child(2n){ background-color:#f9f6f6}
+.nVar_3{width:100%; height:auto; float:left; margin:0; line-height:30px; background-color:#efedec; font-weight:bold; color:#084BBE; text-align:center; border-bottom: 1px solid #dcdad9}
+.clo_7{  width:70%; float:left; margin:0px; text-align:left }
+.clo_7 .a_bt{color: #FFF; width:90px; height:24px; background-color:#2e9de2; margin:1px 2px; float:left;  font-size:11px; line-height:24px; text-align:center; border:1px solid #FFF }
+.clo_7 img{ float:left; margin:7px}
+.clo_8{  width:20%; float:right; margin:0px; text-align:right }
+.btnUpdate{ width:80px; height:20px; margin:5px auto; float:right}
+.LinkRoot{ width:100%; height:20px; float:left; margin:2px 0px; border: 1px solid #E7E6E6; background:#F7F6F6}
+.LinkRoot ul li{ float:left}
+.LinkRoot ul li .icon_Homes{ width:13px; height:13px; background-image:url(../Icon/Home.png) ; float:left; margin:2px 0px 2px 10px}
+.LinkRoot ul li a{ line-height:20px; margin:auto 5px; color:#333}
+.alert-info
+{
+    font-size: 12px;
+    color: #ffd800; line-height:30px; text-transform:none; margin:auto 20px; width:auto; height:30px; float:left
+}
+#msg
+{
+    font-size: 12px;
+    color: #ffd800;
+    line-height: 30px;
+    text-transform: none !important;
+}
+.clo_Image img
+{
+    max-width: 100%;
+    height: auto;
+    float: left;
+}
+.btnDeleteAll
+{ 
+width: 90px;
+height: 24px;
+background-color: #2e9de2;
+margin: 1px 2px;
+float: left; color:#FFF;
+border: 1px solid #FFF;
+}
+.ListImages .Tear_Images{ width:15%; height:100px; float:left; margin:4px; border:1px solid #efecec}
+.ListImages .Tear_Images img{ max-width:100%; max-height:85px; float:left; width:auto}

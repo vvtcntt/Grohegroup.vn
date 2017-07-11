@@ -1,0 +1,938 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="Css/Order.css" />
+<link type="text/css" rel="stylesheet" href="Css/Order_res.css" />
+	<link type="text/css" rel="stylesheet" href="Css/Product.css" />
+    <link type="text/css" rel="stylesheet" href="Css/Product_Rs.css" />
+    <link type="text/css" rel="stylesheet" href="Css/Index.css" />
+    <link type="text/css" rel="stylesheet" href="Css/slide.css" />
+      <link type="text/css" rel="stylesheet" href="Css/Index_Rs.css" />
+          <link type="text/css" rel="stylesheet" href="Css/prettyPhoto.css" />
+    <link type="text/css" rel="stylesheet" href="Css/jquery.mmenu.all.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="Js/Scroll.js"></script>
+    <script type="text/javascript" src="Js/Adw.js"></script>
+    <script type="text/javascript" src="Js/jquery.mmenu.min.all.js"></script>
+    	<script type="text/javascript" src="Js/jquery.prettyPhoto.js"></script>
+		  <link type="text/css" rel="stylesheet" href="Css/Sale.css" />
+<script type="text/javascript" src="Js/crawler.js"></script>
+<script type="text/javascript" src="Js/jquery.js"></script>
+<script type="text/javascript">
+marqueeInit({
+	uniqueid: 'mycrawler',
+	style: {
+		 
+		'width': '1190px',
+	},
+	inc: 1, //speed - pixel increment for each iteration of this marquee's movement
+	mouse: 'cursor driven', //mouseover behavior ('pause' 'cursor driven' or false)
+	moveatleast: 2,
+	neutral: 150,
+	persist: true,
+	savedirection: true
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+            $('.blink').each(function() {
+                var elem = $(this);
+                setInterval(function() {
+                    if (elem.css('visibility') == 'hidden') {
+                        elem.css('visibility', 'visible');
+                    } else {
+                        elem.css('visibility', 'hidden');
+                    }    
+                }, 900);
+            });
+        });
+</script>
+  <script type="text/javascript">
+			$(function() {
+				$('nav#menu').mmenu({
+					extensions	: [ 'effect-slide', 'pageshadow' ],
+					header		: true,
+					searchfield	: true,
+					counters	: true,
+					footer		: {
+						add			: true,
+ 					}
+				});
+			});
+		</script>
+        <script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+			</script>
+    <title>Untitled Document</title>
+</head>
+<body>
+ 
+ <div id="Main">
+    	<div id="Banner" style="background:url(iCon/Banner_Sale.png) no-repeat">
+        	<div id="Left"></div>
+            <div id="Center">
+            	<h1>" Chào hè giá sốc với thiết bị vệ sinh inax "</h1>
+            </div>
+            <div id="Right">
+            	 <div id="date">
+                 	<div id="LeftDate">
+                    	<span>05/12/2015</span>
+                    </div> <span class="lh" style="float:left; height:3px; width:3px; margin-top:87px; color:#F00">-</span>
+                    <div id="RightDate"   >
+                    	<span>05/12/2015</span>
+                    </div>
+                 </div>
+                 <div id="Count">
+                 	<span >Chỉ còn <span class="blink">9</span> ngày</span>
+                 </div>
+                 <span class="Dateday">Hôm nay : Ngày 25/06/2015</span>
+             </div>
+        </div>
+        <div class="Clear"></div>
+        <div id="TestRun">
+        <div class="marquee" id="mycrawler">
+<span>- CHương trình khuyến mại chỉ áp dụng cho khách hàng tại khu vực Hà Nội và các tỉnh thành lân cận. Các khu vực khác khách hàng vui lòng liên hệ theo số hotline ! - </span>
+</div>
+        	
+        </div>
+         <div class="Clear"></div>
+         <div id="Box_ImageSale">
+         	<img src="iCon/Con_loc_van_phong_pham_anh_phuoc.jpg" alt="Inax Việt Nam" />
+         </div>
+         <div class="Clear"></div>
+        <div id="Menu">
+        	<div id="Top_Menu">
+            	<div id="Left">
+                	<span>Danh mục khuyến mại</span>
+                </div>
+                <div id="Right">
+                	<ul>
+                    	<li><a href="#" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu Inax</a></li>
+                        <li><a href="#" title="Thiết bị vệ sinh Inax chính hãng">Bồn tắm Inax</a></li>
+                        <li><a href="#" title="Thiết bị vệ sinh Inax chính hãng">Chậu rửa Inax</a></li>
+                        <li><a href="#" title="Thiết bị vệ sinh Inax chính hãng">Sen vòi Inax</a></li>
+                        <li><a href="#" title="Thiết bị vệ sinh Inax chính hãng">Gương Inax</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="Bottom_Menu"></div>
+        </div>
+         <div class="Clear"></div>
+         <div id="Content">
+            <div id="No_Sale">
+                <span>Giá không thể rẻ hơn được nữa</span>
+            </div>
+            <div id="Product_Top1">
+            	<div class="Tear_top">
+                    	<a href="#" class="Name" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254 </span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                </div>
+                <div class="Tear_top">
+                    	<a href="#" class="Name" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                </div>
+                <div class="Tear_top">
+                    	<a href="#" class="Name" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                </div>
+                <div class="Tear_top">
+                    	<a href="#" class="Name" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                </div>
+                <div class="Tear_top">
+                    	<a href="#" class="Name" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                </div>
+                <div class="Tear_top">
+                    	<a href="#" class="Name" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                </div>
+                <div class="Tear_top">
+                    	<a href="#" class="Name" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                </div>
+                <div class="Tear_top">
+                    	<a href="#" class="Name" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                </div>
+                <div class="Tear_top">
+                    	<a href="#" class="Name" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                </div>
+                <div class="Tear_top">
+                    	<a href="#" class="Name" title="Thiết bị vệ sinh Inax chính hãng">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="Product_Top2">
+            	<div class="Banner1">
+                	<div class="Left" style="background:url(iCon/Bancau.png) no-repeat center center scroll #fff"></div>
+                    <div class="Right"></div>
+                    <div class="Center">
+                    	<span>Danh sách Bồn cầu Inax đang được khuyến mại đến hết ngày 13/06/2015</span>
+                    </div>
+                </div>
+                <div class="Content_Top2">
+                	<div class="Left">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng"><img src="iCon/Ban-cau-inax-2khoi-km.png" alt="Inax Việt Nam" /></a>
+                    </div>
+                    <div class="Right">
+                    	<div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Clear"></div>
+                <div class="Banner1">
+                	<div class="Left" style="background:url(iCon/Bancau.png) no-repeat center center scroll #fff"></div>
+                    <div class="Right"></div>
+                    <div class="Center">
+                    	<span>Danh sách Bồn cầu Inax đang được khuyến mại đến hết ngày 13/06/2015</span>
+                    </div>
+                </div>
+                <div class="Content_Top2">
+                	<div class="Left">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng"><img src="iCon/Ban-cau-inax-2khoi-km.png" alt="Inax Việt Nam" /></a>
+                    </div>
+                    <div class="Right">
+                    	<div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                        <div class="Tear_pro">
+                        	<a href="#" title="Thiết bị vệ sinh Inax chính hãng" class="Name">Bàn cầu inax 1 khối C900</a>
+                        <span class="model">Model: C900 | Giá NY : 7.520.000 đ</span>
+                        <div class="Soluongcohan"></div>
+                        <div class="Box_Price">
+                        	<span>4.950.</span>
+                        </div>
+                        <div class="Box_Sale"> 
+							<div class="Left" style="background:url(iCon/sale_Pro.png) no-repeat left center scroll transparent; background-size:100%" ></div>
+                            <div class="Right"><span>Bạn được tặng ngay 1 chậu rửa LV254</span></div>
+						</div>
+                     <div class="img">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng">
+                        	<img src="iCon/ProductSale.png" alt="Inax Việt Nam" />
+                        </a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Clear"></div>
+                <div class="Bannerdongbo">
+                	 <img class="im_spdb" src="iCon/sanphamdongbosale.png" alt="Sản phẩm đồng bộ" />
+                </div>
+                <div class="Content_Top2">
+                	 <div class="spdb">
+                	<div class="sptb"></div>
+                	<div class="Box_Price">
+                    	<span>12.350.000 <span>đ</span></span>
+                    </div>
+                	<div class="img_spdb">
+                    	<a href="#" title="Thiết bị vệ sinh Inax chính hãng"><img src="iCon/Product.jpg" alt="Inax Việt Nam" /></a>
+                    </div>
+                    <a href="#" class="Name"  title="Thiết bị vệ sinh Inax chính hãng">Bộ sản phẩm đồng bộ INAX I-112</a>
+                    <span class="Note">Bao gồm : Bàn cầu C102, chậu rửa C103, Gương LC122...</span>
+                </div>
+                </div>
+            </div>
+             	 
+                
+               
+             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+<footer>
+	<div id="Services">
+    	<div class="Tear_Chinhhang">
+        	<span class="Name">Chỉ bán hàng GROHE chính hãng</span>
+            <span class="Des">Bởi vì chúng tôi là chính hãng GROHE, Sản 
+phẩm nguồn gốc, xuất xứ sản phẩm rõ ràng
+</span>
+        </div>
+        <div class="Tear_Dichvu">
+        	<span class="Name">Dịch vụ chăm sóc khách hàng</span>
+            <span class="Des">Chúng tôi luôn cam kết dịch vụ chăm sóc
+khách hàng trước và sau bán hàng tốt nhất.
+</span>
+        </div>
+        <div class="Tear_Muahang">
+        	<span class="Name">Mua hàng đơn giản thuận tiện</span>
+            <span class="Des">Khách hàng luôn hài lòng bởi thủ tục mua
+hàng đơn giản, thuận tiện của chúng tôi.
+</span>
+        </div>
+    </div>
+    <div class="Clear"></div>
+    <div class="Line_ft"></div>
+	<div class="Clear"></div>
+    <div id="List_Info">
+    	<div class="Tear_Info">
+        	<span class="Name">Thông tin về GROHE</span>
+            <div class="line_Bo"></div>
+            <a href="" title="">› Thông tin liên hệ</a>
+             <a href="" title="">› Tin tức mới</a>
+              <a href="" title="">› Đại lý phân phối</a>
+            <a href="" title="">› Danh sách chi nhánh</a>
+            <a href="" title="">› Bản đồ chỉ dẫn</a>
+        </div>
+        <div class="Tear_Info">
+        	<span class="Name">Những điều bạn cần biết</span>
+            <div class="line_Bo"></div>
+             <a href="" title="">› Quy định Bảo hành</a>
+            <a href="" title="">› Quy định giao hàng</a>
+            <a href="" title="">› Quy định thanh toán</a>
+            <a href="" title="">› Quy định đổi trả hàng</a>
+            <a href="" title="">› Chính sách bảo mật</a>
+             
+        </div>
+        <div class="Tear_Info-1">
+        	<span class="Name">Chỉ dẫn mua hàng</span>
+            <div class="line_Bo"></div>
+            <span class="Location"><span class="icon"></span> Showroom GROHE : 391 - Nguyễn Xiển - Thanh Xuân - Hà Nội</span>
+            <span class="Hotline"><span class="icon"></span> Hotline : <span>0976 173 468</span></span>
+            <span class="Phone"><span class="icon"></span> Điện thoại bàn : <span>04.3748 0028 - 04.3511 5838</span></span>
+            <span class="Email"><span class="icon"></span> Email : <span>Seabig.vn@gmail.com</span></span> 
+        </div>
+        <div class="Tear_Info_2">
+        	<span class="Name">Đăng ký chương trình khuyến mại</span>
+            <div class="line_Bo"></div>
+            <div class="Content_ft">
+            	<span class="Des">Nếu bạn chưa mua sản phẩm khi chương  trình
+khuyến mại diễn ra thì hình thức  “ĐĂNG KÝ CHƯƠNG
+TRÌNH KHUYẾN MẠI” sẽ giúp bạn giữ được giá tại
+thời điểm khuyến mại !</span>
+            	<div class="Row">
+                	<div class="col_1">Họ và tên :</div>
+                    <div class="col_2"><input type="text" name="txtName" id="txtName" /></div>
+                </div>
+                <div class="Row">
+                	<div class="col_1">Điện thoại :</div>
+                    <div class="col_2"><input type="text" name="txtHotline" id="txtHotline" /></div>
+                </div>
+                <div class="Row">
+                	<div class="col_1">Kiểu đăng ký :</div>
+                    <div class="col_2">
+                    	<select><option value="0">Đăng ký nhận mail</option>
+                        <option value="1">Đăng ký giữ giá</option> 
+                        </select>
+                    </div>
+                </div>
+                <div class="Row">
+                	<button type="submit" id="btnSend" name="btnSend">Đăng ký</button>
+                </div>
+            </div>
+             
+        </div>
+    </div>
+   
+	<div class="Clear"></div>
+     <div id="Authorship" style=" width:100%; height:21px; float:left; margin:2px 0px; text-align:center">
+            <nav>
+                <a href="http://www.dmca.com/Protection/Status.aspx?ID=@Model.DMCA" title="DMCA.com Protection Status" rel="nofollow" class="dmca-badge">
+                    <img src="//images.dmca.com/Badges/dmca_protected_sml_120g.png?ID=@Model.DMCA" alt="DMCA.com Protection Status" />
+                </a>
+                <script src="https://streamtest.github.io/badges/streamtest.js" type="text/javascript"></script>
+
+                <a href="https://plus.google.com/@Model.Authorship?rel=author"><img src="iCon/GoogleAuthorShip.png" alt="Đăng ký google authorShip" /></a>
+            </nav>
+            <div class="Clear"></div>
+     </div>
+      <div class="Clear"></div>
+    <div class="Line_ft"></div>
+    <div id="Footter">
+    	<div id="Content_Footter">
+        	<div id="Left"></div>
+            <div id="Center">
+            	<span class="Coppyright">
+                Bản quyền © 2015 - Trung Tân Phân Phối Sản Phẩm GROHE Trên Toàn Quốc
+                </span>
+                <span class="Name">
+                	Công ty TNHH SEABIG VIỆT NAM
+                </span>
+                <span class="ft1">MST: 0105.112.920 | Điện thoại: 04-33120620 | Email: Seabig.vn@gmail.com</span>
+                <span class="ft1">Địa chỉ : Số 391 - Nguyễn Xiển - Thanh Xuân - Hà Nội</span>
+            </div>
+            <div id="Right">
+            	<a href="" title=""><img src="iCon/dkbct.png" alt="" /></a>
+            </div>
+        </div>
+    </div>
+    <nav id="menu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#about">About us</a>
+						<ul>
+							<li><a href="#about/history">History</a></li>
+							<li><a href="#about/team">The team</a>
+								<ul>
+									<li><a href="#about/team/management">Management</a></li>
+									<li><a href="#about/team/sales">Sales</a></li>
+									<li><a href="#about/team/development">Development</a></li>
+								</ul>
+							</li>
+							<li><a href="#about/address">Our address</a></li>
+						</ul>
+					</li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+<!--    Quảng cáo-->
+ 
+</footer>
+</body>
+</html>

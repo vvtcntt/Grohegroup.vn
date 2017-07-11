@@ -1,0 +1,27 @@
+﻿@model IEnumerable<GROHE.Models.tblImage>
+<div id="Header">
+    <div id="MainMenu">
+        @{Html.RenderAction("PartialMenu", "Header");}
+
+    </div>
+    <div id="Slide">
+        <div id="slideshow">
+            <div class="container">
+                <div class="c_slider" style="background:@Html.Raw(ViewBag.chuoislide)"></div>
+                <div class="slider">
+                    @foreach (var item in Model)
+                    {
+                        <figure>
+                            <img src="@item.Images" alt="@item.Name" title="@item.Name" width="875" height="300" />
+                        </figure>
+                    }
+                </div>
+            </div>
+            <span id="timeline"></span>
+        </div>
+    </div>
+</div>
+<div class="uudai">
+  @Html.Raw(ViewBag.chuoi)
+    
+</div>

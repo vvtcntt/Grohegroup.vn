@@ -1,0 +1,19 @@
+﻿
+@{
+     Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@model GROHE.Models.tblFile
+ <div class="Root">
+     <a href="/" title="Trang chủ" rel="nofollow"><span class="iCon"></span>Trang chủ</a> / <a href="/Catalogues" title="Catalogues">Catalogues</a> / @Model.Name </div>
+<div class="Clear"></div>
+<div id="Data">
+    <h1>@Model.Name</h1>
+    <div class="Line_ft"></div>
+    <div id="Content_Data">
+        <div id="Description"> @Model.Description</div>
+        <div id="Content">
+            <iframe src="@Model.File" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+<div class="Clear"></div>

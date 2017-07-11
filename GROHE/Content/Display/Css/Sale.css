@@ -1,0 +1,174 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+body {
+  
+ background:#FFF;
+    font: 12px arial;
+    margin: 0;
+    padding: 0;
+ 
+}
+@font-face { font-family: UTMAndrogyne; src:url(../Font/UTMAndrogyne.ttf); }
+@font-face { font-family: UTMEricssonCapital; src:url(../Font/UTMEricssonCapital.ttf); }
+@font-face { font-family: vndi01; src: url(../Font/vndi01.ttf); }
+@font-face { font-family: Dientu; src:url(../Font/QuartzRegular.ttf); }
+@font-face { font-family: UTMSwissBlackCondensed; src:url(../Font/UTMSwissBlackCondensed.ttf); }
+@font-face { font-family: UTMSwiss; src:url(../Font/UTMSwiss.ttf); }
+@font-face { font-family: UTM-Swiss-CondensedBold; src:url(../Font/UTM-Swiss-CondensedBold.ttf); }
+@font-face { 
+font-family:taho; 
+src:url(../Font/UTMChickenhawk.ttf); 
+}
+ 
+@font-face { 
+font-family:UTM_SwissCondensed; 
+src:url(../Font/UTM_SwissCondensed.ttf); 
+}
+ul,li{ padding:0px; margin:0px; outline:0px; vertical-align:baseline; border:0px}
+ul,li{ list-style:none  }
+a{text-decoration:none}
+a:hover{color:#176388 !important}
+img { border:none}
+.Clear{ clear:both}
+#Main{ width:1200px; height:auto
+;   margin:0px auto}
+#Banner{ width:100%; height:191px; float:left; margin:0px; }
+#Banner #Left{ width:330px; height:100%; float:left; margin:0px}
+#Banner #Center{ width:620px; height:100%; float:left; margin:0px}
+#Banner #Center h1{ font-size:20px; color:#fff833; font-family:UTMAndrogyne; text-align:center ; font-weight:normal; margin:130px auto}
+#Banner #Right{ width: 244px; height:100%; float:left; margin:0px}
+#Banner #Right #date{ width:100%; height:auto; float:left; margin:0px}
+#Banner #Right #date #LeftDate{ width:82px; height:22px; float:left; margin:85px 5px 5px 35px; background:#F00}
+#Banner #Right #date #LeftDate span{ font-size:14px; text-transform:uppercase; color:#fff; font-family:UTMSwissBlackCondensed; text-align:center; display:block}
+#Banner #Right #date  #RightDate{ width:82px; height:22px; float:left; margin:85px 5px 5px 5px; background:#F00}
+#Banner #Right #date  #RightDate span{ font-size:14px; text-transform:uppercase; color:#fff; font-family:UTMSwissBlackCondensed; text-align:center; display:block}
+#Banner #Right #Count{ width:100%; height:auto; float:left; margin:-10px 0px 0px 0px; text-align:center}
+ 
+#Banner #Right #Count span{ color:#4d4d4d; text-align:center; font-style:italic; margin:0px; text-decoration:blink; text-decoration-blink:true;font-weight:bold }
+#Banner #Right #Count span span{ font-size:65px ; color:#F00; font-style:normal; margin:0px; font-family:UTMEricssonCapital; line-height:60px; font-weight:bold;  }
+.Dateday{ text-align:center; display:block; color:#4d4d4d; margin:3px}
+#TestRun{ width:100%; height:40px; float:left; margin:0px; background:url(../iCon/bg-textrun.png) repeat left center scroll #000; font-weight:bold; }
+#TestRun span{ font-family:vndi01; color:#F00; font-size:21px; display:block;  line-height:30px; text-align:center}
+#Menu{ width:100%; height:51px; float:left; margin:0px}
+#Top_Menu{ width:100#; height:38px; float:left; background:#FF0}
+#Menu #Left{ width:225px; height:100%; background:#F00; float:left; margin:0px}
+#Menu #Right{ float:left; margin:0px; width:969px}
+#Menu #Left span{ color:#FFF; font-family:UTM-Swiss-CondensedBold; text-transform:uppercase; margin:auto auto; text-align:center; display:block; line-height:38px; font-size:17px } 
+#Menu #Right ul{ width:100%; height:auto; float:left; margin:0px}
+#Menu #Right ul li{ float:left; margin:0px; background:url(../iCon/line-sale.png) no-repeat right center scroll transparent; height:100%}
+#Menu #Right ul li a{ line-height:38px; color:#F00; font-family:UTM-Swiss-CondensedBold;; margin:auto 20px; text-transform:uppercase; font-size:17px}
+#Menu #Bottom_Menu{ width:100%; height:13px; float:left; background:url(../iCon/tamgiac_1.png) no-repeat left center scroll transparent}
+#No_Sale{ width:100%; height:39px !important; height:auto; margin:5px 0px; background:url(../iCon/no_sale.png) no-repeat center center scroll transparent}
+#No_Sale span{ font-size:20px; color:#FFF; text-align:center; margin:0px 5px; font-family:UTM-Swiss-CondensedBold; text-transform:uppercase; display:block; line-height:39px}
+#Content{ width:1196px; height:auto; float:left; margin:0px; border:2px solid #e9e9e9; border-top:none}
+#Product_Top1{ width:100%; height:auto; float:left; margin:2px 0px}
+#Product_Top1 .Tear_top{ width:233px; height:330px; float:left; margin:2px; border-bottom:2px solid #e5e5e5; border-right:2px solid #e5e5e5; position:relative; overflow:hidden}
+#Product_Top1 .Tear_top .Name{ color:#474747; text-transform:uppercase; font-size:16px; text-align:center; margin:5px 5px 1px 5px; display:block; font-family:UTM-Swiss-CondensedBold}
+#Product_Top1 .Tear_top .model{ font-size:12.5px; color:#8c8c8c; text-align:center; display:block; font-family:UTM_SwissCondensed; margin:2px 5px}
+#Product_Top1 .Tear_top .Soluongcohan{ width:95px; height:101px; position:absolute; background:url(../iCon/soluongcohan.png) no-repeat transparent; top:70px; left:3px}
+#Product_Top1 .Tear_top .Box_Price{ width:112px; height:60px; background:url(../iCon/bg_Price.png) no-repeat; position:absolute; top:180px; right:5px}
+#Product_Top1 .Tear_top .Box_Price span{ font-size:25px; color:#FFF;  display:block; text-transform:uppercase; margin:13px 5px 5px 15px; font-family:UTMSwissBlackCondensed}
+#Product_Top1 .Tear_top  .Box_Sale{ width:100%; height:50px; float:left; position:absolute; bottom:0px}
+#Product_Top1 .Tear_top  .Box_Sale .Left{ width:60px; float:left; margin:0px; height:100%}
+#Product_Top1 .Tear_top  .Box_Sale .Right{ width: 172px; float:left; margin:0px}
+#Product_Top1 .Tear_top  .Box_Sale .Right span{ color:#F00; margin:10px 5px 5px 10px; display:block; font-style:italic;}
+#Product_Top1 .Tear_top .img{ width:100%; height:242px; float:left; margin:0px; display:table; table-layout:fixed}
+#Product_Top1 .Tear_top .img a{ display:table-cell; vertical-align:middle; text-align:center}
+#Product_Top1 .Tear_top .img a img{ max-width:100%; max-height:100%}
+#Product_Top2{ width:100%; height:auto; float:left; margin:2px 0px}
+#Product_Top2 .Banner1{ width:100%; height:91px;  margin:0px; position:relative}
+#Product_Top2 .Banner1 .Center{ width:100%; height:40px; float:left; margin:25px 0px; background:url(../iCon/bg_nvar-sale.png) repeat-x left center scroll transparent ; position:relative}
+#Product_Top2 .Banner1 .Center span{ line-height:40px; text-align:center; display:block; font-family:UTM-Swiss-CondensedBold; text-transform:uppercase; margin:auto 5px; color:#FFF; font-size:19px}
+#Product_Top2 .Banner1 .Left{ width:92px; height:100%; float:left; margin:0px 5px ;   position:absolute; left:0px; z-index:10; border-radius:50%; background-size:50% !important }
+#Product_Top2 .Banner1 .Right{ width:92px; height:100%; background:url(../iCon/icon_Sale_Sale.png) no-repeat transparent; position:absolute; right:0px; z-index:10}
+.Content_Top2{ width:100%; height:auto; float:left; margin:0px; position:relative}
+.Content_Top2 .Left{ width:220px; height:auto; float:left; margin:0px}
+.Content_Top2 .Left a img{ max-width:100%; height:auto; float:left; margin:2px 0px}
+.Content_Top2 .Right{ width:971px; height:auto; float:left; margin:0px 0px 0px 5px}
+
+.Content_Top2 .Right .Tear_pro{ width:155px; height:260px; float:left; margin:2px; border-bottom:2px solid #e5e5e5; border-left:2px solid #e5e5e5; position:relative; overflow:hidden}
+.Content_Top2 .Right .Tear_pro .Name{ color:#474747; text-transform:uppercase; font-size:12px; text-align:center; margin:5px 5px 1px 5px; display:block; font-family:UTM-Swiss-CondensedBold}
+.Content_Top2 .Right .Tear_pro .model{ font-size:10px; color:#8c8c8c; text-align:center; display:block; font-family:UTM_SwissCondensed; margin:2px 5px}
+.Content_Top2 .Right .Tear_pro .Soluongcohan{ width:65px; height:69px; position:absolute; background:url(../iCon/soluongcohan_1.png) no-repeat transparent; top:50px; left:3px}
+.Content_Top2 .Right .Tear_pro .Box_Price{ width:85px; height:51px; background:url(../iCon/bg_Price-1.png) no-repeat; position:absolute; top:150px; right:0px}
+.Content_Top2 .Right .Tear_pro .Box_Price span{ font-size:20px; color:#FFF;  display:block; text-transform:uppercase; margin:13px 5px 5px 12px; font-family:UTMSwissBlackCondensed}
+.Content_Top2 .Right .Tear_pro .Box_Sale{ width:100%; height:50px; float:left; position:absolute; bottom:0px}
+.Content_Top2 .Right .Tear_pro .Box_Sale .Left{ width:60px; float:left; margin:0px; height:100%}
+.Content_Top2 .Right .Tear_pro .Box_Sale .Right{ width: 85px; float:left; margin:0px}
+.Content_Top2 .Right .Tear_pro  .Box_Sale .Right span{ color:#F00; margin:10px 5px 5px 10px; display:block; font-style:italic; font-size:9px}
+.Content_Top2 .Right .Tear_pro .img{ width:100%; height:177px; float:left; margin:0px; display:table; table-layout:fixed}
+.Content_Top2 .Right .Tear_pro .img a{ display:table-cell; vertical-align:middle; text-align:center}
+.Content_Top2 .Right .Tear_pro .img a img{ max-width:97%; max-height:100%}
+
+#Footter{ width:100%; height:auto; float:left; margin:5px 0px 0px 0px; background:#23a5e4}
+#Footter_Top{  width:1200px; height:100%; margin:0px auto}
+.Tear_Footter{ width:200px; height:auto; float:left; margin:5px 10px 5px 0px }
+.Nvar_Tear_Footter_1{ background:url(../iCon/icon_Info.png) no-repeat left center scroll transparent; height:30px; float:left; width:100%}
+.Nvar_Tear_Footter_1 span{ line-height:30px; text-transform:uppercase;   color:#FFF; margin:auto 5px auto 45px; font-size:14px; font-family:UTM_SwissCondensed}
+.Content_Tear_Footter{ width:100%; height:100%; float:left; margin:8px 0px; background: url(../Icon/Line_Navar_w.png) repeat-x left top scroll transparent;}
+.Content_Tear_Footter a{ position:relative; display:block; margin:7px 5px ; color:#FFF}
+.Content_Tear_Footter a:hover{color:#F00 !important}
+
+.Nvar_Tear_Footter_2{ background:url(../iCon/icon-huongdan.png) no-repeat left center scroll transparent; height:30px; float:left; width:100%}
+.Nvar_Tear_Footter_2 span{ line-height:30px; text-transform:uppercase; font-family:UTM_SwissCondensed; color:#FFF; margin:auto 5px auto 35px; font-size:14px}
+.Nvar_Tear_Footter_3{ background:url(../iCon/icon-Chinhsach.png) no-repeat left center scroll transparent; height:30px; float:left; width:100%}
+.Nvar_Tear_Footter_3 span{ line-height:30px; text-transform:uppercase;   color:#FFF; margin:auto 5px auto 45px; font-size:14px; font-family:UTM_SwissCondensed}
+.Nvar_Tear_Footter_4{ background:url(../iCon/icon_Product.png) no-repeat left center scroll transparent; height:30px; float:left; width:100%}
+.Nvar_Tear_Footter_4 span{ line-height:30px; text-transform:uppercase;   color:#FFF; margin:auto 5px auto 45px; ; font-size:14px; font-family:UTM_SwissCondensed}
+.RegistrySale{ width:300px; height:auto; border-radius:5px; float:right}
+.Title_regis{ font-family:UTM_Cafeta;color:#f6ff00; margin:7px 1px; text-transform:uppercase; font-size:17px}
+.Des_Regis{ color:#FFF; margin:2px }
+.Regis{ width:300px; height:25px; margin:2px auto; background:url(../iCon/dang-ky-km.png) no-repeat left}
+.txtRegis{ width:200px; height:100%; background-color:transparent; border:none; float:left; margin-left:2px}
+.button_search_{ width:95px; height:100%;
+float:left; margin:0px; background-color:transparent; border:none}
+.Des_Regis1{ color:#fff; margin:2px 0px}
+#Footter_Centter{ width:1200px; height:30px; margin:2px auto; background:url(../iCon/Line_Navar_w.png) repeat-x top }
+#Footter_Centter p{ color:#FFF; line-height:30px; text-align:center}
+#Footter_Centter p span{ color:#F00; font-weight:bold}
+#Footter_bottom{ width:1200px; height:120px; margin:0px auto; background:url(../iCon/Line_Navar_w.png) repeat-x top  }
+#Left_Footter_bottom{ width:50%; height:100%; float:left; margin:0px}
+#Logo_Left{ width:150px; height:100%; float:left; margin:4px 0px 0px 0px  }
+#Logo_Left img{ display:block;  max-width:98%; height:auto; border:1px solid #FFF; margin:4px 0px}
+#Info_Right{ width:440px; height:auto; float:left; margin:0px 5px}
+#Info_Right .p1{ font-size:14px;  margin:5px 2px 2px 2px; text-transform:uppercase; font-weight:bold; color:#FF0}
+#Info_Right .p2{ font-size:12px; color:#FFF; margin:2px}
+ 
+#Info_Right h2{  color:#FFF; margin:2px 2px 5px 2px; text-transform:uppercase; font-size:16px; font-family:UTM-Swiss-CondensedBold; font-weight:normal}
+#Right_Footter_bottom{ width:50%; float:left; margin:0px}
+#Right_Footter_bottom p{ color:#FFF; font-weight:bold; margin:5px 2px; text-align:right}
+#Right_Footter_bottom img{ float:right; height:50px; width:auto; margin:2px}
+#Infocty{ width:100%; height:50px; float:left; margin:0px; border-top:1px solid #0894d8}
+#Infocty .cty1{ color:#ffffff; margin:7px 2px 1px 2px; font-weight:bold; text-align:center; text-transform:uppercase; font-family:UTM-Swiss-CondensedBold; font-size:14px; font-weight:normal}
+#Infocty .cty2{ color:#e8ecee; margin:2px;  text-align:center}
+ #Dichvu{ width:1200px; height:98px;  margin:5px auto}
+.Tear_Dichvu1{ width:234px; height:88px; float:left; margin:5px 3px 5px 0px;  background:url(../iCon/dichvugiaohang.png) no-repeat center scroll}
+.Tear_Dichvu2{ width:234px; height:88px; float:left; margin:5px 3px; background: url(../iCon/mienphilapdat.png) no-repeat center scroll}
+.Tear_Dichvu3{ width:234px; height:88px; float:left; margin:5px 3px; background: url(../iCon/thanhtoannhanhgon.png) no-repeat center scroll}
+.Tear_Dichvu4{ width:234px; height:88px; float:left; margin:5px 0px 5px 3px; background:url(../iCon/dichvubanhang.png) no-repeat center scroll}
+.Tear_Dichvu5{ width:234px; height:88px; float:right; margin:5px 0px 5px 3px; background:url(../iCon/giathanhrenhat.png) no-repeat center scroll}
+.marquee{ width:100% !important; float:left}
+#Box_ImageSale{ width:100%; height:auto; float:left; margin:0px}
+#Box_ImageSale img{ width:100%; height:auto; float:left; margin:0px}
+.spdb{ width:19.5%; float:left; margin:2px; border:1px solid #f3f3f3; position:relative}
+ .spdb .img_spdb{ width: 100%; max-height:240px; float:left; margin:0px; display:table; table-layout:fixed}
+  .spdb .img_spdb a{ display:table-cell; vertical-align:middle; text-align:center}
+  .spdb .img_spdb img{ max-width:100%; margin:0px}
+  .spdb .Name{ font-size:12px; color:#525252; margin:4px; font-family:Arial, Helvetica, sans-serif; text-align:center; display:block; text-transform:uppercase}
+  .spdb .Note{ font-size:11px; font-style:italic; color:#8d8d8d; margin:5px 2px; display:block; text-align:center}
+  .spdb .Box_Price{ width:100%; height:30px; top:60%;position:absolute;  text-align:right}
+ .spdb .Box_Price span{ font-size:18px; color:#ff3c00; text-align:right; margin:auto 1px; line-height:100%; font-family:UTMSwiss   }
+  .spdb .Box_Price span span{ font-size:11px; font-family:Arial, Helvetica, sans-serif; text-align:right } 
+  .spdb .sptb{ width:60px; height:60px; position:absolute; right:0px; background:url(../iCon/icon_Theobo.png) no-repeat left center scroll transparent}
+  .Bannerdongbo{ width:100%; height:auto; float:left; margin:5px 0px}
+  .spdb .Box_Price span {
+  font-size: 18px;
+  color: #ff3c00;
+  text-align: right;
+  margin: auto 1px;
+  line-height: 100%;
+  font-family: UTMSwiss;
+}

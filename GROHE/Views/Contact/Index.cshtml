@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@model GROHE.Models.tblContact
+@using (Html.BeginForm()) { 
+    @Html.ValidationSummary(true)
+<div class="Root">
+    <a href="/Homes" title="Trang chủ" rel="nofollow"><span></span>Trang chủ</a> &raquo; Liên hệ & hỏi đáp
+</div>
+<div class="Clear"></div>
+<div id="Orders">
+    <h2>LIÊN HỆ VÀ HỎI ĐÁP</h2>
+    <div class="rOrder">
+        <div class="Left"><span>Họ và Tên :</span></div>
+        <div class="Right">
+            @Html.TextBoxFor(p => p.Name, new { @class = "txtName", @required = "required", @autofocus = "autofocus" })
+           
+        </div>
+    </div>
+    <div class="rOrder">
+        <div class="Left"><span>Địa chỉ :</span></div>
+        <div class="Right">
+            @Html.TextBoxFor(p => p.Address, new { @class = "txtAddress", @required = "required", @autofocus = "autofocus" })
+            
+        </div>
+    </div>
+
+    <div class="rOrder">
+        <div class="Left"><span>Điện thoại :</span></div>
+        <div class="Right">
+            @Html.TextBoxFor(p => p.Mobile, new { @class = "txtMobile", @required = "required", @autofocus = "autofocus" })
+            
+        </div>
+    </div>
+    <div class="rOrder">
+        <div class="Left"><span>Email :</span></div>
+        <div class="Right">
+
+            @Html.TextBoxFor(p => p.Email, new { @class = "txtEmail", @required = "required", @autofocus = "autofocus" })
+             
+        </div>
+    </div>
+    <div class="rOrder">
+        <div class="Left"><span>Nội dung :</span></div>
+        <div class="Right">
+            @Html.TextBoxFor(p => p.Content, new { @class = "txtDescription", @required = "required", @autofocus = "autofocus" })
+          
+        </div>
+    </div>
+    <div class="rOrders">
+        <p class="Ghichu">Ghi chú(*) : </p>
+        <p class="Ghichu1">- Bạn phải ghi đầy đủ họ tên, địa chỉ, số điện thoại, email, nội dung . Như vậy thông tin bạn gửi mới hơp lệ và được hồi đáp </p>
+        <p class="Ghichu1">- Thời gian hồi đáp có thể ngay sau 15 phút tính từ thời điểm bạn gửi hoặc lâu hơn. Nếu quá 24h mà bạn chưa được hồi đáp thì có thể liên hệ qua hotline của chúng tôi</p>
+
+        <p class="Date">Hà Nội, ngày @DateTime.Now.Day tháng @DateTime.Now.Month năm @DateTime.Now.Year</p>
+                <p class="Sign">Người gửi liên hệ </p>
+    </div>
+    <div class="Func">
+       <button type="submit" id="btlSendContact" name="btlSendContact" class="btlSendContact">Gửi thông tin</button>
+      		
+    </div>
+    <div class="Clear"></div>
+</div>
+}

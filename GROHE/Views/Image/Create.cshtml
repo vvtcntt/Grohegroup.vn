@@ -1,0 +1,121 @@
+﻿@model GROHE.Models.tblImage
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#SelectImages").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#Images").val(fileUrl);
+            };
+            finder.popup();
+        });
+    });
+</script>
+@using (Html.BeginForm()) 
+{ 
+    @Html.ValidationSummary(true)
+    <div id="InsertPoduct">
+    <div class="Nvar_Content_Detail">
+        <div class="Left_Nvar">
+            <img src="/Content/Admin/Icon/folder.png" alt="Danh mục sản phẩm" />Add Image
+        </div>
+        <div class="Right_Nvar">
+                <div id="msg" class="msg">
+                    <div class="alert alert-info" id="update-message">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="Content_Content_Detail">
+        <div class="tr_1">
+            <div class="left_tr1" id="Test">
+                <span>GroupImage :</span>
+            </div>
+            <div class="Right_tr1">
+                  @Html.DropDownList("drMenu","===== Select Group Image=====")
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1" id="Test">
+                <span>GroupProduct :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.DropDownList("drMenu1", "===== Select Group Product=====")
+                <span style="color:red; line-height:100%; display:block; margin:auto 8px">Chỉ lựa chọn khi thêm quảng cáo trong danh mục sản phẩm</span>
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Name :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Name, null, new { @class = "Leght_2" }) <span class="Aler_ttxtName" style="color:#F00"></span>
+
+            </div>
+        </div>
+         
+        <div class="tr_1">
+            <div class="left_tr1"><span>Image :</span></div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Images, new { @class = "Leght_2" })&nbsp;<input id="SelectImages" type="button" value="Browses" />
+
+            </div>
+        </div>
+
+         <div class="tr_1">
+            <div class="left_tr1"><span>Active:</span></div>
+            <div class="Right_tr1">
+
+                 @Html.RadioButtonFor(p=>p.Active,true,new{@id="Active",@checked="True"}) : Yes
+                @Html.RadioButtonFor(p=>p.Active,false, new { @id="Active"}): No 
+               
+                  
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1"><span>Link:</span></div>
+            <div class="Right_tr1">
+
+                 @Html.RadioButtonFor(p=>p.Link,"Nofollow",new{@id="Active",@checked="True"}) : Nofollow
+                @Html.RadioButtonFor(p=>p.Link,"Dofollow", new { @id="Active"}): Dofollow 
+               
+                  
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1"><span>Url:</span></div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Url, new { @class = "Leght_3" })
+            </div>
+        </div>
+           
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Ord:</span>
+            </div>
+            <div class="Right_tr1">
+           @Html.TextBoxFor(p=>p.Ord, new { @class="txtWarraty",@Value=@Html.Raw(ViewBag.Ord),@Type="number"})
+                  
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+            </div>
+            <div class="Right_tr1">
+                <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Add</button> 
+            </div>
+        </div>
+    </div>
+
+ </div>
+}
+ 
+ 
+  
+ 

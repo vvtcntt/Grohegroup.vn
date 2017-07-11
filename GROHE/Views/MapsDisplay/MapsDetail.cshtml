@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@model GROHE.Models.tblMap
+
+
+<div class="Root">
+    <a href="/Homes" title="Trang chủ" rel="nofollow"><span></span>Trang chủ</a> &raquo; Liên hệ & hỏi đáp
+</div>
+<div id="Conten_Maps">
+    <div class="nVar_ListNews">
+        <div class="Left_nVar_ListNews"></div>
+        <div class="Center_nVar_ListNews">
+            <span>Chi tiết </span>
+        </div>
+        <div class="Right_nVar_ListNews"></div>
+    </div>
+    <div class="Clear"></div>
+    <h1>@Model.Name</h1>
+    <div id="Description">@Model.Description</div>
+    <div id="Content">@Model.Content</div>
+</div>
+<div class="Clear"></div>

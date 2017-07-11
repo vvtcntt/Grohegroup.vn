@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Show ERRO INPORT PRICE";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div id="Content_Detail">
+    <div class="Nvar_Content_Detail">
+        <div class="Left_Nvar">
+            <img src="/Content/Admin/Icon/folder.png" alt="Danh mục sản phẩm" /><span  >Danh sách sản phẩm bị lỗi</span>
+        </div>
+        <div class="Center_Nvar">
+            <input type="text" name="txtSearch" id="txtSearch" class="txtSearch" />             
+        </div>
+       </div>
+    <h1 style="text-align:center; text-transform:uppercase; font-weight:normal; margin:5px auto; font-size:13px; color:#ff0000; text-decoration:blink">@Html.Raw(ViewBag.leght)</h1>
+    <h1 style="text-align:center; text-transform:uppercase; font-weight:normal; margin:5px auto; font-size:13px; color:#ff0000; text-decoration:blink">
+        @Html.Raw(ViewBag.Erro)</h1>
+    <div class="/Content_Content_Detail">
+        <div class="Nvar_1">
+
+            <div class="clo_1" style="text-align:center; width:10%">
+                STT
+            </div>
+            <div class="clo_2" style="width:80%; text-align:center ">Name</div>
+
+        </div>
+
+        <div class="Nvar_2" style="text-transform:none">
+
+
+            @Html.Raw(ViewBag.chuoi)
+
+
+        </div>
+
+        <div class="nVar_3">
+            <div class="clo_1">
+                -
+            </div>
+
+            <div class="clo_7">
+
+
+                <a class="a_bt" href="/Productad/Index" title="Quay lại"><span>></span> Go to Product</a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+ 
+

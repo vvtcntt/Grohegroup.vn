@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+   <meta name="viewport" content="width=device-width" />
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/favicon.gif" rel="shortcut icon" type="image/x-icon" />
+
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <link href="~/Content/Admin/Css/Admin.css" rel="stylesheet" />
+<script type="text/javascript" src="~/Content/ckeditor/ckeditor.js"></script>
+    <link href="~/Content/Admin/Css/Admin_Add.css" rel="stylesheet" />
+<script type="text/javascript" src="~/Content/ckfinder/ckfinder.js"></script>
+    <link href="~/Content/Admin/Css/jquery-ui.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-ui-1.8.20.js"></script>
+    <script src="~/Scripts/jquery.easy-confirm-dialog.js"></script>
+    <script src="~/Scripts/jquery.colorbox.js"></script>    
+    <script src="~/Scripts/jquery-ui.js"></script> 
+   <link href="~/Content/Admin/Css/colorbox.css" rel="stylesheet" />
+     <link href="~/Content/themes/base/jquery.ui.dialog.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+   <div id="Main">
+        <div id="Top_Main">
+            <div id="nvar_Top">
+                <a href="/" title="Thiết bị vệ sinh GROHE chính hãng" target="_blank">
+                    <img src="/Content/Admin/Icon/icon_Homes.png" alt="Homes" />Control Panel</a>
+            </div>
+            <div id="nvar_Bottom">
+                <div id="nvar_Bottom_left">
+                    <div id="nvar_Bottom_left_1">
+                       
+                                Welcome : @Request.Cookies["Username"].Values["FullName"]  - [@Request.Cookies["Username"].Values["UserName"]]
+                         
+                    </div>
+                    <div id="nvar_Bottom_left_2">
+                        Select Language:
+                        <select>
+                            <option value="0" selected="selected">Viet Nam</option>
+                            <option value="1">EngLish</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div id="ul_Right">
+                    <a href="/../../Login/Logout">
+                        <img src="/Content/Admin/Icon/huong-dan.png" alt="Hướng dẫn" />LogOut</a>
+                    <a href="#">
+                        <img src="/Content/Admin/Icon/huong-dan.png" alt="Hướng dẫn" />Note</a>
+                </div>
+            </div>
+        </div>
+        <div class="LinkRoot">
+            <ul>
+                <li><span class="/Content/Admin/Icon_Homes"></span><a href="#" title="Thiết bị vệ sinh GROHE chính hãng">Homes</a></li>
+                <li><a href="#" title="Thiết bị vệ sinh GROHE chính hãng">&raquo; Product</a></li>
+            </ul>
+        </div>
+        <div id="/Content">
+            <div id="Left_Content">
+                <div class="Tear_Menu">
+                    <div class="Nvar_menu">
+                        <img src="/Content/Admin/Icon/program-small-icons.png" alt="Menu" />Manager
+                    </div>
+                    <div class="List_menu">
+                        <ul>
+                            <li><a href="/../../Config/Index" title="Thiết bị vệ sinh GROHE chính hãng">Config </a></li>
+                             <li><a href="/../../Maps/Index" title="Thiết bị vệ sinh GROHE chính hãng">Maps</a></li>
+                            <li><a href="/../../SendEmail/Index" title="Thiết bị vệ sinh GROHE chính hãng">Email</a></li>
+                            <li><a href="/../../Url/Index" title="Thiết bị vệ sinh GROHE chính hãng">Url</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="Tear_Menu">
+                    <div class="Nvar_menu">
+                        <img src="/Content/Admin/Icon/program-small-icons.png" alt="Menu" />Product
+                    </div>
+                    <div class="List_menu">
+                        <ul>
+                             <li><a href="/../../GroupProduct/Index" title="Thiết bị vệ sinh GROHE chính hãng">Group Product</a></li>
+                            <li><a href="/../../Productad/Index" title="Thiết bị vệ sinh GROHE chính hãng">List Product</a></li>
+                            <li><a href="/../../ProductSyn/Index" title="Thiết bị vệ sinh GROHE chính hãng">Product Syn</a></li>
+                            <li><a href="/../../ProductSale/Index" title="Thiết bị vệ sinh GROHE chính hãng">Product Sale</a></li>
+                            <li><a href="/../../Files/Index" title="Thiết bị vệ sinh GROHE chính hãng">Catalogis</a></li>
+                            <li><a href="/../../ColorProduct/Index" title="Thiết bị vệ sinh GROHE chính hãng">Color Product</a></li>
+                            <li><a href="/../../FunctionProduct/Index" title="Thiết bị vệ sinh GROHE chính hãng">Function Product</a></li>
+                            <li><a href="/../../Productad/ProductHiden" title="Thiết bị vệ sinh GROHE chính hãng">Product Hiden</a></li>
+                            <li><a href="#" title="Thiết bị vệ sinh GROHE chính hãng">Order</a></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="Tear_Menu">
+                    <div class="Nvar_menu">
+                        <img src="/Content/Admin/Icon/program-small-icons.png" alt="Menu" />News
+                    </div>
+                    <div class="List_menu">
+                        <ul>
+                            <li><a href="/../../GroupNews/Index" title="Thiết bị vệ sinh GROHE chính hãng">Group News</a></li>
+                            <li><a href="/../../Newsad/Index" title="Thiết bị vệ sinh GROHE chính hãng">List News</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="Tear_Menu">
+                    <div class="Nvar_menu">
+                        <img src="/Content/Admin/Icon/program-small-icons.png" alt="Menu" />Agency
+                    </div>
+                    <div class="List_menu">
+                        <ul>
+                            <li><a href="/../../GroupAgency/Index" title="Thiết bị vệ sinh GROHE chính hãng">Group Agency</a></li>
+                            <li><a href="/../../Agency/Index" title="Thiết bị vệ sinh GROHE chính hãng">List Agency</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="Tear_Menu">
+                    <div class="Nvar_menu">
+                        <img src="/Content/Admin/Icon/program-small-icons.png" alt="Menu" />Images
+                    </div>
+                    <div class="List_menu">
+                        <ul>
+                            <li><a href="/../../GroupImage/Index" title="Thiết bị vệ sinh GROHE chính hãng">Group Image</a></li>
+                            <li><a href="/../../Image/Index" title="Thiết bị vệ sinh GROHE chính hãng">List Image</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="Tear_Menu">
+                    <div class="Nvar_menu">
+                        <img src="/Content/Admin/Icon/program-small-icons.png" alt="Menu" />Video
+                    </div>
+                    <div class="List_menu">
+                        <ul>
+                            <li><a href="/../../Video/Index" title="Thiết bị vệ sinh GROHE chính hãng">Video</a></li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="Tear_Menu">
+                    <div class="Nvar_menu">
+                        <img src="/Content/Admin/Icon/program-small-icons.png" alt="Menu" />Account
+                    </div>
+                    <div class="List_menu">
+                        <ul>
+                            <li><a href="/../../Users/Index" title="Thiết bị vệ sinh GROHE chính hãng">List Account</a></li>
+                            <li><a href="/../../Module/ModuleIndex" title="Thiết bị vệ sinh GROHE chính hãng">Righs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Tear_Menu">
+                    <div class="Nvar_menu">
+                        <img src="/Content/Admin/Icon/program-small-icons.png" alt="Menu" />Support
+                    </div>
+                    <div class="List_menu">
+                        <ul> 
+                            <li><a href="/../../Support/Index" title="Thiết bị vệ sinh GROHE chính hãng">Support</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="Right_Content">
+                 
+                
+                    @RenderBody()
+                
+                     @Scripts.Render("~/bundles/jqueryui")
+                
+            </div>
+        </div>
+        <div class="Clear"></div>
+        <div id="Footter">
+        </div>
+    </div>
+</body>
+</html>

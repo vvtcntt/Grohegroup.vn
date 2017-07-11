@@ -1,0 +1,181 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@model GROHE.Models.tblProduct
+<div class="Root">
+    @Html.Raw(ViewBag.nUrl)
+</div>
+@using (Html.BeginForm("Command", "Product", FormMethod.Post))
+{
+<div id="Content_Product">
+    <article>
+        <div id="LeftProduct">
+            <div id="LeftProduct_Top">
+                <div id="Left_ContentProduct">
+                    <div id="Top_Product">
+                        <div id="Left_TopProduct">
+                            <div id="img_Product">
+                                <div id="SaleProduct" style="background:url(@Model.ImageSale) no-repeat"></div>
+                                <div id="GROHEchinhhang"></div>
+                                <div id="Sale">
+                                    <span>@Model.Sale</span>
+                                </div>
+                                <div id="Content_Img_Product">
+                                    <a href="#" title="@Model.Name" rel="nofollow">
+                                        <img src="@Model.ImageLinkDetail" alt="@Model.Name" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="List_Product">
+                                <ul class="gallery clearfix">
+                                    @Html.Raw(ViewBag.chuoiimage)
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Right_ContentProduct">
+                    <div id="Top1">
+                        <h1>@Model.Name</h1>
+                        <span>Mã sản phẩm : <span>@Model.Code</span> | Số lần xem <span>@Model.Visit</span> | Ngày cập nhật : @String.Format("{0:d/M/yyyy}", Model.DateCreate)</span>
+                    </div>
+                    <div id="Top2">
+                        <ul>
+                            <li>
+                                @if (Model.Status == true)
+                            {
+                                    <span> <span class="Status"></span> Tình trạng : Còn hàng</span>
+                            }
+                            else
+                            {
+                                    <span> <span class="Status"></span> Tình trạng : Hết hàng</span>
+                            }
+                            </li>
+                            <li>
+                                <span> <span class="Address"></span> Xuất xứ : Chính hãng</span>
+
+                            </li>
+                            <li>
+                                <span> <span class="Status"></span> Bảo hành: @Model.Warranty năm</span>
+                            </li>
+                            <li>
+                                <span> <span class="Status"></span> Nhóm : @Html.Raw(ViewBag.Nhomsp)</span>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                    @Html.Raw(ViewBag.color)
+                    <div id="Top3">
+                        <div id="Left_Top3">
+                            @if(Model.PriceSale<10)
+                            { <span>Khuyến mại : <span class="Price_Sale">Liên hệ</span></span>}
+                            else
+                            {
+                            <span>Khuyến mại : <span class="Price_Sale">@string.Format("{0:#,#}", Model.PriceSale) đ</span></span>
+                            }
+                            @if(Model.PriceSale<10)
+                            {<span class="PriceDetail">Giá niêm yết : Liên hệ </span> }
+                            else
+                            {
+                            <span class="PriceDetail">Gián niêm yết : @string.Format("{0:#,#}", Model.Price) đ </span> 
+                            }
+                            <span class="editprice">Giá trên có thể thay đổi mà không báo trước !</span>
+                        </div>
+                        <div id="Right_Top3">
+                            <span class="sp1">Hãy gọi điện</span>
+                            <span class="sp2">sẽ có giá tốt hơn</span>
+                        </div>
+                    </div>
+
+                    <div id="Top5">
+                        <span>Số lượng : </span><input type="number" value="01" name="txtOrd" id="txtOrd" class="txtOrd" /><button type="submit" name="btnOrder" id="btnOrder" class="btnOrd">Đặt Hàng</button>
+                        <input type="text" value="@Model.id" id="idPro" name="idPro" style="opacity:0; height:1px; width:1px; float:right" />
+                        <input type="text" value="@Model.idCate" id="idCate" name="idCate" style="opacity: 0; height: 1px; width: 1px; float: right" />
+                    </div>
+                    <div id="Top6">
+                        <ul>
+                            <li><a href="/3/huong-dan-mua-thiet-bi-ve-sinh-tren-GROHE-vn" title="Thiết bị vệ sinh Inax chính hãng" rel="nofollow"><span class="Muahang"></span>Hướng dẫn mua hàng</a></li>
+                            <li><a href="/3/hinh-thuc-thanh-toan" title="Thiết bị vệ sinh Inax chính hãng" rel="nofollow"><span class="Thanhtoan"></span>Phương thức thanh toán</a></li>
+                            <li><a href="/3/chinh-sach-van-chuyen-va-giao-hang" title="Thiết bị vệ sinh Inax chính hãng" rel="nofollow"><span class="Vanchuyen"></span>Phương thức VC & lắp đặt</a></li>
+                            <li><a href="/3/chinh-sach-bao-hanh" title="Thiết bị vệ sinh GROHE chính hãng" rel="nofollow"><span class="Baohanh"></span>Chính sách bảo hành</a></li>
+                        </ul>
+                    </div>
+                    @Html.Raw(ViewBag.chuoisym)
+                    <div id="Top8">
+                        @Model.Description
+
+                    </div>
+                </div>
+            </div>
+            <div id="LeftProduct_Content">
+                <div class="nVar_Content">
+                    <div class="Nvar">
+                        <span>★ Chi tiết sản phẩm</span>
+                    </div>
+                </div>
+                <div id="LeftProduct_Content_Content">
+                    @Html.Raw(ViewBag.chuoifun)
+                    @Html.Raw(Model.Content)
+                </div>
+            </div>
+            <div id="LeftProduct_Parametter">
+                <div class="nVar_Content">
+                    <div class="Nvar">
+                        <span>★ Thông số kỹ thuật</span>
+                    </div>
+                </div>
+                <div id="LeftProduct_Parametter_content">
+                    @Html.Raw(Model.Parameter)
+                    @Html.Raw(ViewBag.thongso)
+                </div>
+
+                <div class="Clear"></div>
+                <div id="Note">
+                    <span>Tất cả các sản phẩm do nhà sản xuất cung cấp đều có sự sai số về kích thước, thông số cũng có thể thay đổi do quy định nhà sản xuất. Để biết rõ hơn khách hàng vui lòng liên hệ hotline để nhận thông tin !</span>
+                </div>
+            </div>
+            <div id="Comment">
+                <div class="nVar_2">
+                    <span>Nhận xét đánh giá</span>
+                </div>
+                <div id="Sluion">
+                    <div class="Mxh" style="float: left; width: 270px; margin-left: 2px">
+                        <div class="fb-like" data-send="true" data-layout="button_count" data-width="60"
+                             data-show-faces="true">
+                        </div>
+                        <div class="tweet">
+                            <if condition="in_array($forum['forumid'], array(1,2))">
+                                <else />
+                                <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="YOUR-TWITTER-USERNAME" rel="nofollow">Tweet</a>
+                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                            </if>
+                        </div>
+                        <div id="g" style="float: left; margin: 7px 5px; height: 15px; width: 20px">
+                            <g:plusone size="medium"></g:plusone>
+                        </div>
+                    </div>
+                </div>
+                <div id="review">
+                    <span class="rv1">Cho điểm chất lượng sản phẩm</span>
+                    <span class="rv2">Mời bạn đánh giá về sản phẩm @Model.Name</span>
+                    <div id="Content_review">
+                        <input type="radio" name="review" value="1" class="rd1" /> <img src="~/Content/Display/iCon/rating_1_rstar.gif" alt="1 điểm" />
+                        <input type="radio" name="review" value="2" class="rd2" /><img src="~/Content/Display/iCon/rating_2_rstar.gif" alt="2 điểm" />
+                        <input type="radio" name="review" value="3" class="rd3" /><img src="~/Content/Display/iCon/rating_3_rstar.gif" alt="3 điểm" />
+                        <input type="radio" name="review" value="4" class="rd4" /><img src="~/Content/Display/iCon/rating_4_rstar.gif" alt="4 điểm" />
+                        <input type="radio" name="review" value="5" class="rd5" /><img src="~/Content/Display/iCon/rating_5_rstar.gif" alt="5 điểm" />
+                    </div>
+                </div>
+                <div id="ConmentFacebook"><div class="fb-comments" data-href="@Request.Url.ToString()" data-num-posts="20" style="width:100%; float:left; margin:0px" width="100%"></div></div>
+            </div>
+        </div>
+    </article>
+    <aside>
+        @{Html.RenderAction("PartialRightProductDetail", "Product");}
+    </aside>
+</div>
+<div class="Clear"></div>
+}

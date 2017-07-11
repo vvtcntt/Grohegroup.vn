@@ -1,0 +1,14 @@
+﻿@{
+     Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+@{Html.RenderAction("PatialHeader", "Header");}
+<div class="hr"></div>
+
+@{Html.RenderAction("PartialProductSaleHomes", "Product");}
+<div class="Clear"></div>
+@{Html.RenderAction("ListProductSyn", "ProductSynDisplay");}
+<div class="Clear"></div>
+@{Html.RenderAction("PartialProductHomes", "Product");}
+@Html.Raw(ViewBag.Thongbao)
+<div class="Clear"></div>

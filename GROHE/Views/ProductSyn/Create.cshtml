@@ -1,0 +1,356 @@
+﻿@model GROHE.Models.tblProductSyn
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#SelectImages").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#Images").val(fileUrl);
+            };
+            finder.popup();
+        });
+    });
+</script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var max_fields = 10; //maximum input boxes allowed
+        var wrapper = $(".myinput"); //Fields wrapper
+        var add_button = $(".btnAddNew"); //Add button ID
+
+        var x = 0; //initlal text box count
+        $(add_button).click(function (e) { //on add input button click
+            e.preventDefault();
+            if (x < max_fields) { //max input box allowed
+                x++; //text box increment
+                $(wrapper).append('<div>   <input type="file" name="uploadFile[' + x + ']" /><a href="#" class="btnRemove">Xóa</a></div>'); //add input box
+            }
+        });
+
+        $(wrapper).on("click", ".btnRemove", function (e) { //user click on remove text
+            e.preventDefault(); $(this).parent('div').remove(); x--;
+        })
+    });
+</script>
+
+@using (Html.BeginForm("Create", "ProductSyn", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+    <div id="InsertPoduct">
+        <div class="Nvar_Content_Detail">
+            <div class="Left_Nvar">
+                <img src="/Content/Admin/Icon/folder.png" alt="Danh mục sản phẩm" />Add ProductSyn
+            </div>
+            <div class="Right_Nvar">
+                <div id="msg" class="msg">
+                    <div class="alert alert-info" id="update-message">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Content_Content_Detail">
+             
+             
+            <div class="tr_1">
+                <div class="left_tr1">
+                    <span>Name :</span>
+                </div>
+                <div class="Right_tr1">
+                    @Html.TextBoxFor(p => p.Name, null, new { @class = "Leght_2", @autofocus = "autofocus", @required = "required" }) <span class="Aler_ttxtName" style="color: #F00"></span>
+
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1">
+                    <span>Code :</span>
+                </div>
+                <div class="Right_tr1">
+                    @Html.TextBoxFor(p => p.Code, null, new { @class = "Leght_5", @autofocus = "autofocus", @required = "required" })
+
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1">
+                    <span>Code List Syn :</span>
+                </div>
+                <div class="Right_tr1">
+                    @Html.TextBoxFor(p => p.CodeSyn, null, new { @class = "Leght_1", @autofocus = "autofocus", @required = "required", placeholder = "Nhập danh sách Mã sản phẩm có trong sản phẩm đồng bộ này, cú pháp: Code1,Code2" })
+
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1">
+                    <span>Description:</span>
+                </div>
+                <div class="Right_tr1">
+                    @Html.TextAreaFor(p => p.Description, new { @class = "Leght_6", @autofocus = "autofocus", @required = "required" })
+
+                </div>
+            </div>
+            <div class="tr_1" style=" display:none">
+                <div class="left_tr1">
+                    <span>Thông tin cơ bản:</span>
+                </div>
+                <div class="Right_tr1">
+                    @Html.TextAreaFor(p => p.Info, new { @class = "Leght_6" })
+
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1">
+                    <span>Content:</span>
+                </div>
+                <div class="Right_tr1">
+                    @Html.TextAreaFor(p => p.Content, new { @class = "Leght_6" })
+
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1">
+                    <span>Parameter:</span>
+                </div>
+                <div class="Right_tr1">
+                    @Html.TextAreaFor(p => p.Parameter, new { @class = "Leght_6" })
+
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1"><span>List Images :</span></div>
+                <div class="Right_tr1">
+                    @Html.Raw(TempData["Msg"])
+                    <fieldset>
+                        <legend>Upload Images multi file</legend>
+                        <label>Chọn file: </label><br />
+                        <a class="btnAddNew" href="#">Add New</a>
+                        <br />
+                        <div id="myinput" class="myinput">
+                            <input type="file" name="uploadFile[0]" /><br />
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1"><span>Image Thumb :</span></div>
+                <div class="Right_tr1">
+                    @Html.TextBoxFor(p => p.ImageLinkThumb, new { @class = "Leght_2" })&nbsp;<input id="SelectImages" type="button" value="Browses" />
+
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1"><span>Image Detail :</span></div>
+                <div class="Right_tr1">
+                    @Html.TextBoxFor(p => p.ImageLinkDetail, new { @class = "Leght_2" })&nbsp;<input id="SelectImages1" type="button" value="Browses" />
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1"><span>Price:</span></div>
+                <div class="Right_tr1">
+                    @Html.TextBoxFor(p => p.Price, new { @class = "Leght_4" })
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1"><span>Price Sale:</span></div>
+                <div class="Right_tr1">
+                    @Html.TextBoxFor(p => p.PriceSale, new { @class = "Leght_4", @value = "0" })
+                </div>
+            </div>
+
+
+            <div class="tr_1">
+                <div class="left_tr1"><span>VAT:</span></div>
+                <div class="Right_tr1">
+                    @Html.RadioButtonFor(p => p.Vat, "1", new { @id = "Vat1", @checked = "True" }) : Yes
+                    @Html.RadioButtonFor(p => p.Vat, "0", new { @id = "Vat2" }): No
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1"><span>Warranty Time:</span></div>
+                <div class="Right_tr1">
+                    @Html.TextBoxFor(p => p.Warranty, new { @class = "txtWarraty", @Type = "number", @value = "1" })
+                </div>
+            </div>
+
+            <div class="tr_1">
+                <div class="left_tr1"><span>Origin:</span></div>
+                <div class="Right_tr1">
+                    @Html.RadioButtonFor(p => p.Address, "1", new { @id = "Origin", @checked = "True" }) : Yes
+                    @Html.RadioButtonFor(p => p.Address, "0", new { @id = "Origin" }): No
+
+                </div>
+            </div>
+            <div class="tr_1">
+                <div class="left_tr1"><span>Transport:</span></div>
+                <div class="Right_tr1">
+                    @Html.RadioButtonFor(p => p.Transport, true, new { @id = "Transport", @checked = "True" }) : Yes
+                    @Html.RadioButtonFor(p => p.Transport, false, new { @id = "Transport" }): No
+
+                </div>
+                <div class="tr_1">
+                    <div class="left_tr1"><span>Access:</span></div>
+                    <div class="Right_tr1">
+                        @Html.TextAreaFor(p => p.Access, new { @class = "Leght_6" })
+                    </div>
+                </div>
+                <div class="tr_1">
+                    <div class="left_tr1"><span>Sale:</span></div>
+                    <div class="Right_tr1">
+                        @Html.TextAreaFor(p => p.Sale, new { @class = "Leght_6" })
+                    </div>
+                </div>
+                <div class="tr_1">
+                    <div class="left_tr1">
+                        <span>Ord:</span>
+                    </div>
+                    <div class="Right_tr1">
+                        @Html.TextBoxFor(p => p.Ord, new { @class = "txtWarraty", @Value = @Html.Raw(ViewBag.Ord), @Type = "number" })
+
+                    </div>
+                </div>
+                <div class="tr_1">
+                    <div class="left_tr1"><span>Status:</span></div>
+                    <div class="Right_tr1">
+                        @Html.RadioButtonFor(p => p.Status, true, new { @id = "Status", @checked = "True" }) : Yes
+                        @Html.RadioButtonFor(p => p.Status, false, new { @id = "Status" }): No
+                    </div>
+                </div>
+                <div class="tr_1">
+                    <div class="left_tr1"><span>Active:</span></div>
+                    <div class="Right_tr1">
+
+                        @Html.RadioButtonFor(p => p.Active, true, new { @id = "Active", @checked = "True" }) : Yes
+                        @Html.RadioButtonFor(p => p.Active, false, new { @id = "Active" }): No
+
+
+                    </div>
+                </div>
+                <div class="tr_1">
+                    <div class="left_tr1"><span>Product New</span></div>
+                    <div class="Right_tr1">
+                        @Html.RadioButtonFor(p => p.New, true, new { @id = "ViewHomes" }) : Yes
+                        @Html.RadioButtonFor(p => p.New, false, new { @id = "ViewHomes", @checked = "True" }): No
+
+
+                    </div>
+                </div>
+                <div class="tr_1">
+                    <div class="left_tr1"><span>View Homes:</span></div>
+                    <div class="Right_tr1">
+                        @Html.RadioButtonFor(p => p.ViewHomes, true, new { @id = "ViewHomes" }) : Yes
+                        @Html.RadioButtonFor(p => p.ViewHomes, false, new { @id = "ViewHomes", @checked = "True" }): No
+
+
+                    </div>
+                </div>
+                <div class="tr_1">
+                    <div class="left_tr1"><span>Title:</span></div>
+                    <div class="Right_tr1">
+                        @Html.TextBoxFor(p => p.Title, new { @class = "Leght_2" })
+                    </div>
+                </div>
+                <div class="tr_1">
+                    <div class="left_tr1"><span>Keyword:</span></div>
+                    <div class="Right_tr1">
+                        @Html.TextAreaFor(p => p.Keyword, new { @class = "Leght_6" })
+                    </div>
+                </div>
+
+                <div class="tr_1">
+                    <div class="left_tr1">
+                    </div>
+                    <div class="Right_tr1">
+                        <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+<script type="text/javascript">
+
+    //$("input").keypress(function () {
+    $(document).ready(function () {
+     
+        $('#Name').keyup(function () {
+            var text = $(this).val();
+            $('#Title').val(text);
+            $('#Keyword').val(text);
+            // alert(text);
+            $.post("/Productad/CheckValue", { "text": text },
+                function (data) {
+                    $('.Aler_ttxtName').html(data);
+                    //$(".alert").replaceWith("<div class='alert alert-info'>" + data.chuoi + "</div>");
+
+                });
+        });
+    });
+
+
+
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#SelectImages").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#ImageLinkThumb").val(fileUrl);
+            };
+            finder.popup();
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#SelectImages1").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#ImageLinkDetail").val(fileUrl);
+            };
+            finder.popup();
+        });
+    });
+</script>
+<script type="text/javascript">
+    var editor;
+    function createEditor(languageCode, id) {
+        var editor = CKEDITOR.replace(id, {
+            language: languageCode
+        });
+    }
+
+    $(function () {
+        createEditor('vi', 'Content');
+    });
+
+</script>
+<script type="text/javascript">
+    var editor;
+    function createEditor(languageCode, id) {
+        var editor = CKEDITOR.replace(id, {
+            language: languageCode
+        });
+    }
+
+    $(function () {
+        createEditor('vi', 'Info');
+    });
+
+</script>
+<script type="text/javascript">
+    var editor;
+    function createEditor(languageCode, id) {
+        var editor = CKEDITOR.replace(id, {
+            language: languageCode
+        });
+    }
+
+    $(function () {
+        createEditor('vi', 'Parameter');
+    });
+
+</script>

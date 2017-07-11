@@ -1,0 +1,61 @@
+﻿
+@{
+ 
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+
+ 
+@model IEnumerable<GROHE.Models.tblProductSyn>
+<div id="ProductSYN">
+
+    <div id="nVar_ProductSYN">
+        <span> Sản phẩm đồng bộ</span>
+    </div>
+    <div class="Adw_Syn">
+  @Html.Raw(ViewBag.hienthianh)
+    </div>
+ 
+    <div id="Content_ProductSYN">
+        @foreach (var item in Model)
+        {
+            <div class="spdb">
+                <div class="sptb"></div>
+
+                <div class="img_spdb">
+                    <a href="/Syn/@item.Tag" title="@item.Name"><img src="@item.ImageLinkThumb" alt="@item.Name" /></a>
+                </div>
+                <a href="/Syn/@item.Tag" class="Name" title="@item.Name">@item.Name</a>
+                <div class="Bottom_Tear_Sale">
+                    <div class="Price">
+                        <p class="PriceSale">@string.Format("{0:#,#}", @item.PriceSale) <span>đ</span></p>
+                        <p class="Price_s">@string.Format("{0:#,#}", @item.Price) đ</p>
+                    </div>
+                    <div class="sevices">
+                        @if (item.Status == true)
+                        {
+                            <span class="Status"></span>
+                        }
+                        else
+                        {
+
+                            <span class="StatusNo"></span>
+                        }
+                        @if (item.Transport == true)
+                        { <span class="Transport"><span class="icon"></span> Toàn quốc</span>
+                        }
+                        else
+                        {
+                            <span class="Transport"><span class="icon"></span> Liên hệ</span>
+
+                        }
+
+
+
+                        <span class="View"></span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="Clear"></div>

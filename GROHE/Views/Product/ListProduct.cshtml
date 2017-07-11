@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@model GROHE.Models.tblGroupProduct
+<aside>
+    <div class="Root">
+        @Html.Raw(ViewBag.nUrl)
+    </div>
+</aside>
+<article>
+    <div id="Content">
+        <div id="Hearshort">
+            <div id="LeftHeadshort">
+                <img src="@Model.Background" alt="@Model.Name" />
+            </div>
+            <div id="RightHeadshort">
+                <div id="nVarhs"><span>@Model.Name</span></div>
+                <span class="mota">@Model.Description</span>
+                <div id="Des">
+                    @Html.Raw(Model.Content)
+                </div>
+
+            </div>
+
+            @Html.Raw(ViewBag.catalogis)
+
+        </div>
+        <div class="Clear"></div>
+        <div class="Clear"></div>
+        @Html.Raw(ViewBag.chuoi)
+    </div>
+    <div class="Clear"></div>
+</article>

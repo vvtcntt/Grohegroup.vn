@@ -1,0 +1,32 @@
+﻿<div id="nVar">
+    <div id="Content_nVar">
+        <div id="Menu_nvar">
+            <span>Danh mục sản phẩm</span>
+            @{Html.RenderAction("PartialMenu", "Header");}
+        </div>
+        <div id="Box_Search">
+@using (Html.BeginForm("Search", "Product", FormMethod.Post))
+{
+            <input type="text" name="txtSearch" class="txtSearch" id="txtSearch" />
+            <button type="submit" name="btnSearch" id="btnSearch" class="btnSearch">TÌM</button>
+}
+        </div>
+        <div id="BoxTime">
+            Thời gian Mở cửa : <span>7H30 - 18H</span>
+        </div>
+        <div id="BoxOrder">
+            @if (Session["soluong"] != "" && Session["soluong"] != null)
+            {
+
+
+                <a href="/Order/OrderIndex" title="Giỏ hàng" class="CountOf"><span class="icon"></span>Giỏ hàng <span>có @Session["soluong"].ToString()  </span></a>
+            }
+            else
+            {
+                <a href="/" title="Giỏ hàng" class="CountOf" rel="nofollow"><span class="icon"></span>Giỏ hàng <span>có 0 sp</span></a>
+            }
+
+        </div>
+    </div>
+
+</div>

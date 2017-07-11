@@ -1,0 +1,158 @@
+﻿@model GROHE.Models.tblConfig
+<div id="Services">
+    <div class="Tear_Chinhhang">
+        <span class="Name">Chỉ bán hàng GROHE chính hãng</span>
+        <span class="Des">
+            Bởi vì chúng tôi là chính hãng GROHE, Sản
+            phẩm nguồn gốc, xuất xứ sản phẩm rõ ràng
+        </span>
+    </div>
+    <div class="Tear_Dichvu">
+        <span class="Name">Dịch vụ chăm sóc khách hàng</span>
+        <span class="Des">
+            Chúng tôi luôn cam kết dịch vụ chăm sóc
+            khách hàng trước và sau bán hàng tốt nhất.
+        </span>
+    </div>
+    <div class="Tear_Muahang">
+        <span class="Name">Mua hàng đơn giản thuận tiện</span>
+        <span class="Des">
+            Khách hàng luôn hài lòng bởi thủ tục mua
+            hàng đơn giản, thuận tiện của chúng tôi.
+        </span>
+    </div>
+</div>
+<div class="Clear"></div>
+<div class="Line_ft"></div>
+<div class="Clear"></div>
+<div id="List_Info">
+    <div class="Tear_Info">
+        <span class="Name">Thông tin về GROHE</span>
+        <div class="line_Bo"></div>
+        <a href="/Lien-he" title="Liên hệ" rel="nofollow">› Thông tin liên hệ</a>
+        <a href="/2/Tin-tuc" title="tin tức">› Tin tức mới</a>
+        <a href="/Khuyen-mai-grohe" title="Khuyến mại" rel="nofollow">› Bản tin khuyến mại</a>
+        <a href="/Catalogues" title="Calotagues" rel="nofollow">› Tải về Catalogues</a>
+        <a href="/2/Cong-nghe-san-pham" title="Công nghệ sản phẩm" rel="nofollow">› Công nghệ sản phẩm mới</a>
+        <a href="/Ban-do" title="Bản đồ" rel="nofollow">› Bản đồ chỉ dẫn</a>
+    </div>
+    <div class="Tear_Info">
+        <span class="Name">Những điều bạn cần biết</span>
+        <div class="line_Bo"></div>
+        <a href="/3/chinh-sach-bao-hanh-grohe" title="Quy định bảo hành" rel="nofollow">› Quy định Bảo hành</a>
+        <a href="/3/chinh-sach-van-chuyen-va-giao-hang" title="Quy định giao hàng" rel="nofollow">› Quy định giao hàng</a>
+        <a href="/3/chinh-sach-thanh-toan-cua-grohe" title="Quy định thanh toán" rel="nofollow">› Quy định thanh toán</a>
+        <a href="/3/chinh-sach-van-chuyen-va-giao-hang-grohe" title="Quy định đổi trả hàng" rel="nofollow">› Quy định đổi trả hàng</a>
+        <a href="/3/chinh-sach-bao-mat-thong-tin" title="Chính sách bảo mật" rel="nofollow">› Chính sách bảo mật</a>
+
+    </div>
+    <div class="Tear_Info-1">
+        <span class="Name">Chỉ dẫn mua hàng</span>
+        <div class="line_Bo"></div>
+        <span class="Location"><span class="icon"></span> Showroom GROHE : @Model.Address</span>
+        <span class="Hotline"><span class="icon"></span> Hotline : 
+            @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
+            {
+
+                <span>@Model.HotlineOUT</span>
+
+            }
+            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
+            {
+
+                <span>@Model.HotlineIN</span>
+            }
+
+
+            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
+            {
+                <span>@Model.HotlineOUT</span>
+
+            }
+       
+        
+        </span>
+        <span class="Phone"><span class="icon"></span> Điện thoại bàn : <span>@Model.MobileIN</span></span>
+        <span class="Email"><span class="icon"></span> Email : <span>@Model.Email</span></span>
+    </div>
+    <div class="Tear_Info_2">
+        <span class="Name">Đăng ký chương trình khuyến mại</span>
+        <div class="line_Bo"></div>
+@using (Html.BeginForm("Command", "Footter", FormMethod.Post))
+{
+        <div class="Content_ft">
+            <span class="Des">
+                Nếu bạn chưa mua sản phẩm khi chương  trình
+                khuyến mại diễn ra thì hình thức  “ĐĂNG KÝ CHƯƠNG
+                TRÌNH KHUYẾN MẠI” sẽ giúp bạn giữ được giá tại
+                thời điểm khuyến mại !
+            </span>
+            <div class="Row">
+                <div class="col_1">Họ và tên :</div>
+                <div class="col_2"><input type="text"   name="txtName" id="txtName" /></div>
+            </div>
+            <div class="Row">
+                <div class="col_1">Điện thoại :</div>
+                <div class="col_2"><input type="text"   name="txtHotline" id="txtHotline" /></div>
+            </div>
+            <div class="Row">
+                <div class="col_1">Kiểu đăng ký :</div>
+                <div class="col_2">
+                    <select id="selectcate" name="selectcate">
+                        <option value="0">Đăng ký nhận mail</option>
+                        <option value="1">Đăng ký giữ giá</option>
+                    </select>
+                </div>
+            </div>
+            <div class="Row">
+                <button type="submit" id="btnSend" name="btnSend">Đăng ký</button>
+            </div>
+        </div>
+}
+    </div>
+</div>
+<div class="Clear"></div>
+<div id="BannerTimes"></div>
+<div class="Clear"></div>
+<a href="http://binhnonglanh.top" style="color:#fff; font-size:3px; margin:0px; display:inline-block" title="Bình nóng lạnh loại nào tốt">Bình nóng lạnh loại nào tốt</a>  <a style="color:#fff; font-size:3px; margin:0px; display:inline-block" href="http://thayloilocnuoc.com" title="Thay lõi lọc nước tại nhà">Thay lõi lọc nước tại nhà</a>
+<div id="Authorship" style=" width:100%; height:21px; float:left; margin:2px 0px; text-align:center">
+    <nav>@Html.Raw(Model.DMCA)<a href="https://plus.google.com/@Model.Authorship?rel=author"><img src="~/Content/Display/iCon/GoogleAuthorShip.png" alt="Đăng ký google authorShip" /></a>
+    </nav>
+    <div class="Clear"></div>
+</div>
+<div class="Clear"></div>
+<div id="Maps_Homes">
+    @Html.Raw(ViewBag.maps)
+    <div class="Clear"></div>
+</div>
+<div class="Line_ft"></div>
+<div id="Footter">
+    <div id="Content_Footter">
+        <div id="Left"></div>
+        <div id="Center">
+            <span class="Coppyright">
+                Bản quyền © 2015 - @Model.Name
+            </span>
+            <span class="Name">
+                Công ty TNHH SEABIG VIỆT NAM
+            </span>
+            <span class="ft1">MST: 0105956762 | Điện thoại: @Model.MobileIN | Email: @Model.Email</span>
+            <span class="ft1">Địa chỉ : @Model.Address</span>
+        </div>
+        <div id="Right">
+            <a href="" title=""><img src="~/Content/Display/iCon/dkbct.png" alt="" /></a>
+        </div>
+    </div>
+    <div id="LinkURL">
+        @Html.Raw(ViewBag.chuoi)
+    </div>
+    <div class="Clear"></div>
+</div>
+@if(Request.Browser.IsMobileDevice==false)
+{@Html.Raw(Model.CodeChat)}
+@if(Request.Browser.IsMobileDevice)
+{
+   Html.RenderAction("MenuMobine", "Footter");
+   }
+ 
+ 

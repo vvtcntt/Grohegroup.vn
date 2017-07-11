@@ -1,0 +1,182 @@
+﻿@model GROHE.Models.tblNew
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#SelectImages").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#Images").val(fileUrl);
+            };
+            finder.popup();
+        });
+    });
+</script>
+@using (Html.BeginForm()) 
+{ 
+    @Html.ValidationSummary(true)
+    <div id="InsertPoduct">
+    <div class="Nvar_Content_Detail">
+        <div class="Left_Nvar">
+            <img src="/Content/Admin/Icon/folder.png" alt="Danh mục sản phẩm" />Add News
+        </div>
+        <div class="Right_Nvar">
+                <div id="msg" class="msg">
+                    <div class="alert alert-info" id="update-message">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="Content_Content_Detail">
+        <div class="tr_1">
+            <div class="left_tr1" id="Test">
+                <span>GroupProduct :</span>
+            </div>
+            <div class="Right_tr1">
+                 @Html.DropDownList("drMenu","===== Select Group Product=====")
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Name :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Name, null, new { @class = "Leght_2" }) <span class="Aler_ttxtName" style="color:#F00"></span>
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Description:</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p=>p.Description, new { @class = "Leght_6" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Content:</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p=>p.Content, new { @class = "Leght_6" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1"><span>Image Thumb :</span></div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.ImageLinkThumb, new { @class = "Leght_2" })&nbsp;<input id="SelectImages" type="button" value="Browses" />
+
+            </div>
+        </div>
+
+         <div class="tr_1">
+            <div class="left_tr1"><span>Active:</span></div>
+            <div class="Right_tr1">
+
+                 @Html.RadioButtonFor(p=>p.Active,true,new{@id="Active",@checked="True"}) : Yes
+                @Html.RadioButtonFor(p=>p.Active,false, new { @id="Active"}): No 
+               
+                  
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1"><span>ViewHomes:</span></div>
+            <div class="Right_tr1">
+
+                 @Html.RadioButtonFor(p=>p.ViewHomes,true,new{@id="Active",@checked="True"}) : Yes
+                @Html.RadioButtonFor(p=>p.ViewHomes,false, new { @id="Active"}): No 
+               
+                  
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1"><span>Title:</span></div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Title, new { @class = "Leght_2" })
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1"><span>Keyword:</span></div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p=>p.Keyword, new { @class = "Leght_6" })
+            </div>
+        </div>  
+        <div class="tr_1">
+            <div class="left_tr1"><span>Tabs:</span></div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p => p.Tabs, new { @class = "Leght_6" })
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Ord:</span>
+            </div>
+            <div class="Right_tr1">
+           @Html.TextBoxFor(p=>p.Ord, new { @class="txtWarraty",@Value=@Html.Raw(ViewBag.Ord),@Type="number"})
+                  
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+            </div>
+            <div class="Right_tr1">
+                <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Add</button> 
+            </div>
+        </div>
+    </div>
+
+ </div>
+}
+<script type="text/javascript">
+
+    //$("input").keypress(function () {
+    $(document).ready(function () {
+        $('#Name').keyup(function () {
+            var text = $(this).val();
+            $('#Title').val(text);
+            $('#Keyword').val(text);
+            // alert(text);
+            $.post("/News/CheckValue", { "text": text },
+                function (data) {
+                    $('.Aler_ttxtName').html(data);
+                    //$(".alert").replaceWith("<div class='alert alert-info'>" + data.chuoi + "</div>");
+
+                });
+        });
+    });
+
+
+
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#SelectImages").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#ImageLinkThumb").val(fileUrl);
+            };
+            finder.popup();
+        });
+    });
+</script>
+  
+<script type="text/javascript">
+    var editor;
+    function createEditor(languageCode, id) {
+        var editor = CKEDITOR.replace(id, {
+            language: languageCode
+        });
+    }
+
+    $(function () {
+        createEditor('vi', 'Content');
+    });
+
+</script>

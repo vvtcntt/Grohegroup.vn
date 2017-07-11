@@ -1,0 +1,131 @@
+﻿@model GROHE.Models.tblConfig
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+   <div class="Nvar_Content_Detail">
+        <div class="Left_Nvar">
+            <img src="/Content/Admin/Icon/folder.png" alt="Danh mục sản phẩm" />Cấu hình website
+        </div>
+
+    </div>
+    <div class="Content_Content_Detail">
+         
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Title :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Title, new { @class = "txtName" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Description :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Description, new { @class = "txtName" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Keyword :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Keywords, new { @class = "txtName" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Company Name :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Name, new { @class = "txtName" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Address :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Address, new { @class = "txtName" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Mobile :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Mobile, new { @class = "txtName" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Email:</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.Email, new { @class = "txtName" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Logo:</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextBoxFor(p=>p.ImageLinkLogo, new { @class = "txtName" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Footter :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p=>p.Footer, new { @class = "txtHeadShort" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Slogan :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.TextAreaFor(p=>p.Slogan, new { @class = "txtHeadShort" })
+
+            </div>
+        </div>
+        <div class="tr_1">
+            <div class="left_tr1">
+                <span>Authorship :</span>
+            </div>
+            <div class="Right_tr1">
+                @Html.CheckBoxFor(p => p.Authorship)
+               
+
+            </div>
+        </div>
+           
+        
+        <div class="tr_1">
+            <div class="left_tr1">
+            </div>
+            <div class="Right_tr1">
+                <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Ghi lại</button>
+                <button type="button" id="btnCanse" name="btnCanse" class="btnCanse">Bỏ qua</button>
+            </div>
+        </div>
+    </div>
+}
