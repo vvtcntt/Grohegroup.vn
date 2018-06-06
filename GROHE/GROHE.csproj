@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -211,6 +213,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Admin\Address\addressController.cs" />
     <Compile Include="Controllers\Admin\Agency\AgencyController.cs" />
     <Compile Include="Controllers\Admin\Agency\GroupAgencyController.cs" />
     <Compile Include="Controllers\Admin\ColorProduct\ColorProductController.cs" />
@@ -262,6 +265,7 @@
     <Compile Include="Models\ImageProduct.cs" />
     <Compile Include="Models\Mapping\ImageProductMap.cs" />
     <Compile Include="Models\Mapping\ProductConnectMap.cs" />
+    <Compile Include="Models\Mapping\tblAddressMap.cs" />
     <Compile Include="Models\Mapping\tblAgencyMap.cs" />
     <Compile Include="Models\Mapping\tblColorProductMap.cs" />
     <Compile Include="Models\Mapping\tblConfigMap.cs" />
@@ -293,6 +297,7 @@
     <Compile Include="Models\Mapping\tblVideoMap.cs" />
     <Compile Include="Models\ProductConnect.cs" />
     <Compile Include="Models\StringClass.cs" />
+    <Compile Include="Models\tblAddress.cs" />
     <Compile Include="Models\tblAgency.cs" />
     <Compile Include="Models\tblColorProduct.cs" />
     <Compile Include="Models\tblConfig.cs" />
@@ -1519,6 +1524,7 @@
     <Content Include="Content\Display\Font\VSWISEC.TTF" />
     <Content Include="Content\Display\toto.psd" />
     <Content Include="Content\Display\iCon\Bao-gia-ferroli.xlsx" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\GROHEGROUP.VN.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\accent.png" />
@@ -1751,6 +1757,11 @@
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <Content Include="Views\Shared\_LayoutSale.cshtml" />
     <Content Include="Views\Shared\_LayoutDefault.cshtml" />
+    <Content Include="Views\address\Create.cshtml" />
+    <Content Include="Views\address\Edit.cshtml" />
+    <Content Include="Views\address\Index.cshtml" />
+    <Content Include="Views\address\ProductAddress.cshtml" />
+    <Content Include="Views\address\UpdateProductAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

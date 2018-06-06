@@ -1,0 +1,167 @@
+﻿@{
+    ViewBag.Title = "Sửa xuất xứ sản phẩm";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+@using (Html.BeginForm("CommandEdit", "address", FormMethod.Post))
+{   @Html.ValidationSummary(true)
+    <div id="main-content">
+        <div class="container-fluid">
+            <div style="width: 100%; margin: 0 auto;">
+
+                <div id="Breadcrumb" class="Block Breadcrumb ui-widget-content ui-corner-top ui-corner-bottom">
+                    <ul>
+                        <li><a href='/admin'><i class="icon-home" style="font-size:14px;"></i> Trang chủ</a></li>
+                        <li class='SecondLast'><a href="/UpdateProductAddress">Xuất xứ</a></li>
+                    </ul>
+                </div>
+
+                <div style="clear: both;"></div>
+
+                <div id="cph_Main_ContentPane">
+                    <div class="widget">
+                        <!-- widget-title -->
+                        <div class="widget-title">
+                            <h4><i class="icon-reorder"></i>&nbsp;Sửa xuất xứ</h4>
+
+                            <!-- Button -->
+                            <div class="ui-widget-content ui-corner-top ui-corner-bottom">
+                                <div id="toolbox">
+                                    <div style="float:right;" class="toolbox-content">
+
+                                        <table class="toolbar">
+                                            <tr>
+
+                                                <td align="center">
+                                                    <button type="submit" class="toolbar btn btn-info" name="btnSave" id="btnSave"><i class="icon-save"></i> &nbsp;Lưu lại</button>
+
+                                                </td>
+
+
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Button -->
+
+                            <div id="hiddenToolBarScroll" class="scrollBox hidden">
+
+                                <div class="FloatMenuBar" style="float:left; margin-left:20px">
+
+                                    <div class="ui-widget-content ui-corner-top ui-corner-bottom">
+                                        <div id="Div1">
+
+                                            <div style="float:left;" class="toolbox-content">
+
+                                                <table class="toolbar">
+                                                    <tr>
+
+                                                        <td align="center">
+                                                            <button type="submit" class="toolbar btn btn-info" name="btnSave" id="btnSave"><i class="icon-save"></i> &nbsp;Lưu lại</button>
+
+                                                        </td>
+
+
+                                                    </tr>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- widget-title -->
+                        <!-- widget-body -->
+                        <div class="widget-body">
+                            <div id="cph_Main_ctl00_notification_divNotice" style="padding-top:10px;">
+                                <!-- Messange -->
+                                @Html.Raw(ViewBag.result)
+
+                                <!-- End Messange -->
+                            </div>
+                            <table class="admintable" style="width: 100%;">
+                                <tr>
+                                    <td class="key">
+                                        Nhập mã sản phẩm : <span class="Required">*</span>
+                                    </td>
+                                    <td>
+                                        <input type="search" name="ProductGetCode" id="ProductGetCode" class="ProductGetCode" placeholder="Nhập mã sản phẩm" />
+ 
+                                        <span class="tooltip-help">
+                                            <span class="tooltipContent">
+                                                <p class="tooltiptitle">
+                                                    Nhập mã sản phẩm
+                                                </p>
+                                                <p class="tooltipmessage">
+                                                    Nhập mã sản phẩm
+                                                </p>
+                                            </span>
+                                        </span>
+                                        <span class="Aler_ttxtName" style="color: #FFF; background:#39ac37; font-size:12px; padding:5px 8px; display:block">Nhập xong mã ấn dấu [Cách] để kiểm tra</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="key">
+                                        Xuất xứ sản phẩm
+                                    </td>
+                                    <td>
+
+                                        @Html.DropDownList("drAddress", "--Nhóm xuất xứ--")
+
+                                        <span class="tooltip-help">
+                                            <span class="tooltipContent">
+                                                <p class="tooltiptitle">
+                                                    Xuất xứ sản phẩm
+                                                </p>
+                                                <p class="tooltipmessage">
+                                                    Xuất xứ sản phẩm
+                                                </p>
+                                            </span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td align="center"  >
+                                        <button type="submit" class="toolbar btn btn-info" style="float:left; margin-left:200px" name="btnSave" id="btnSave"><i class="icon-save" ></i> &nbsp;Sửa ngay</button>
+
+                                    </td>
+
+
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+<script type="text/javascript">
+
+    $(document).ready(function () {
+   
+        $('#ProductGetCode').keyup(function () {
+             var text = $(this).val(); 
+            $.post("/address/CheckProduct", { "text": text },
+                function (data) {
+                    $('.Aler_ttxtName').html(data);
+                    $(".ProductGetCode").css('border:1px solid #39ac37 !important');
+                });
+         });
+   
+
+    });
+</script>
+<script src="~/Scripts/jquery-3.1.0.js"></script>
+<script src="~/Scripts/jquery-ui.js"></script>
+<link href="~/Scripts/jquery-ui.css" rel="stylesheet" />
+<link href="~/Scripts/jquery-ui.css" rel="stylesheet" />
+<script src="~/Scripts/AutoComplete.js"></script>

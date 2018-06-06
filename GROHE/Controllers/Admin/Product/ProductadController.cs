@@ -213,7 +213,14 @@ namespace GROHE.Controllers.Admin.Productad
                 chuoicolor += "<input type=\"checkbox\" name=\"chkCol+" + listcolor[i].id + "\" id=\"chkCol+" + listcolor[i].id + "\" class=\"chkFuc\" /> " + listcolor[i].Name + "</br>";
             }
             ViewBag.chuoicolor = chuoicolor;
-                return View();
+            var listaddress = db.tblAddresses.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
+            var lstAddress = new List<SelectListItem>();
+            foreach (var item in listaddress)
+            {
+                lstAddress.Add(new SelectListItem { Text = item.Name, Value = item.id.ToString() });
+            }
+            ViewBag.drAddress = new SelectList(lstAddress, "Value", "Text", 0);
+            return View();
         }
 
         //
@@ -239,6 +246,11 @@ namespace GROHE.Controllers.Admin.Productad
                 tblproduct.Visit = 0;
                 string idUser = Request.Cookies["Username"].Values["UserID"];
                 tblproduct.idUser = int.Parse(idUser);
+                string idAddress = Collection["drAddress"];
+                if (idAddress != null && idAddress != "")
+                {
+                    tblproduct.Address = int.Parse(idAddress);
+                }
                 db.tblProducts.Add(tblproduct);
                 db.SaveChanges();
                 var listprro = db.tblProducts.OrderByDescending(p => p.id).Take(1).ToList();
@@ -417,7 +429,21 @@ namespace GROHE.Controllers.Admin.Productad
             {
                 ViewBag.tenfile = "File thông số kỹ thuật : " + listfile[0].Name + "";
             }
-                return View(tblproduct);
+            string idaddress = tblproduct.Address.ToString();
+            var listaddress = db.tblAddresses.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
+            var lstAddress = new List<SelectListItem>();
+            foreach (var item in listaddress)
+            {
+                lstAddress.Add(new SelectListItem { Text = item.Name, Value = item.id.ToString() });
+            }
+            if (idaddress != null && idaddress != "")
+            {
+                ViewBag.drAddress = new SelectList(lstAddress, "Value", "Text", int.Parse(idaddress));
+
+            }
+            else
+                ViewBag.drAddress = new SelectList(lstAddress, "Value", "Text", 0);
+            return View(tblproduct);
         }
  
         [HttpPost]
@@ -492,6 +518,15 @@ namespace GROHE.Controllers.Admin.Productad
                         bool Status = (collection["Status"] == "True") ? true : false;
                         tblproduct.Status = Status;
                     }
+                    string idAddress = collection["drAddress"];
+                    if (idAddress != null && idAddress != "")
+                    {
+                        tblproduct.Address = int.Parse(idAddress);
+                    }
+                    else
+                    {
+                        tblproduct.Address = 0;
+                    }
                     bool Active = (collection["Active"] == "True") ? true : false;
                     bool New = (collection["New"] == "True") ? true : false;
                     bool ViewHomes = (collection["ViewHomes"] == "True") ? true : false;
@@ -509,8 +544,7 @@ namespace GROHE.Controllers.Admin.Productad
                     tblproduct.ImageLinkDetail = ImageLinkDetail;
                     tblproduct.Vat = Vat;
                     tblproduct.Warranty = Warranty;
-                    tblproduct.Address = Address;
-                    tblproduct.Transport = Transport;
+                     tblproduct.Transport = Transport;
                     tblproduct.Access = Access;
                     tblproduct.Sale = Sale;
                     tblproduct.Active = Active;

@@ -50,28 +50,9 @@
         <span class="Name">Chỉ dẫn mua hàng</span>
         <div class="line_Bo"></div>
         <span class="Location"><span class="icon"></span> Showroom GROHE : @Model.Address</span>
-        <span class="Hotline"><span class="icon"></span> Hotline : 
-            @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
-            {
-
-                <span>@Model.HotlineOUT</span>
-
-            }
-            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
-            {
-
-                <span>@Model.HotlineIN</span>
-            }
-
-
-            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
-            {
-                <span>@Model.HotlineOUT</span>
-
-            }
-       
-        
-        </span>
+        <span class="Hotline"><span class="icon"></span> Hotline :<span>@Model.HotlineIN</span></span>
+        <span class="Hotline"><span class="icon"></span> Tổng đài bán hàng :<span>@Model.HotlineOUT</span></span>
+        <span class="Hotline"><span class="icon"></span> Tổng đài bảo hành :<span>@Model.HotlineOUT</span></span>
         <span class="Phone"><span class="icon"></span> Điện thoại bàn : <span>@Model.MobileIN</span></span>
         <span class="Email"><span class="icon"></span> Email : <span>@Model.Email</span></span>
     </div>

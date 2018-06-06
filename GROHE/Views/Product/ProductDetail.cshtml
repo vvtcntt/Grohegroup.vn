@@ -53,7 +53,15 @@
                             }
                             </li>
                             <li>
-                                <span> <span class="Address"></span> Xuất xứ : Chính hãng</span>
+                                @if (ViewBag.address != null && ViewBag.address != "")
+                                {
+                                    <span> <span class="Address"></span> Xuất xứ : @ViewBag.address</span>
+                                }
+                                else
+                                {
+                                    <span> <span class="Address"></span> Xuất xứ : Chính hãng</span>
+                                }
+                               
 
                             </li>
                             <li>

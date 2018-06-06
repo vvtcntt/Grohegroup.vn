@@ -18,6 +18,7 @@ namespace GROHE.Models
 
         public DbSet<ImageProduct> ImageProducts { get; set; }
         public DbSet<ProductConnect> ProductConnects { get; set; }
+        public DbSet<tblAddress> tblAddresses { get; set; }
         public DbSet<tblAgency> tblAgencies { get; set; }
         public DbSet<tblColorProduct> tblColorProducts { get; set; }
         public DbSet<tblConfig> tblConfigs { get; set; }
@@ -52,6 +53,7 @@ namespace GROHE.Models
         {
             modelBuilder.Configurations.Add(new ImageProductMap());
             modelBuilder.Configurations.Add(new ProductConnectMap());
+            modelBuilder.Configurations.Add(new tblAddressMap());
             modelBuilder.Configurations.Add(new tblAgencyMap());
             modelBuilder.Configurations.Add(new tblColorProductMap());
             modelBuilder.Configurations.Add(new tblConfigMap());

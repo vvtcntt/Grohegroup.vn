@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using GROHE.Models;
+using System.Text;
+
 namespace GROHE.Controllers.Display.Session.Product
 {
     public class ProductController : Controller
@@ -345,6 +347,16 @@ namespace GROHE.Controllers.Display.Session.Product
                 files += "<object src=\"" + filesbaogia[0].File + "\"><embed src=\"" + filesbaogia[0].File + "\"></embed></object>";
                 ViewBag.thongso = files;
             }
+
+            string address = Product.Address.ToString();
+            string resultAddress = "";
+            if (address != null && address != "")
+            {
+                int idaddress = int.Parse(address);
+                if (db.tblAddresses.FirstOrDefault(p => p.id == idaddress) != null)
+                    resultAddress = db.tblAddresses.FirstOrDefault(p => p.id == idaddress).Name;
+            }
+            ViewBag.address = resultAddress;
             return View(Product);
         }
         public PartialViewResult PartialRightProductDetail(string tag)
@@ -353,27 +365,28 @@ namespace GROHE.Controllers.Display.Session.Product
             tblProduct Product = db.tblProducts.First(p => p.Tag == tag);
             int id = int.Parse(Product.id.ToString());
             tblConfig tblconfig = db.tblConfigs.First();
-            string chuoisupport = "";
+            StringBuilder chuoisupport = new StringBuilder();
             var listSupport = db.tblSupports.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
             for (int i = 0; i < listSupport.Count; i++)
             {
-                chuoisupport += "<div class=\"Line_Buttom\"></div>";
-                chuoisupport += "<div class=\"Tear_Supports\">";
-                chuoisupport += "<div class=\"Left_Tear_Support\">";
-                chuoisupport += "<span class=\"htv1\">" + listSupport[i].Mission + ":</span>";
-                chuoisupport += "<span class=\"htv2\">" + listSupport[i].Name + " :</span>";
-                chuoisupport += "</div>";
-                chuoisupport += "<div class=\"Right_Tear_Support\">";
-                chuoisupport += "<a href=\"ymsgr:sendim?" + listSupport[i].Yahoo + "\">";
-                chuoisupport += "<img src=\"http://opi.yahoo.com/online?u=" + listSupport[i].Yahoo + "&m=g&t=1\" alt=\"Yahoo\" class=\"imgYahoo\" />";
-                chuoisupport += " </a>";
-                chuoisupport += "<a href=\"Skype:" + listSupport[i].Skyper + "?chat\">";
-                chuoisupport += "<img class=\"imgSkype\" src=\"/Content/Display/iCon/skype-icon.png\" title=\"Kangaroo\" alt=\"" + listSupport[i].Name + "\">";
-                chuoisupport += "</a>";
-                chuoisupport += "</div>";
-                chuoisupport += "</div>";
+                chuoisupport.Append("<div class=\"Line_Buttom\"></div>");
+                chuoisupport.Append("<div class=\"Tear_Supports\">");
+                chuoisupport.Append("<div class=\"Left_Tear_Support\">");
+                chuoisupport.Append("<span class=\"htv1\">" + listSupport[i].Mission + ":</span>");
+                chuoisupport.Append("<span class=\"htv2\">" + listSupport[i].Name + " :</span>");
+                chuoisupport.Append("</div>");
+                chuoisupport.Append("<div class=\"Right_Tear_Support\">");
+                chuoisupport.Append("<div class=\"topTearSupport\">");
+                chuoisupport.Append("<a href=\"tel:" + listSupport[i].Mobile + "\" title=\"" + listSupport[i].Name + "\"><img src=\"/Content/Display/iCon/logo_zalo.png\" alt=\"" + listSupport[i].Name + "\" /></a>");
+                chuoisupport.Append("<a href=\"tel:" + listSupport[i].Mobile + "\" title=\"" + listSupport[i].Name + "\"><img src=\"/Content/Display/iCon/Viber_logo.png\" alt=\"" + listSupport[i].Name + "\" /></a>");
+                chuoisupport.Append("</div>");
+                chuoisupport.Append("<div class=\"bottomTearSupport\">");
+                chuoisupport.Append("<span>" + listSupport[i].Mobile + "</span>");
+                chuoisupport.Append("</div>");
+                chuoisupport.Append("</div>");
+                chuoisupport.Append("</div>");
             }
-            ViewBag.chuoisupport = chuoisupport;
+            ViewBag.chuoisupport = chuoisupport.ToString();
 
             //lIST Menu
             int idCate = int.Parse(Product.idCate.ToString());

@@ -194,15 +194,14 @@
                     @Html.TextBoxFor(p => p.Warranty, new { @class = "txtWarraty", @Type = "number", @value = "1" })@Html.TextBoxFor(p => p.Visit, new { @class = "txtWarraty", @Type = "number", @style = "opacity:0" })
                 </div>
             </div>
-
             <div class="tr_1">
-                <div class="left_tr1"><span>Origin:</span></div>
+                <div class="left_tr1"><span>Xuất xứ:</span></div>
                 <div class="Right_tr1">
-                    @Html.RadioButtonFor(p => p.Address, "1", new { @id = "Origin"}) : Yes
-               @Html.RadioButtonFor(p => p.Address, "0", new { @id = "Origin" }): No
-                
+                    @Html.DropDownList("drAddress", "--Nhóm xuất xứ--")
                 </div>
             </div>
+
+
             <div class="tr_1">
                 <div class="left_tr1"><span>Transport:</span></div>
                 <div class="Right_tr1">
