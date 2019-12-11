@@ -197,8 +197,8 @@
                 <div class="left_tr1"><span>Transport:</span></div>
                 <div class="Right_tr1">
                     @Html.RadioButtonFor(p => p.Transport, true, new { @id = "Transport", @checked = "True" }) : Yes
-                @Html.RadioButtonFor(p => p.Transport,false, new { @id = "Transport" }): No
-               
+                    @Html.RadioButtonFor(p => p.Transport, false, new { @id = "Transport" }): No
+
                 </div>
                 <div class="tr_1">
                     <div class="left_tr1"><span>Access:</span></div>
@@ -212,7 +212,7 @@
                         @Html.TextAreaFor(p => p.Sale, new { @class = "Leght_6" })
                     </div>
                 </div>
-                
+
                 <div class="tr_1">
                     <div class="left_tr1"><span>Image Sale :</span></div>
                     <div class="Right_tr1">
@@ -227,7 +227,7 @@
                     <div class="Right_tr1">
                         @Html.RadioButtonFor(p => p.Note, true, new { @id = "Note" }) : Yes
                         @Html.RadioButtonFor(p => p.Note, false, new { @id = "Note", @checked = "True" }): No
-                   
+
                     </div>
                 </div>
                 <div class="tr_1">
@@ -243,7 +243,7 @@
                     <div class="left_tr1"><span>Status:</span></div>
                     <div class="Right_tr1">
                         @Html.RadioButtonFor(p => p.Status, true, new { @id = "Status", @checked = "True" }) : Yes
-                @Html.RadioButtonFor(p => p.Status,false, new { @id = "Status" }): No
+                        @Html.RadioButtonFor(p => p.Status, false, new { @id = "Status" }): No
                     </div>
                 </div>
                 <div class="tr_1">
@@ -251,9 +251,9 @@
                     <div class="Right_tr1">
 
                         @Html.RadioButtonFor(p => p.Active, true, new { @id = "Active", @checked = "True" }) : Yes
-                @Html.RadioButtonFor(p => p.Active, false, new { @id = "Active" }): No 
-               
-                  
+                        @Html.RadioButtonFor(p => p.Active, false, new { @id = "Active" }): No
+
+
                     </div>
                 </div>
                 <div class="tr_1">
@@ -262,6 +262,16 @@
 
                         @Html.RadioButtonFor(p => p.ProductSale, true, new { @id = "Active", @checked = "True" }) : Yes
                         @Html.RadioButtonFor(p => p.ProductSale, false, new { @id = "Active" }): No
+
+
+                    </div>
+                </div>
+                 
+                <div class="tr_1">
+                    <div class="left_tr1"><span>Product Priority:</span></div>
+                    <div class="Right_tr1">
+                        @Html.RadioButtonFor(p => p.Priority, true, new { @id = "Priority" }) : Yes
+                        @Html.RadioButtonFor(p => p.Priority, false, new { @id = "Priority", @checked = "True" }): No
 
 
                     </div>
@@ -279,9 +289,9 @@
                     <div class="left_tr1"><span>View Homes:</span></div>
                     <div class="Right_tr1">
                         @Html.RadioButtonFor(p => p.ViewHomes, true, new { @id = "ViewHomes" }) : Yes
-                 @Html.RadioButtonFor(p => p.ViewHomes, false, new { @id = "ViewHomes", @checked = "True" }): No
-                
-                  
+                        @Html.RadioButtonFor(p => p.ViewHomes, false, new { @id = "ViewHomes", @checked = "True" }): No
+
+
                     </div>
                 </div>
                 <div class="tr_1">
@@ -304,7 +314,7 @@
                         <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Add</button>
                     </div>
                 </div>
-                 
+
             </div>
         </div>
 

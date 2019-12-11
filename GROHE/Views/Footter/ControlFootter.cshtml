@@ -49,55 +49,66 @@
     <div class="Tear_Info-1">
         <span class="Name">Chỉ dẫn mua hàng</span>
         <div class="line_Bo"></div>
-        <span class="Location"><span class="icon"></span> Showroom GROHE : @Model.Address</span>
-        <span class="Hotline"><span class="icon"></span> Hotline :<span>@Model.HotlineIN</span></span>
-        <span class="Hotline"><span class="icon"></span> Tổng đài bán hàng :<span>@Model.HotlineOUT</span></span>
-        <span class="Hotline"><span class="icon"></span> Tổng đài bảo hành :<span>@Model.HotlineOUT</span></span>
-        <span class="Phone"><span class="icon"></span> Điện thoại bàn : <span>@Model.MobileIN</span></span>
+        <span class="Location"><span class="icon"></span> Showroom 01 : @Model.Address1</span>
+        <span class="Hotline"><span class="icon"></span> Hotline :<span>@Model.Hotline1</span></span>
+        <span class="Phone"><span class="icon"></span> Điện thoại bàn : <span>@Model.Mobile1</span></span>
+        <span class="Location"><span class="icon"></span> Showroom 02 : @Model.Address2</span>
+        <span class="Hotline"><span class="icon"></span> Hotline :<span>@Model.Hotline2</span></span>
+        <span class="Phone"><span class="icon"></span> Điện thoại bàn : <span>@Model.Mobile2</span></span>
+        <span class="Hotline"><span class="icon"></span> Tổng đài bán hàng :<span>@Model.PbxSell</span></span>
+        <span class="Hotline"><span class="icon"></span> Tổng đài bảo hành :<span>@Model.PbxGua</span></span>
         <span class="Email"><span class="icon"></span> Email : <span>@Model.Email</span></span>
     </div>
     <div class="Tear_Info_2">
         <span class="Name">Đăng ký chương trình khuyến mại</span>
         <div class="line_Bo"></div>
-@using (Html.BeginForm("Command", "Footter", FormMethod.Post))
-{
-        <div class="Content_ft">
-            <span class="Des">
-                Nếu bạn chưa mua sản phẩm khi chương  trình
-                khuyến mại diễn ra thì hình thức  “ĐĂNG KÝ CHƯƠNG
-                TRÌNH KHUYẾN MẠI” sẽ giúp bạn giữ được giá tại
-                thời điểm khuyến mại !
-            </span>
-            <div class="Row">
-                <div class="col_1">Họ và tên :</div>
-                <div class="col_2"><input type="text"   name="txtName" id="txtName" /></div>
-            </div>
-            <div class="Row">
-                <div class="col_1">Điện thoại :</div>
-                <div class="col_2"><input type="text"   name="txtHotline" id="txtHotline" /></div>
-            </div>
-            <div class="Row">
-                <div class="col_1">Kiểu đăng ký :</div>
-                <div class="col_2">
-                    <select id="selectcate" name="selectcate">
-                        <option value="0">Đăng ký nhận mail</option>
-                        <option value="1">Đăng ký giữ giá</option>
-                    </select>
+        @using (Html.BeginForm("Command", "Footter", FormMethod.Post))
+        {
+            <div class="Content_ft">
+                <span class="Des">
+                    Nếu bạn chưa mua sản phẩm khi chương  trình
+                    khuyến mại diễn ra thì hình thức  “ĐĂNG KÝ CHƯƠNG
+                    TRÌNH KHUYẾN MẠI” sẽ giúp bạn giữ được giá tại
+                    thời điểm khuyến mại !
+                </span>
+                <div class="Row">
+                    <div class="col_1">Họ và tên :</div>
+                    <div class="col_2"><input type="text" name="txtName" id="txtName" /></div>
+                </div>
+                <div class="Row">
+                    <div class="col_1">Điện thoại :</div>
+                    <div class="col_2"><input type="text" name="txtHotline" id="txtHotline" /></div>
+                </div>
+                <div class="Row">
+                    <div class="col_1">Kiểu đăng ký :</div>
+                    <div class="col_2">
+                        <select id="selectcate" name="selectcate">
+                            <option value="0">Đăng ký nhận mail</option>
+                            <option value="1">Đăng ký giữ giá</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="Row">
+                    <button type="submit" id="btnSend" name="btnSend">Đăng ký</button>
                 </div>
             </div>
-            <div class="Row">
-                <button type="submit" id="btnSend" name="btnSend">Đăng ký</button>
-            </div>
-        </div>
-}
+        }
     </div>
 </div>
 <div class="Clear"></div>
+<div id="channel">
+    <span>Đăng ký và theo dõi sản phẩm trên</span>
+
+    <ul><li><a href="@Model.FanpageYoutube" title="youtube"><img src="~/Content/Display/iCon/update/youtube.png" title="youtube" /></a></li><li><a href="@Model.FanpageYoutube" title="facebook"><img src="~/Content/Display/iCon/update/facebook-icon.jpg" title="facebook" /></a></li></ul>
+</div>
+<div class="Clear"></div>
+<div class="Clear"></div>
 <div id="BannerTimes"></div>
 <div class="Clear"></div>
-<a href="http://binhnonglanh.top" style="color:#fff; font-size:3px; margin:0px; display:inline-block" title="Bình nóng lạnh loại nào tốt">Bình nóng lạnh loại nào tốt</a>  <a style="color:#fff; font-size:3px; margin:0px; display:inline-block" href="http://thayloilocnuoc.com" title="Thay lõi lọc nước tại nhà">Thay lõi lọc nước tại nhà</a>
+<a href="http://thegioibinhnonglanh.vn" style="color:#fff; font-size:3px; margin:0px; display:inline-block" title="Bình nóng lạnh loại nào tốt">Bình nóng lạnh loại nào tốt</a>  <a style="color:#fff; font-size:3px; margin:0px; display:inline-block" href="http://thayloilocnuoc.com" title="Thay lõi lọc nước tại nhà">Thay lõi lọc nước tại nhà</a>
 <div id="Authorship" style=" width:100%; height:21px; float:left; margin:2px 0px; text-align:center">
-    <nav>@Html.Raw(Model.DMCA)<a href="https://plus.google.com/@Model.Authorship?rel=author"><img src="~/Content/Display/iCon/GoogleAuthorShip.png" alt="Đăng ký google authorShip" /></a>
+    <nav>
+        @Html.Raw(Model.DMCA)<a href="https://plus.google.com/@Model.Authorship?rel=author"><img src="~/Content/Display/iCon/GoogleAuthorShip.png" alt="Đăng ký google authorShip" /></a>
     </nav>
     <div class="Clear"></div>
 </div>
@@ -117,8 +128,9 @@
             <span class="Name">
                 Công ty TNHH SEABIG VIỆT NAM
             </span>
-            <span class="ft1">MST: 0105956762 | Điện thoại: @Model.MobileIN | Email: @Model.Email</span>
-            <span class="ft1">Địa chỉ : @Model.Address</span>
+            <span class="ft1">MST: 0105956762 | Điện thoại: @Model.Mobile1 - @Model.Mobile2 | Email: @Model.Email</span>
+            <span class="ft1">Cơ sở 1 : @Model.Address1</span>
+            <span class="ft1">Cơ sở 2 : @Model.Address2</span>
         </div>
         <div id="Right">
             <a href="" title=""><img src="~/Content/Display/iCon/dkbct.png" alt="" /></a>
@@ -129,11 +141,11 @@
     </div>
     <div class="Clear"></div>
 </div>
-@if(Request.Browser.IsMobileDevice==false)
+@if (Request.Browser.IsMobileDevice == false)
 {@Html.Raw(Model.CodeChat)}
-@if(Request.Browser.IsMobileDevice)
+@if (Request.Browser.IsMobileDevice)
 {
-   Html.RenderAction("MenuMobine", "Footter");
-   }
- 
- 
+    Html.RenderAction("MenuMobine", "Footter");
+}
+
+@{ Html.RenderAction("callPartial", "Footter");}

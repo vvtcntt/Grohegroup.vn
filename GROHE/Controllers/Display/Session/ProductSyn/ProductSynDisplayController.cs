@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using GROHE.Models;
@@ -17,84 +18,57 @@ namespace GROHE.Controllers.Display.Session.ProductSyn
         }
         public PartialViewResult ListProductSyn()
         {
-            string chuoi = "";
+            StringBuilder chuoi = new StringBuilder();
             var listProductSyn = db.tblProductSyns.Where(p => p.Active == true && p.ViewHomes == true).OrderBy(p => p.Ord).ToList();
-             
-                chuoi += "<div id=\"ProductSYN\">";
-                if (listProductSyn.Count > 0)
+
+            chuoi.Append("<div id=\"ProductSYN\">");
+            if (listProductSyn.Count > 0)
+            {
+                chuoi.Append("<div class=\"n_var\">");
+                chuoi.Append("<div class=\"Left_n_Var\"></div>");
+                chuoi.Append("<div class=\"Center_n_Var\"><h3>Sản phẩm GROHE đồng bộ</h3></div>");
+                chuoi.Append("<div class=\"Right_n_Var\"></div>");
+                chuoi.Append("</div>");
+
+            }
+            chuoi.Append("<div class=\"Adw_Syn\">");
+            var listImage = db.tblImages.Where(p => p.Active == true && p.idCate == 2).OrderBy(p => p.Ord).ToList();
+            for (int i = 0; i < listImage.Count; i++)
+            {
+                chuoi.Append("<a href=\"" + listImage[i].Url + "\" title=\"" + listImage[i].Name + "\"><img src=\"" + listImage[i].Images + "\" alt=\"" + listImage[i].Name + "\"/></a>");
+
+            }
+            chuoi.Append(" </div>");
+            if (listProductSyn.Count > 0)
+            {
+                chuoi.Append("<div id=\"Content_ProductSYN\">");
+
+                chuoi.Append("<div class=\"owl-carousel owl-theme\">");
+                for (int i = 0; i < listProductSyn.Count; i++)
                 {
-                     chuoi += "<div class=\"n_var\">";
-            	 chuoi += "<div class=\"Left_n_Var\"></div>";
-                 chuoi += "<div class=\"Center_n_Var\"><h3>Sản phẩm GROHE đồng bộ</h3></div>";
-                 chuoi += "<div class=\"Right_n_Var\"></div>"; 
-             chuoi += "</div>";
-                    
+                    chuoi.Append("<div class=\"item spdb\">");
+                    chuoi.Append("<div class=\"sptb\"></div>");
+                    chuoi.Append("<div class=\"img_spdb\">");
+                    chuoi.Append("<a href=\"/syn/" + listProductSyn[i].Tag + "\" title=\"" + listProductSyn[i].Name + "\"><img src=\"" + listProductSyn[i].ImageLinkThumb + "\" alt=\"" + listProductSyn[i].Name + "\" /></a>");
+                    chuoi.Append("</div>");
+                    chuoi.Append("<a href=\"/syn/" + listProductSyn[i].Tag + "\" class=\"Name\" title=\"" + listProductSyn[i].Name + "\">" + listProductSyn[i].Name + "</a>");
+                    chuoi.Append("<div class=\"Bottom_Tear_Sale\">");
+                    chuoi.Append("<div class=\"Price\">");
+                    chuoi.Append("<p class=\"PriceSale\">" + string.Format("{0:#,#}", listProductSyn[i].PriceSale) + " <span>đ</span></p>");
+                    chuoi.Append(" <p class=\"Price_s\">" + string.Format("{0:#,#}", listProductSyn[i].Price) + "</p>");
+                    chuoi.Append("</div>");
+                    chuoi.Append("</div>");
+                    chuoi.Append("</div>");
                 }
-                chuoi += "<div class=\"Adw_Syn\">";
-                var listImage = db.tblImages.Where(p => p.Active == true && p.idMenu == 2).OrderBy(p => p.Ord).ToList();
-                for (int i = 0; i < listImage.Count; i++)
-                {
-                    chuoi += "<a href=\"/" + listImage[i].Url + "\" title=\"" + listImage[i].Name + "\"><img src=\"" + listImage[i].Images + "\" alt=\"" + listImage[i].Name + "\"/></a>";
+                chuoi.Append("</div>");
+                chuoi.Append("</div>");
+            }
+            chuoi.Append("</div>");
 
-                }
-                chuoi += " </div>";
-                if (listProductSyn.Count > 0)
-                {
-                    chuoi += "<div id=\"Content_ProductSYN\">";
-
-                    for (int i = 0; i < listProductSyn.Count; i++)
-                    {
-                        chuoi += " <div class=\"spdb\">";
-                        chuoi += " <div class=\"sptb\"></div>";
-
-                        chuoi += " <div class=\"img_spdb\">";
-                        chuoi += " <a href=\"/Syn/" + listProductSyn[i].Tag + "\" title=\"" + listProductSyn[i].Name + "\"><img src=\"" + listProductSyn[i].ImageLinkThumb + "\" alt=\"" + listProductSyn[i].Name + "\" /></a>";
-                        chuoi += " </div>";
-                        chuoi += " <a href=\"/Syn/" + listProductSyn[i].Tag + "\" class=\"Name\" title=\"" + listProductSyn[i].Name + "\">" + listProductSyn[i].Name + "</a>";
-                        chuoi += "<div class=\"Bottom_Tear_Sale\">";
-                        chuoi += "<div class=\"Price\">";
-                        if (listProductSyn[i].PriceSale>2)
-                        {chuoi += "<p class=\"PriceSale\">" + string.Format("{0:#,#}", listProductSyn[i].PriceSale) + " <span>đ</span></p>";}
-                        else
-                        {chuoi += "<p class=\"PriceSale\"> Liên hệ</p>";}
-                        if (listProductSyn[i].Price > 2)
-                        { chuoi += "<p class=\"Price_s\">" + string.Format("{0:#,#}", listProductSyn[i].Price) + "đ</p>"; }
-                        else
-                        { chuoi += "<p class=\"Price_s\">Liên hệ</p>"; }
-                        chuoi += "</div>";
-                        chuoi += "<div class=\"sevices\">";
-                        if (listProductSyn[i].Status == true)
-                        {
-                            chuoi += "<span class=\"Status\"></span>";
-                        }
-                        else
-                        {
-                            chuoi += "<span class=\"StatusNo\"></span>";
-                        }
-
-                        chuoi += "<span class=\"Transport\"><span class=\"icon\">";
-                        if (listProductSyn[i].Transport == true)
-                        {
-                            chuoi += "</span> Toàn quốc</span>";
-                        }
-                        else
-                        {
-                            chuoi += "</span> Liên hệ</span>";
-                        }
-                        chuoi += "<span class=\"View\"></span>";
-                        chuoi += "</div>";
-                        chuoi += "</div>";
-
-                        chuoi += "  </div>";
-                    }
-                    chuoi += "</div>";
-                }
-                chuoi += "</div>";
-           
             ViewBag.chuoisyc = chuoi;
             return PartialView();
         }
-     
+
         public ActionResult ProductSyn_Detail(string tag)
         {
             var tblproductSyn = db.tblProductSyns.First(p => p.Tag == tag);
@@ -112,17 +86,7 @@ namespace GROHE.Controllers.Display.Session.ProductSyn
             }
             ViewBag.chuoiimage = chuoiimages;
             int idsyn = int.Parse(tblproductSyn.id.ToString());
-            int visit = int.Parse(tblproductSyn.Visit.ToString());
-            if (visit > 0)
-            {
-                tblproductSyn.Visit = tblproductSyn.Visit + 1;
-                db.SaveChanges();
-            }
-            else
-            {
-                tblproductSyn.Visit = tblproductSyn.Visit + 1;
-                db.SaveChanges();
-            }
+             
             var Product = db.ProductConnects.Where(p => p.idSyn == idsyn).ToList();
             string chuoipr = "";
             string chuoisosanh = "";
@@ -284,5 +248,106 @@ namespace GROHE.Controllers.Display.Session.ProductSyn
             ViewBag.hienthianh = chuoi;
             return View(listsanphamdongbo);
         }
-	}
+        public ActionResult list()
+        {
+            ViewBag.Title = "<title>Sản phẩm grohe theo bộ</title>";
+            ViewBag.Description = "<meta name=\"description\" content=\"Sản phẩm grohe theo bộ, sản phẩm grohe combo theo bộ giá rẻ nhất Việt Nam\"/>";
+            ViewBag.Keyword = "<meta name=\"keywords\" content=\"Sản phẩm grohe theo bộ\" /> ";
+            ViewBag.dcTitle = "<meta name=\"DC.title\" content=\"Sản phẩm grohe theo bộ\" />";
+            ViewBag.dcDescription = "<meta name=\"DC.description\" content=\"Sản phẩm grohe theo bộ, sản phẩm grohe combo theo bộ giá rẻ nhất Việt Nam\" />";
+            string meta = "";
+            meta += "<meta itemprop=\"name\" content=\"\" />";
+            meta += "<meta itemprop=\"url\" content=\"\" />";
+            meta += "<meta itemprop=\"description\" content=\"Sản phẩm grohe theo bộ, sản phẩm grohe combo theo bộ giá rẻ nhất Việt Nam\" />";
+            meta += "<meta itemprop=\"image\" content=\"\" />";
+            meta += "<meta property=\"og:title\" content=\"Sản phẩm grohe theo bộ\" />";
+            meta += "<meta property=\"og:type\" content=\"product\" />";
+            meta += "<meta property=\"og:url\" content=\"" + Request.Url.ToString() + "\" />";
+            meta += "<meta property=\"og:image\" content=\"\" />";
+            meta += "<meta property=\"og:site_name\" content=\"http://grohegroup.vn\" />";
+            meta += "<meta property=\"og:description\" content=\"Sản phẩm grohe theo bộ, sản phẩm grohe combo theo bộ giá rẻ nhất Việt Nam\" />";
+            meta += "<meta property=\"fb:admins\" content=\"\" />";
+            ViewBag.Meta = meta;
+            ViewBag.nUrl = "<a href=\"/\" title=\"Trang chủ\" rel=\"nofollow\"><span class=\"iCon\"></span> Trang chủ</a> / <h1>Sản phẩm grohe theo bộ</h1>";
+            StringBuilder chuoi = new StringBuilder();
+            chuoi.Append(" <div class=\"List_product\">");
+            chuoi.Append(" <div id=\"Box_Name\">");
+            chuoi.Append("<div id=\"Leff_BoxName\">   <h2><a href=\"/san-pham-grohe-dong-bo\" title=\"Sản phẩm grohe theo bộ\">Sản phẩm grohe theo bộ</a></h2></div>");
+            chuoi.Append("<div id=\"Rigt_Box_Name\">");
+            chuoi.Append("<select>");
+            chuoi.Append("<option value=\"0\"> - Sắp xếp -</option>");
+            chuoi.Append("<option value=\"1\"> - Giá tăng dần -</option>");
+            chuoi.Append("<option value=\"1\"> - GIá giảm giần -</option>");
+            chuoi.Append(" </select>");
+            chuoi.Append("</div>");
+            chuoi.Append("</div>");
+            chuoi.Append("<div class=\"Clear\"></div>");
+
+            chuoi.Append("<div class=\"ContentProduct ContentProductSyn\">");
+            var listProduct = db.tblProductSyns.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
+            for (int j = 0; j < listProduct.Count; j++)
+            {
+                chuoi.Append("<div class=\"Tear_1\">");
+                if (listProduct[j].New == true)
+                {
+                    chuoi.Append(" <div class=\"Box_ProductNews\"></div>");
+                }
+   
+                chuoi.Append("<div class=\"img\">");
+                chuoi.Append("<a href=\"/syn/" + listProduct[j].Tag + "\" title=\"" + listProduct[j].Name + "\">");
+                chuoi.Append("<img src=\"" + listProduct[j].ImageLinkThumb + "\" alt=\"" + listProduct[j].Name + "\" title=\"" + listProduct[j].Name + "\" />");
+                chuoi.Append("</a>");
+                chuoi.Append("</div>");
+                chuoi.Append("<h3><a href=\"/syn/" + listProduct[j].Tag + "\" title=\"" + listProduct[j].Name + "\" class=\"Name\">" + listProduct[j].Name + "</a></h3>");
+                chuoi.Append("<div class=\"Info\">");
+                chuoi.Append("<div class=\"LeftInfo\">");
+                string note = "";
+                if (listProduct[j].PriceSale > 10)
+                {
+                    chuoi.Append("<span class=\"PriceSale\">" + string.Format("{0:#,#}", listProduct[j].PriceSale) + "đ</span>");
+
+                    
+                }
+                else
+                    chuoi.Append("<span class=\"PriceSale\">Liên hệ</span>");
+                if (listProduct[j].Price < 10)
+                    chuoi.Append("<span class=\"Price\">Liên hệ</span>");
+                else
+                    chuoi.Append("<span class=\"Price\">" + string.Format("{0:#,#}", listProduct[j].Price) + "đ</span>");
+                chuoi.Append("</div>");
+                chuoi.Append("<div class=\"RightInfo\">");
+                chuoi.Append("<div class=\"Top_RightInfo\">");
+                chuoi.Append("<a href=\"\" title=\"\"><span></span></a>");
+                chuoi.Append("</div>");
+                chuoi.Append(" <div class=\"Bottom_RightInfo\">");
+                int ids = int.Parse(listProduct[j].id.ToString());
+                var listfuc = db.tblFunctionProducts.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
+                var checkfun = db.tblConnectFunProuducts.Where(p => p.idPro == ids).ToList();
+                if (checkfun.Count > 0)
+                {
+                    for (int z = 0; z < listfuc.Count; z++)
+                    {
+                        int idfun = int.Parse(listfuc[z].id.ToString());
+                        var connectfun = db.tblConnectFunProuducts.Where(p => p.idFunc == idfun && p.idPro == ids).ToList();
+                        if (connectfun.Count > 0)
+                        {
+                            chuoi.Append("<a href=\"" + listfuc[z].Url + "\" rel=\"nofollow\" title=\"" + listfuc[z].Name + "\"><img src=\"" + listfuc[z].Images + "\" alt=\"" + listfuc[z].Name + "\" /></a>");
+                        }
+                    }
+
+                }
+                chuoi.Append("</div>");
+                chuoi.Append("</div>");
+                chuoi.Append("</div>");
+               
+                chuoi.Append("</div>");
+            }
+            chuoi.Append("<div class=\"Clear\"></div>");
+            chuoi.Append("</div>");
+            chuoi.Append("</div>");
+            ViewBag.chuoi = chuoi.ToString();
+            return View();
+        }
+
+    }
 }

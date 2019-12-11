@@ -1,18 +1,24 @@
-﻿<div id="nVar">
+﻿@model GROHE.Models.tblConfig
+<div id="nVar">
     <div id="Content_nVar">
         <div id="Menu_nvar">
             <span>Danh mục sản phẩm</span>
             @{Html.RenderAction("PartialMenu", "Header");}
         </div>
         <div id="Box_Search">
-@using (Html.BeginForm("Search", "Product", FormMethod.Post))
-{
-            <input type="text" name="txtSearch" class="txtSearch" id="txtSearch" />
-            <button type="submit" name="btnSearch" id="btnSearch" class="btnSearch">TÌM</button>
-}
+            @using (Html.BeginForm("Search", "Product", FormMethod.Post))
+            {
+                <input type="text" name="txtSearch" class="txtSearch" id="txtSearch" />
+                <button type="submit" name="btnSearch" id="btnSearch" class="btnSearch">TÌM</button>
+            }
+        </div>
+        <div id="boxsale">
+            <a href="/ban-tin-khuyen-mai" title="Khuyến mại">
+                <img src="~/Content/Display/iCon/update/KM-con.gif" />
+            </a>
         </div>
         <div id="BoxTime">
-            Thời gian Mở cửa : <span>7H30 - 18H</span>
+            Thời gian Mở cửa : <span>@Model.TimeWork</span>
         </div>
         <div id="BoxOrder">
             @if (Session["soluong"] != "" && Session["soluong"] != null)

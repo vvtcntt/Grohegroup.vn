@@ -24,6 +24,9 @@ namespace GROHE
             routes.MapRoute("ListAgency", "4/{Tag}/{*catchall}", new { controller = "AgencyDisplay", action = "ListAgency", tag = UrlParameter.Optional }, new { controller = "^A.*", action = "^ListAgency$" });
             routes.MapRoute("DetailAgency", "5/{Tag}/{*catchall}", new { controller = "AgencyDisplay", action = "AgencyDetail", tag = UrlParameter.Optional }, new { controller = "^A.*", action = "^AgencyDetail$" });
             routes.MapRoute("Detaicatalogues", "7/{tag}/{*catchall}", new { controller = "Catalogues", action = "CataloguesDetail", tag = UrlParameter.Optional }, new { controller = "^C.*", action = "^CataloguesDetail$" });
+            routes.MapRoute(name: "ban-tin-khuyen-mai", url: "ban-tin-khuyen-mai", defaults: new { controller = "sale", action = "detail" });
+            routes.MapRoute("synlist", "san-pham-grohe-dong-bo", new { controller = "ProductSynDisplay", action = "list", tag = UrlParameter.Optional }, new { controller = "^P.*", action = "^list$" });
+
             routes.MapRoute("Danh_Sach_manufactures", "6/{Manu}/{*catchall}", new { controller = "Product", action = "ListProductManufactures", manu = UrlParameter.Optional }, new { controller = "^P.*", action = "^ListProductManufactures$" });
             routes.MapRoute(name: "Tin-tuc", url: "Tin-tuc", defaults: new { controller = "NewDisplay", action = "ListNew" });
             routes.MapRoute(name: "Hang-san-xuat", url: "Hang-san-xuat", defaults: new { controller = "ManufacturesDeplay", action = "ListManufactures" });

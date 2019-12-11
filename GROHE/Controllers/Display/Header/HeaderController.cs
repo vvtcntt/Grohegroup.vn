@@ -26,7 +26,7 @@ namespace GROHE.Controllers.Display.Header
         }
         public PartialViewResult PartialnVar()
         {
-            return PartialView();
+            return PartialView(db.tblConfigs.FirstOrDefault());
         }
       public PartialViewResult PartialMenu()
         {
@@ -34,6 +34,9 @@ namespace GROHE.Controllers.Display.Header
             string chuoi = "";
             chuoi += "<div class=\"Menu\">";
             chuoi += "<ul class=\"ul1\">";
+            chuoi += "<li class=\"li1\">";
+            chuoi += "<a href=\"/san-pham-grohe-dong-bo\" title=\"Sản phẩm grohe dồng bộ\"><span></span> Sản phẩm grohe đồng bộ</a>";
+            chuoi += "</li>";
             for (int i = 0; i < listParent.Count;i++ )
             {
              

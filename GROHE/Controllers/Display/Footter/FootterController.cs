@@ -31,6 +31,10 @@ namespace GROHE.Controllers.Display.Footter
             ViewBag.maps = maps.Content;
             return PartialView(tblconfig);
         }
+        public PartialViewResult callPartial()
+        {
+            return PartialView(db.tblConfigs.First());
+        }
         public ActionResult Command(FormCollection collection, tblRegister registry)
         {
              string Name = collection["txtName"];

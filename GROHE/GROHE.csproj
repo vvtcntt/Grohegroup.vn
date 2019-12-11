@@ -1331,6 +1331,13 @@
     <Content Include="Content\Display\Css\Product_Rs.css" />
     <Content Include="Content\Display\Css\Sale.css" />
     <Content Include="Content\Display\Css\styles.css" />
+    <Content Include="Content\Display\Css\update\call.css" />
+    <Content Include="Content\Display\Css\update\owl.carousel.min.css" />
+    <Content Include="Content\Display\Css\update\owl.theme.default.min.css" />
+    <Content Include="Content\Display\Css\update\Popup_ud.css" />
+    <Content Include="Content\Display\Css\update\product.css" />
+    <Content Include="Content\Display\Css\update\sale.css" />
+    <Content Include="Content\Display\Css\update\times.css" />
     <Content Include="Content\Display\data.html" />
     <Content Include="Content\Display\Datadetail.html" />
     <Content Include="Content\Display\Default.html" />
@@ -1409,6 +1416,13 @@
     <Content Include="Content\Display\iCon\tamgiac.png" />
     <Content Include="Content\Display\iCon\tamgiac_hover.png" />
     <Content Include="Content\Display\iCon\TOTOERRO.png" />
+    <Content Include="Content\Display\iCon\update\bon-cau-inax-icon.png" />
+    <Content Include="Content\Display\iCon\update\calling.gif" />
+    <Content Include="Content\Display\iCon\update\facebook-icon.jpg" />
+    <Content Include="Content\Display\iCon\update\hinhtron.png" />
+    <Content Include="Content\Display\iCon\update\icon-zalo.png" />
+    <Content Include="Content\Display\iCon\update\KM-con.gif" />
+    <Content Include="Content\Display\iCon\update\youtube.png" />
     <Content Include="Content\Display\iCon\voi-rua-lavabo1.png" />
     <Content Include="Content\Display\Js\Adw.js" />
     <Content Include="Content\Display\Js\crawler.js" />
@@ -1418,6 +1432,9 @@
     <Content Include="Content\Display\Js\js.js" />
     <Content Include="Content\Display\Js\PopupDetailProduct.js" />
     <Content Include="Content\Display\Js\Scroll.js" />
+    <Content Include="Content\Display\Js\update\jquery.popupMiendatweb.min.js" />
+    <Content Include="Content\Display\Js\update\owl.carousel.min.js" />
+    <Content Include="Content\Display\Js\update\script.js" />
     <Content Include="Content\Display\ListNews.html" />
     <Content Include="Content\Display\ListProduct.html" />
     <Content Include="Content\Display\Newdetail.html" />
@@ -1762,6 +1779,10 @@
     <Content Include="Views\address\Index.cshtml" />
     <Content Include="Views\address\ProductAddress.cshtml" />
     <Content Include="Views\address\UpdateProductAddress.cshtml" />
+    <Content Include="Views\Footter\callPartial.cshtml" />
+    <Content Include="Views\ProductSale\detail.cshtml" />
+    <Content Include="Views\Sale\detail.cshtml" />
+    <Content Include="Views\ProductSynDisplay\list.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

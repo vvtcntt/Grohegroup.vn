@@ -205,9 +205,9 @@
             <div class="tr_1">
                 <div class="left_tr1"><span>Transport:</span></div>
                 <div class="Right_tr1">
-                    @Html.RadioButtonFor(p => p.Transport, true, new { @id = "Transport"}) : Yes
+                    @Html.RadioButtonFor(p => p.Transport, true, new { @id = "Transport" }) : Yes
                     @Html.RadioButtonFor(p => p.Transport, false, new { @id = "Transport" }): No
-               
+
                 </div>
                 <div class="tr_1">
                     <div class="left_tr1"><span>Access:</span></div>
@@ -234,7 +234,7 @@
                     </div>
                     <div class="Right_tr1">
                         @Html.RadioButtonFor(p => p.Note, true, new { @id = "Note" }) : Yes
-                        @Html.RadioButtonFor(p => p.Note, false, new { @id = "Note"  }): No
+                        @Html.RadioButtonFor(p => p.Note, false, new { @id = "Note" }): No
 
                     </div>
                 </div>
@@ -250,18 +250,18 @@
                 <div class="tr_1">
                     <div class="left_tr1"><span>Status:</span></div>
                     <div class="Right_tr1">
-                        @Html.RadioButtonFor(p => p.Status, true, new { @id = "Status"}) : Yes
-                @Html.RadioButtonFor(p => p.Status, false, new { @id = "Status" }): No
+                        @Html.RadioButtonFor(p => p.Status, true, new { @id = "Status" }) : Yes
+                        @Html.RadioButtonFor(p => p.Status, false, new { @id = "Status" }): No
                     </div>
                 </div>
                 <div class="tr_1">
                     <div class="left_tr1"><span>Active:</span></div>
                     <div class="Right_tr1">
 
-                        @Html.RadioButtonFor(p => p.Active, true, new { @id = "Active"}) : Yes
-                        @Html.RadioButtonFor(p => p.Active, false, new { @id = "Active" }): No 
-               
-                  
+                        @Html.RadioButtonFor(p => p.Active, true, new { @id = "Active" }) : Yes
+                        @Html.RadioButtonFor(p => p.Active, false, new { @id = "Active" }): No
+
+
                     </div>
                 </div>
                 <div class="tr_1">
@@ -275,19 +275,29 @@
                     </div>
                 </div>
                 <div class="tr_1">
+                    <div class="left_tr1"><span>Priority:</span></div>
+                    <div class="Right_tr1">
+
+                        @Html.RadioButtonFor(p => p.Priority, true, new { @id = "Priority" }) : Yes
+                        @Html.RadioButtonFor(p => p.Priority, false, new { @id = "Priority" }): No
+
+
+                    </div>
+                </div>
+                <div class="tr_1">
                     <div class="left_tr1"><span>Product New</span></div>
                     <div class="Right_tr1">
                         @Html.RadioButtonFor(p => p.New, true, new { @id = "ViewHomes" }) : Yes
-                        @Html.RadioButtonFor(p => p.New, false, new { @id = "ViewHomes"  }): No
+                        @Html.RadioButtonFor(p => p.New, false, new { @id = "ViewHomes" }): No
                     </div>
                 </div>
                 <div class="tr_1">
                     <div class="left_tr1"><span>View Homes:</span></div>
                     <div class="Right_tr1">
                         @Html.RadioButtonFor(p => p.ViewHomes, true, new { @id = "ViewHomes" }) : Yes
-                 @Html.RadioButtonFor(p => p.ViewHomes, false, new { @id = "ViewHomes" }): No
-                
-                  
+                        @Html.RadioButtonFor(p => p.ViewHomes, false, new { @id = "ViewHomes" }): No
+
+
                     </div>
                 </div>
                 <div class="tr_1">
@@ -306,9 +316,9 @@
                 <div class="tr_1">
                     <div class="left_tr1">
                     </div>
-                    <div class="Right_tr1"> 
-                        <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Save</button> 
-                     </div>
+                    <div class="Right_tr1">
+                        <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Save</button>
+                    </div>
                 </div>
             </div>
         </div>

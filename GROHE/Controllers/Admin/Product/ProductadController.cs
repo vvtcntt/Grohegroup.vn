@@ -504,6 +504,8 @@ namespace GROHE.Controllers.Admin.Productad
                     bool Note = (collection["Note"] == "True") ? true : false;
                     string Warranty = collection["Warranty"];
                     string Address = collection["Address"];
+                    bool Priority = (collection["Priority"] == "True") ? true : false;
+
                     bool Transport = (collection["Transport"] == "True") ? true : false;
                     string Access = collection["Access"];
                     string Sale = collection["Sale"];
@@ -777,6 +779,47 @@ namespace GROHE.Controllers.Admin.Productad
             result = "Active Updated.";
             return Json(new { result = result });
         }
+        public ActionResult ProductEditProductSale(string chk, string nchecked)
+        {
+
+            var Product = db.tblProducts.Find(int.Parse(chk));
+            var result = string.Empty;
+            if (nchecked == "true")
+            {
+                Product.ProductSale = false;
+            }
+            else
+            { Product.ProductSale = true; }
+
+            //db.Entry(Product).State = System.Data.EntityState.Modified;
+            db.SaveChanges();
+            #region[Updatehistory]
+            Updatehistoty.UpdateHistory("Edit  ProductSale Product", Request.Cookies["Username"].Values["FullName"].ToString(), Request.Cookies["Username"].Values["UserID"].ToString());
+            #endregion
+            result = "Active Updated.";
+            return Json(new { result = result });
+        }
+        public ActionResult ProductEditPriority(string chk, string nchecked)
+        {
+
+            var Product = db.tblProducts.Find(int.Parse(chk));
+            var result = string.Empty;
+            if (nchecked == "true")
+            {
+                Product.Priority = false;
+            }
+            else
+            { Product.Priority = true; }
+
+            //db.Entry(Product).State = System.Data.EntityState.Modified;
+            db.SaveChanges();
+            #region[Updatehistory]
+            Updatehistoty.UpdateHistory("Edit  Priority Product", Request.Cookies["Username"].Values["FullName"].ToString(), Request.Cookies["Username"].Values["UserID"].ToString());
+            #endregion
+            result = "Active Updated.";
+            return Json(new { result = result });
+        }
+
         #region[Delete]
         public ActionResult DeleteProduct(int id)
         {

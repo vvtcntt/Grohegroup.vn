@@ -27,24 +27,10 @@
             <div class="Hotlines">
                 <span class="hl1">Tư vấn online (24/7)</span>
                 <span class="hl2">
-                    @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
-                    {
+                   
 
-                        <span>@Model.HotlineOUT</span>
-
-                    }
-                    else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
-                    {
-
-                        <span>@Model.HotlineIN</span>
-                    }
-
-
-                    else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
-                    {
-                        <span>@Model.HotlineOUT</span>
-
-                    }  
+                        <span>@Model.PbxSell</span>
+                   
                 </span>
             </div>
         </div>

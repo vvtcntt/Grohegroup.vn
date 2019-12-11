@@ -214,7 +214,44 @@
                 });
             //
         });
+         $(document).on("click", ".ProductSale", function () {
+            //your code
 
+            var getID = $(this).attr('id');
+            var Active = $(this).attr("value")
+            //alert(getID);
+
+            $.post("/Productad/ProductEditProductSale", { "chk": getID, "nchecked": Active },
+                function (data) {
+
+
+                    $(".alert").replaceWith("<div class='alert alert-info'>" + data.result + "</div>");
+                    $(".alert").fadeOut(2000);
+
+
+
+                });
+            //
+         });
+         $(document).on("click", ".Priority", function () {
+            //your code
+
+            var getID = $(this).attr('id');
+            var Active = $(this).attr("value")
+            //alert(getID);
+
+            $.post("/Productad/ProductEditPriority", { "chk": getID, "nchecked": Active },
+                function (data) {
+
+
+                    $(".alert").replaceWith("<div class='alert alert-info'>" + data.result + "</div>");
+                    $(".alert").fadeOut(2000);
+
+
+
+                });
+            //
+        });
 
     })
 </script>

@@ -66,6 +66,8 @@ namespace GROHE.Models.Mapping
             this.Property(t => t.Address).HasColumnName("Address");
             this.Property(t => t.Transport).HasColumnName("Transport");
             this.Property(t => t.Access).HasColumnName("Access");
+            this.Property(t => t.Priority).HasColumnName("Priority");
+
             this.Property(t => t.Sale).HasColumnName("Sale");
             this.Property(t => t.Note).HasColumnName("Note");
             this.Property(t => t.ImageSale).HasColumnName("ImageSale");

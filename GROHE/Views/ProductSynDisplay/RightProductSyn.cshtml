@@ -3,25 +3,28 @@
         <div id="img_Support"></div>
 
         <div id="Contact_Support">
-            @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
-            {<span class="Hotline"><span></span> @Model.HotlineOUT</span> }
-            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
-            {
-                <span class="Hotline"><span></span> @Model.HotlineIN</span>
-            }
-            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 22)
-            {
-                <span class="Mobile_Company">Điện thoại : @Model.MobileOUT - Hotline :@Model.HotlineOUT</span>
+            <div class="timeWorks">
+                <span class="tm1">Thời gian làm việc : <strong>@Model.TimeWork</strong> </span>
+                <span class="tm2">Làm việc tất cả các ngày trong tuần</span>
+                <span class="tm3">
+                    Khách hàng mua hàng ngoài <strong>19H30</strong> cần đặt lịch trước qua số hotline : <strong>@Model.PbxSell</strong>
+                </span>
+            </div>
+            <div class="hotlineSwitchBoard" style="margin:10px ">
+                <span class="nameHotline">Tổng đài bán hàng</span>
+                <span class="hotlines">@Model.PbxSell</span>
+            </div>
+            <span class="Address"><span></span> @Model.Address1</span>
 
-            }
-            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 22 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
-            {
-                <span class="Mobile_Company">Điện thoại : @Model.MobileOUT - Hotline :@Model.HotlineOUT</span>
-            }
+            <span class="Hotline"><span></span> @Model.Hotline1</span>
 
-            <span class="Mobile"><span></span> @Model.MobileIN</span>
+            <span class="Hotline"><span></span> @Model.Hotline2</span>
+            <span class="Address"><span></span> @Model.Address1</span>
+            <span class="Mobile"><span></span> @Model.Mobile1</span>
+            <span class="Address"><span></span> @Model.Address2</span>
+            <span class="Mobile"><span></span> @Model.Mobile2</span>
+
             <span class="Email"><span></span> @Model.Email</span>
-            <span class="Address"><span></span> @Model.Address</span>
         </div>
         <div id="ListSupport">
             <span class="httt">Hỗ trợ trực tuyến</span>

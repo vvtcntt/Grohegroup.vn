@@ -16,6 +16,17 @@
          });
      });
 </script>
+ <script type="text/javascript">
+     $(function () {
+         $("#SelectImageSale").click(function () {
+             var finder = new CKFinder();
+             finder.selectActionFunction = function (fileUrl) {
+                 $("#ImageSale").val(fileUrl);
+             };
+             finder.popup();
+         });
+     });
+ </script>
 <script type="text/javascript">
     $(function () {
         $("#SelectImagesFavicon").click(function () {
@@ -51,282 +62,357 @@
         </div>
 
     </div>
-    <div class="Content_Content_Detail">
-         
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Title :</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.Title, new { @class = "Leght_2" })
+   <div class="Content_Content_Detail">
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Description :</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextAreaFor(p=>p.Description, new { @class = "Leght_6" })
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Title :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Title, new { @class = "Leght_2" })
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Keyword :</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextAreaFor(p=>p.Keywords, new { @class = "Leght_6" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Description :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextAreaFor(p => p.Description, new { @class = "Leght_6" })
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Company Name :</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.Name, new { @class = "Leght_2" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Keyword :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextAreaFor(p => p.Keywords, new { @class = "Leght_6" })
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Address :</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.Address, new { @class = "Leght_2" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Company Name :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Name, new { @class = "Leght_2" })
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Mobile IN:</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.MobileIN, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Address cơ sở 1:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Address1, new { @class = "Leght_2" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Address cơ sở 2:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Address2, new { @class = "Leght_2" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Hotline cơ sở 1:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Hotline1, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Hotline cơ sở 2:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Hotline2, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Điện thoại bàn cơ sở 1:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Mobile1, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Điện thoại bàn cơ sở 2 :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Mobile2, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Tổng đài bán hàng :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.PbxSell, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Tổng đài bảo hành :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.PbxGua, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Tổng đài phản ảnh :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.PbxDen, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Email:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Email, new { @class = "Leght_2" })
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Hotline IN:</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.HotlineIN, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Logo:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.ImageLinkLogo, new { @class = "Leght_3" })&nbsp;<input id="SelectImages" type="button" value="Browser" />
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Tổng đài bảo hành:</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p => p.MobileOUT, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Favicon:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Favicon, new { @class = "Leght_3" })&nbsp;<input id="SelectImagesFavicon" type="button" value="Browser" />
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Tổng đài bán hàng :</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p => p.HotlineOUT, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Hottag :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextAreaFor(p => p.Footer, new { @class = "Leght_6" })
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Email:</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.Email, new { @class = "Leght_2" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Slogan :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Slogan, new { @class = "Leght_3" })
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Logo:</span>
-            </div>
-            <div class="Right_tr1">
-               @Html.TextBoxFor(p => p.ImageLinkLogo, new { @class="Leght_3"})&nbsp;<input id="SelectImages" type="button" value="Browser" />
-               
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Favicon:</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p => p.Favicon, new { @class = "Leght_3" })&nbsp;<input id="SelectImagesFavicon" type="button" value="Browser" />
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>UserEmail Send :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.UserEmail, new { @class = "Leght_4" })
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Hottag :</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextAreaFor(p=>p.Footer, new { @class = "Leght_6" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>PassEmail Send :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.PassEmail, new { @class = "Leght_4", @type = "password" })
 
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Slogan :</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.Slogan, new { @class = "Leght_3" })
-              
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>UserEmail Send :</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.UserEmail, new { @class = "Leght_4" })
-              
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>PassEmail Send :</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.PassEmail, new { @class = "Leght_4",@type="password" })
-              
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Authorship :</span>
-            </div>
-            <div class="Right_tr1">
-             
-                  @Html.TextAreaFor(p=>p.Authorship, new { @class = "Leght_4" })
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>DMCA :</span>
-            </div>
-            <div class="Right_tr1">
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Authorship :</span>
+           </div>
+           <div class="Right_tr1">
 
-                @Html.TextAreaFor(p => p.DMCA, new { @class = "Leght_4", @placeholder = "Nhập mã id tài khoản DMCA" })
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Code Chat :</span>
-            </div>
-            <div class="Right_tr1">
+               @Html.TextAreaFor(p => p.Authorship, new { @class = "Leght_4" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>DMCA :</span>
+           </div>
+           <div class="Right_tr1">
 
-                @Html.TextAreaFor(p => p.CodeChat, new { @class = "Leght_4", @placeholder = "Nhập mã Code Chat" })
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>FanpageFacebook :</span>
-            </div>
-            <div class="Right_tr1">
+               @Html.TextAreaFor(p => p.DMCA, new { @class = "Leght_4", @placeholder = "Nhập mã id tài khoản DMCA" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Code Chat :</span>
+           </div>
+           <div class="Right_tr1">
 
-                @Html.TextAreaFor(p => p.FanpageFacebook, new { @class = "Leght_4", @placeholder = "Nhập đường dẫn Fanpage facebook website" })
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>FanpageGoogle+
-                 :</span>
-            </div>
-            <div class="Right_tr1">
+               @Html.TextAreaFor(p => p.CodeChat, new { @class = "Leght_4", @placeholder = "Nhập mã Code Chat" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>FanpageFacebook :</span>
+           </div>
+           <div class="Right_tr1">
 
-                @Html.TextAreaFor(p => p.FanpageGoogle, new { @class = "Leght_4", @placeholder = "Nhập đường dẫn tài khoản G+ website" })
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>FanpageYoutube :</span>
-            </div>
-            <div class="Right_tr1">
+               @Html.TextAreaFor(p => p.FanpageFacebook, new { @class = "Leght_4", @placeholder = "Nhập đường dẫn Fanpage facebook website" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>
+                   FanpageGoogle+
+                   :
+               </span>
+           </div>
+           <div class="Right_tr1">
 
-                @Html.TextAreaFor(p => p.FanpageYoutube, new { @class = "Leght_4", @placeholder = "Nhập đường dẫn kênh Youtube cho website" })
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Host:</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.Host, new { @class = "Leght_5" })
-              
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Port:</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.Port, new { @class = "Leght_5" })
-              
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Timeout:</span>
-            </div>
-            <div class="Right_tr1">
-                @Html.TextBoxFor(p=>p.Timeout, new { @class = "Leght_5"  })
-              
-            </div>
-        </div>
-            <div class="tr_1">
-            <div class="left_tr1">
-                <span>Coppy :</span>
-            </div>
-            <div class="Right_tr1">
-                    @{ bool Coppy = ((Model.Coppy == null) || (Model.Coppy == false)) ? false : true; }
-                    @Html.CheckBoxFor(p=>Coppy)
-                  
-            </div>
-        </div>
-          <div class="tr_1">
-            <div class="left_tr1">
-                <span>Social :</span>
-            </div>
-            <div class="Right_tr1">
-                    @{ bool Social = ((Model.Social == null) || (Model.Social == false)) ? false : true; }
-                    @Html.CheckBoxFor(p=>Social)
-                  
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Popup :</span>
-            </div>
-            <div class="Right_tr1">
-                    @{ bool Popup = ((Model.Popup == null) || (Model.Popup == false)) ? false : true; }
-                    @Html.CheckBoxFor(p=>Popup)
-                  
-            </div>
-        </div>
-        <div class="tr_1">
-            <div class="left_tr1">
-                <span>Adw Left :</span>
-            </div>
-            <div class="Right_tr1">
-                    @{ bool PopupSupport = ((Model.PopupSupport == null) || (Model.PopupSupport == false)) ? false : true; }
-                    @Html.CheckBoxFor(p=>PopupSupport)
-                  
-            </div>
-        </div>
-         
-        <div class="tr_1">
-            <div class="left_tr1">
-            </div>
-            <div class="Right_tr1">
-                <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Save</button>
-                <button type="button" id="btnCanse" name="btnCanse" class="btnCanse">Cancel</button>
-            </div>
-        </div>
-    </div>
+               @Html.TextAreaFor(p => p.FanpageGoogle, new { @class = "Leght_4", @placeholder = "Nhập đường dẫn tài khoản G+ website" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>FanpageYoutube :</span>
+           </div>
+           <div class="Right_tr1">
+
+               @Html.TextAreaFor(p => p.FanpageYoutube, new { @class = "Leght_4", @placeholder = "Nhập đường dẫn kênh Youtube cho website" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Host:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Host, new { @class = "Leght_5" })
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Port:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Port, new { @class = "Leght_5" })
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Timeout:</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.Timeout, new { @class = "Leght_5" })
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Coppy :</span>
+           </div>
+           <div class="Right_tr1">
+               @{ bool Coppy = ((Model.Coppy == null) || (Model.Coppy == false)) ? false : true; }
+               @Html.CheckBoxFor(p => Coppy)
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Social :</span>
+           </div>
+           <div class="Right_tr1">
+               @{ bool Social = ((Model.Social == null) || (Model.Social == false)) ? false : true; }
+               @Html.CheckBoxFor(p => Social)
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Popup :</span>
+           </div>
+           <div class="Right_tr1">
+               @{ bool Popup = ((Model.Popup == null) || (Model.Popup == false)) ? false : true; }
+               @Html.CheckBoxFor(p => Popup)
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Adw Left :</span>
+           </div>
+           <div class="Right_tr1">
+               @{ bool PopupSupport = ((Model.PopupSupport == null) || (Model.PopupSupport == false)) ? false : true; }
+               @Html.CheckBoxFor(p => PopupSupport)
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Thời gian làm việc :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.TimeWork, new { @class = "Leght_2" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>tiêu đề chương trình khuyến mại :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.TitleSale, new { @class = "Leght_2" })
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Ảnh banner khuyến mại :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.ImageSale, new { @class = "Leght_3" })&nbsp;<input id="SelectImageSale" type="button" value="Browser" />
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Ngày bắt đầu khuyến mại :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(model => model.StartDateSale, new { @type = "date", @class = "form-control datepicker", @Value = Model.StartDateSale.ToString("yyyy-MM-dd") })
+               @Html.ValidationMessageFor(model => model.StartDateSale, "", new { @class = "text-danger" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Ngày kết thúc khuyến mại :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(model => model.EndDateSale, new { @type = "date", @class = "form-control datepicker", @Value = Model.EndDateSale.ToString("yyyy-MM-dd") })
+               @Html.ValidationMessageFor(model => model.EndDateSale, "", new { @class = "text-danger" })
+
+
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+           </div>
+           <div class="Right_tr1">
+               <button type="submit" id="btnAdd" name="btnAdd" class="btnAdd">Save</button>
+               <button type="button" id="btnCanse" name="btnCanse" class="btnCanse">Cancel</button>
+           </div>
+       </div>
+   </div>
 }
